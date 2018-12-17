@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookInfoUnitView" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="lbTitle" destination="zFM-Kc-Hmp" id="t7o-Z3-vui"/>
+                <outlet property="lbValue" destination="7ul-yy-U1a" id="YZ8-YK-d5u"/>
+                <outlet property="view" destination="iN0-l3-epB" id="WIA-wV-i58"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="248"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPO-RT-3G9" customClass="GCleanView" customModule="LimeBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="248"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trích đoạn " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-Kc-Hmp">
+                            <rect key="frame" x="8" y="11.5" width="80.5" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="Q03-Tn-4rE"/>
+                        <constraint firstItem="zFM-Kc-Hmp" firstAttribute="leading" secondItem="HPO-RT-3G9" secondAttribute="leading" constant="8" id="Se6-U3-hlB"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RuS-hE-3bm" customClass="GCleanView" customModule="LimeBook" customModuleProvider="target">
+                    <rect key="frame" x="120" y="0.0" width="255" height="248"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOC-hi-Vxx" customClass="GCleanView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="12" width="255" height="224"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ôi con sông ngày xưa, và ngày sau vẫn thế, nỗi khát vọng tình yêu" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ul-yy-U1a">
+                                    <rect key="frame" x="0.0" y="0.0" width="255" height="224.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.75474880580000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.75474880580000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="7ul-yy-U1a" firstAttribute="leading" secondItem="bOC-hi-Vxx" secondAttribute="leading" id="KKQ-ey-FFu"/>
+                                <constraint firstAttribute="trailing" secondItem="7ul-yy-U1a" secondAttribute="trailing" id="S5P-lQ-7ft"/>
+                                <constraint firstAttribute="bottom" secondItem="7ul-yy-U1a" secondAttribute="bottom" id="iVX-8b-CCb"/>
+                                <constraint firstItem="7ul-yy-U1a" firstAttribute="top" secondItem="bOC-hi-Vxx" secondAttribute="top" id="pZo-d1-Qv4"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.29297145920000001" green="0.66126236780000003" blue="0.7777006662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.29297145920000001" green="0.66126236780000003" blue="0.7777006662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="bOC-hi-Vxx" firstAttribute="top" secondItem="RuS-hE-3bm" secondAttribute="top" constant="12" id="6sg-v8-4td"/>
+                        <constraint firstAttribute="trailing" secondItem="bOC-hi-Vxx" secondAttribute="trailing" id="NsM-Js-nBE"/>
+                        <constraint firstAttribute="bottom" secondItem="bOC-hi-Vxx" secondAttribute="bottom" constant="12" id="Wdh-ez-zsq"/>
+                        <constraint firstItem="bOC-hi-Vxx" firstAttribute="leading" secondItem="RuS-hE-3bm" secondAttribute="leading" id="t2G-VX-ena"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RuS-hE-3bm" firstAttribute="leading" secondItem="HPO-RT-3G9" secondAttribute="trailing" id="0u1-Va-vUz"/>
+                <constraint firstAttribute="trailing" secondItem="RuS-hE-3bm" secondAttribute="trailing" id="1ds-sP-SmY"/>
+                <constraint firstItem="HPO-RT-3G9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CWz-g4-NMS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HPO-RT-3G9" secondAttribute="bottom" id="HUp-1Q-SUr"/>
+                <constraint firstAttribute="bottom" secondItem="RuS-hE-3bm" secondAttribute="bottom" id="PmX-uQ-64a"/>
+                <constraint firstItem="RuS-hE-3bm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="a9R-gU-WCw"/>
+                <constraint firstItem="HPO-RT-3G9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="clg-QE-tK4"/>
+                <constraint firstItem="zFM-Kc-Hmp" firstAttribute="top" secondItem="bOC-hi-Vxx" secondAttribute="top" id="p6E-tT-upF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="46.5" y="268"/>
+        </view>
+    </objects>
+</document>

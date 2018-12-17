@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationView" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="HTX-Qm-Ynw" id="Jjq-29-Cqk"/>
+                <outlet property="lbTitle" destination="zhJ-vD-d0p" id="QMJ-af-1p1"/>
+                <outlet property="leftButton" destination="ecd-wM-23i" id="9ik-Xr-Ahe"/>
+                <outlet property="statusView" destination="dsw-Wb-QpN" id="hFH-RO-VxQ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="riG-3s-yAb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsw-Wb-QpN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <color key="backgroundColor" red="0.089427716549999994" green="0.32237358669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="fhY-MQ-U4v"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTX-Qm-Ynw">
+                    <rect key="frame" x="0.0" y="20" width="375" height="55"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhJ-vD-d0p">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeL-1b-G7w" customClass="GCleanView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="55"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecd-wM-23i">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="55"/>
+                                    <state key="normal" image="DefaultBack"/>
+                                    <connections>
+                                        <action selector="leftTouch:" destination="-1" eventType="touchUpInside" id="66Z-NI-jF2"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="ecd-wM-23i" firstAttribute="top" secondItem="LeL-1b-G7w" secondAttribute="top" id="1DC-pk-jGx"/>
+                                <constraint firstAttribute="trailing" secondItem="ecd-wM-23i" secondAttribute="trailing" id="MI1-Zs-x2v"/>
+                                <constraint firstAttribute="width" constant="44" id="ZQK-E3-UBk"/>
+                                <constraint firstItem="ecd-wM-23i" firstAttribute="leading" secondItem="LeL-1b-G7w" secondAttribute="leading" id="dyg-oz-oiu"/>
+                                <constraint firstAttribute="bottom" secondItem="ecd-wM-23i" secondAttribute="bottom" id="qNa-BQ-Eif"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="LeL-1b-G7w" secondAttribute="bottom" id="4ho-58-7Qq"/>
+                        <constraint firstAttribute="bottom" secondItem="zhJ-vD-d0p" secondAttribute="bottom" id="HPK-uQ-plP"/>
+                        <constraint firstAttribute="trailing" secondItem="zhJ-vD-d0p" secondAttribute="trailing" id="NfD-dC-EpN"/>
+                        <constraint firstItem="LeL-1b-G7w" firstAttribute="top" secondItem="HTX-Qm-Ynw" secondAttribute="top" id="XJ8-b9-Vuy"/>
+                        <constraint firstItem="zhJ-vD-d0p" firstAttribute="leading" secondItem="HTX-Qm-Ynw" secondAttribute="leading" id="aK1-RQ-hZS"/>
+                        <constraint firstItem="LeL-1b-G7w" firstAttribute="leading" secondItem="HTX-Qm-Ynw" secondAttribute="leading" id="svh-xC-96s"/>
+                        <constraint firstItem="zhJ-vD-d0p" firstAttribute="top" secondItem="HTX-Qm-Ynw" secondAttribute="top" id="xHF-zY-WQa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dsw-Wb-QpN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nfc-z7-eY6"/>
+                <constraint firstAttribute="trailing" secondItem="dsw-Wb-QpN" secondAttribute="trailing" id="PRb-qg-PYJ"/>
+                <constraint firstItem="dsw-Wb-QpN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WBe-Zv-54X"/>
+                <constraint firstAttribute="trailing" secondItem="HTX-Qm-Ynw" secondAttribute="trailing" id="aQe-vZ-Sbi"/>
+                <constraint firstItem="HTX-Qm-Ynw" firstAttribute="top" secondItem="dsw-Wb-QpN" secondAttribute="bottom" id="oRf-WA-c4U"/>
+                <constraint firstAttribute="bottom" secondItem="HTX-Qm-Ynw" secondAttribute="bottom" id="qCi-Pf-aNz"/>
+                <constraint firstItem="HTX-Qm-Ynw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="x7M-iT-ECV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-162" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="DefaultBack" width="10" height="18"/>
+    </resources>
+</document>

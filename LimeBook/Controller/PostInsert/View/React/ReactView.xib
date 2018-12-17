@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReactView" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="imgSelectView" destination="HBL-h9-Hn8" id="PyR-Kq-8lR"/>
+                <outlet property="note" destination="RBc-oR-eEY" id="uw4-Rh-Nj2"/>
+                <outlet property="postSelectView" destination="nYR-4H-wPu" id="LkB-ZC-V5f"/>
+                <outlet property="ratingView" destination="IPP-vL-mAC" id="Qnv-3X-vHG"/>
+                <outlet property="react" destination="IKy-bq-0XY" id="82e-6b-ZoL"/>
+                <outlet property="view" destination="Sno-X0-SP3" id="OVm-Do-9hi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Sno-X0-SP3">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5st-Si-i4y" userLabel="imageSelect">
+                    <rect key="frame" x="0.0" y="458" width="367" height="89"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ảnh đính kèm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWf-kD-Ac2">
+                            <rect key="frame" x="12" y="8" width="92" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBL-h9-Hn8" customClass="ImageSelectView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="29" width="367" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="PJN-We-XON"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="height" destination="PJN-We-XON" id="i5T-HC-kXF"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="HBL-h9-Hn8" secondAttribute="trailing" id="9Gu-pH-1Ph"/>
+                        <constraint firstItem="yWf-kD-Ac2" firstAttribute="leading" secondItem="5st-Si-i4y" secondAttribute="leading" constant="12" id="LIe-lJ-PAP"/>
+                        <constraint firstItem="yWf-kD-Ac2" firstAttribute="top" secondItem="5st-Si-i4y" secondAttribute="top" constant="8" id="Oe9-U4-RHu"/>
+                        <constraint firstItem="HBL-h9-Hn8" firstAttribute="leading" secondItem="5st-Si-i4y" secondAttribute="leading" id="VQI-Sf-1H3"/>
+                        <constraint firstAttribute="bottom" secondItem="HBL-h9-Hn8" secondAttribute="bottom" id="czL-mV-HYW"/>
+                        <constraint firstItem="HBL-h9-Hn8" firstAttribute="top" secondItem="yWf-kD-Ac2" secondAttribute="bottom" constant="4" id="kiF-2C-841"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfp-tk-Sl9">
+                    <rect key="frame" x="0.0" y="547" width="367" height="120"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="G5J-ux-DUZ">
+                            <rect key="frame" x="0.0" y="0.0" width="367" height="120"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBc-oR-eEY" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="367" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="60" id="96F-2R-V0X"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKy-bq-0XY" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="60" width="367" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="60" id="Xjg-Mi-KD5"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="100" id="g2f-yU-zSP"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PnF-Zm-9ao">
+                            <rect key="frame" x="0.0" y="120" width="367" height="0.0"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" id="Myj-rg-GT9"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="PnF-Zm-9ao" firstAttribute="top" secondItem="G5J-ux-DUZ" secondAttribute="bottom" id="6mH-Ky-N5l"/>
+                        <constraint firstAttribute="trailing" secondItem="G5J-ux-DUZ" secondAttribute="trailing" id="NO4-XI-2Ix"/>
+                        <constraint firstItem="PnF-Zm-9ao" firstAttribute="leading" secondItem="xfp-tk-Sl9" secondAttribute="leading" id="VEl-kp-Z9F"/>
+                        <constraint firstAttribute="trailing" secondItem="PnF-Zm-9ao" secondAttribute="trailing" id="bZA-vA-AWo"/>
+                        <constraint firstItem="G5J-ux-DUZ" firstAttribute="top" secondItem="xfp-tk-Sl9" secondAttribute="top" id="ezX-hp-2XR"/>
+                        <constraint firstAttribute="bottom" secondItem="PnF-Zm-9ao" secondAttribute="bottom" id="pbO-l2-ZKx"/>
+                        <constraint firstItem="G5J-ux-DUZ" firstAttribute="leading" secondItem="xfp-tk-Sl9" secondAttribute="leading" id="rj1-5x-5zT"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nYR-4H-wPu" customClass="PostSelectView" customModule="LimeBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="367" height="386"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="4Fd-rh-aXH"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPP-vL-mAC" customClass="RatingView" customModule="LimeBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="386" width="367" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="QMk-3p-sdo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5st-Si-i4y" secondAttribute="trailing" id="2KD-fp-Nwu"/>
+                <constraint firstItem="nYR-4H-wPu" firstAttribute="top" secondItem="Sno-X0-SP3" secondAttribute="top" id="APa-nV-bU6"/>
+                <constraint firstItem="5st-Si-i4y" firstAttribute="top" secondItem="IPP-vL-mAC" secondAttribute="bottom" constant="12" id="HJv-Se-bnB"/>
+                <constraint firstItem="IPP-vL-mAC" firstAttribute="leading" secondItem="Mk7-Dn-I6s" secondAttribute="leading" id="K68-5Q-atr"/>
+                <constraint firstAttribute="trailing" secondItem="xfp-tk-Sl9" secondAttribute="trailing" id="OCX-a4-O6Y"/>
+                <constraint firstItem="Mk7-Dn-I6s" firstAttribute="trailing" secondItem="IPP-vL-mAC" secondAttribute="trailing" id="OCb-XB-lZn"/>
+                <constraint firstItem="nYR-4H-wPu" firstAttribute="leading" secondItem="Sno-X0-SP3" secondAttribute="leading" id="Xcp-9e-FDi"/>
+                <constraint firstItem="IPP-vL-mAC" firstAttribute="top" secondItem="nYR-4H-wPu" secondAttribute="bottom" id="i3V-uv-MHO"/>
+                <constraint firstItem="xfp-tk-Sl9" firstAttribute="top" secondItem="5st-Si-i4y" secondAttribute="bottom" id="krQ-TX-Fmh"/>
+                <constraint firstAttribute="trailing" secondItem="nYR-4H-wPu" secondAttribute="trailing" id="mmY-nj-0Nz"/>
+                <constraint firstItem="xfp-tk-Sl9" firstAttribute="leading" secondItem="Sno-X0-SP3" secondAttribute="leading" id="nUG-P3-1eO"/>
+                <constraint firstItem="5st-Si-i4y" firstAttribute="leading" secondItem="Sno-X0-SP3" secondAttribute="leading" id="nwa-OX-ffh"/>
+                <constraint firstAttribute="bottom" secondItem="xfp-tk-Sl9" secondAttribute="bottom" id="u4w-lA-KfE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Mk7-Dn-I6s"/>
+            <point key="canvasLocation" x="-54" y="-602"/>
+        </view>
+    </objects>
+</document>

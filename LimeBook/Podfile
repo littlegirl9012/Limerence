@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'LimeBook' do
+  use_frameworks!
+pod 'Alamofire', '~> 4.4'
+pod 'AlamofireImage'
+pod 'PureLayout'
+pod 'Gallery'
+pod 'ALCameraViewController'
+pod 'Socket.IO-Client-Swift', '~> 13.1.0'
+pod 'GoogleMaps'
+pod 'GooglePlaces'
+pod 'AccountKit'
+pod 'SwipeableTabBarController'
+pod 'SwiftHash'
+pod 'FBSDKLoginKit'
+pod 'SDWebImage'
+pod 'swiftScan'
+pod 'SwiftyStarRatingView'
+pod 'XMPPFramework/Swift'
+
+end

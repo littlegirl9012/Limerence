@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookActionView">
+            <connections>
+                <outlet property="btAdd" destination="YbZ-ic-0ex" id="IzJ-dC-uHn"/>
+                <outlet property="btExit" destination="gVc-xo-0hN" id="PaF-0j-YC4"/>
+                <outlet property="btList" destination="1DV-dB-6ml" id="aA3-mn-BVY"/>
+                <outlet property="lbTitle" destination="h87-3Q-tvC" id="bu3-h0-yDe"/>
+                <outlet property="view" destination="iN0-l3-epB" id="SkU-eX-95N"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dls-PY-E8h">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mùa hè đã qua mà chúng ta chưa thể nói lời tạm biệt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h87-3Q-tvC">
+                            <rect key="frame" x="12" y="16" width="351" height="50"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seJ-vJ-xum" customClass="LineView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="81" width="375" height="1"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="nJS-zv-pIj"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="h87-3Q-tvC" secondAttribute="bottom" constant="16" id="4cc-ca-vO5"/>
+                        <constraint firstItem="seJ-vJ-xum" firstAttribute="leading" secondItem="Dls-PY-E8h" secondAttribute="leading" id="Cpw-Fc-N9A"/>
+                        <constraint firstItem="h87-3Q-tvC" firstAttribute="leading" secondItem="Dls-PY-E8h" secondAttribute="leading" constant="12" id="Ih2-aV-ius"/>
+                        <constraint firstAttribute="trailing" secondItem="seJ-vJ-xum" secondAttribute="trailing" id="Lvf-gK-LRy"/>
+                        <constraint firstAttribute="width" priority="750" constant="320" id="OYv-Qh-q2u"/>
+                        <constraint firstItem="h87-3Q-tvC" firstAttribute="top" secondItem="Dls-PY-E8h" secondAttribute="top" constant="16" id="YW4-o5-wFg"/>
+                        <constraint firstAttribute="trailing" secondItem="h87-3Q-tvC" secondAttribute="trailing" constant="12" id="dZo-Xd-bT0"/>
+                        <constraint firstAttribute="bottom" secondItem="seJ-vJ-xum" secondAttribute="bottom" id="uCt-8H-AdI"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ad4-iS-OtU" customClass="GCleanView" customModule="LimeBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="82" width="375" height="150"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v5M-Oy-YX7">
+                            <rect key="frame" x="0.0" y="12" width="375" height="126"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbZ-ic-0ex">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <state key="normal" title="Thêm vào tủ sách của bạn">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="addTouch:" destination="-1" eventType="touchUpInside" id="1lI-zL-qgL"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DV-dB-6ml">
+                                    <rect key="frame" x="0.0" y="42" width="375" height="42"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <state key="normal" title="Thành viên sở hữu sách">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="userTouch:" destination="-1" eventType="touchUpInside" id="Wq1-8q-EIE"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-xo-0hN">
+                                    <rect key="frame" x="0.0" y="84" width="375" height="42"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <state key="normal" title="Đóng">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="closeTouch:" destination="-1" eventType="touchUpInside" id="Xrf-Y0-dCs"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.75474880580000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="v5M-Oy-YX7" secondAttribute="bottom" constant="12" id="8EA-EW-yFd"/>
+                        <constraint firstAttribute="height" priority="750" constant="150" id="9PC-PB-kqt"/>
+                        <constraint firstItem="v5M-Oy-YX7" firstAttribute="leading" secondItem="ad4-iS-OtU" secondAttribute="leading" id="d0P-jK-Pc4"/>
+                        <constraint firstAttribute="trailing" secondItem="v5M-Oy-YX7" secondAttribute="trailing" id="w3T-Pg-VsS"/>
+                        <constraint firstItem="v5M-Oy-YX7" firstAttribute="top" secondItem="ad4-iS-OtU" secondAttribute="top" constant="12" id="xZo-GE-0eU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ad4-iS-OtU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BG3-bh-gJO"/>
+                <constraint firstAttribute="trailing" secondItem="ad4-iS-OtU" secondAttribute="trailing" id="IDw-TI-gaW"/>
+                <constraint firstAttribute="bottom" secondItem="ad4-iS-OtU" secondAttribute="bottom" id="KUL-xG-tPp"/>
+                <constraint firstItem="Dls-PY-E8h" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jg1-Ar-5WF"/>
+                <constraint firstItem="ad4-iS-OtU" firstAttribute="top" secondItem="Dls-PY-E8h" secondAttribute="bottom" id="qFF-JH-SMd"/>
+                <constraint firstItem="Dls-PY-E8h" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="v0b-n3-0hc"/>
+                <constraint firstAttribute="trailing" secondItem="Dls-PY-E8h" secondAttribute="trailing" id="yht-K4-U9n"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-966" y="-1150"/>
+        </view>
+        <view contentMode="scaleToFill" id="KQs-vi-K47">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookAddViewController" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="addView" destination="FBg-3F-BAE" id="oZN-Ea-mqY"/>
+                <outlet property="btInsert" destination="kjN-g0-8vD" id="mV3-fb-Umd"/>
+                <outlet property="btTrash" destination="83w-Kc-gTc" id="ZFp-V9-Fij"/>
+                <outlet property="navigationView" destination="Cdj-mt-B1g" id="ixk-BZ-qBO"/>
+                <outlet property="view" destination="ZA6-xC-QJV" id="qsF-4V-lG4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZA6-xC-QJV">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="815"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdj-mt-B1g" customClass="NavigationView" customModule="LimeBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83w-Kc-gTc">
+                            <rect key="frame" x="335" y="24" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="1xq-Ua-DCf"/>
+                                <constraint firstAttribute="height" constant="40" id="Q3b-cD-grw"/>
+                            </constraints>
+                            <state key="normal" image="Trash"/>
+                            <connections>
+                                <action selector="deleteTouch:" destination="-1" eventType="touchUpInside" id="bMQ-ZK-Vd4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.071262716130000001" green="0.45187341450000001" blue="0.91223826139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="UxZ-pE-2D5"/>
+                        <constraint firstAttribute="trailing" secondItem="83w-Kc-gTc" secondAttribute="trailing" id="gSj-Ak-qP5"/>
+                        <constraint firstAttribute="bottom" secondItem="83w-Kc-gTc" secondAttribute="bottom" id="ujH-ir-kqA"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOx-nA-phD">
+                    <rect key="frame" x="0.0" y="64" width="375" height="751"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8e-EF-zAN" customClass="TPKeyboardAvoidingScrollView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="751"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBg-3F-BAE" customClass="BookAddView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="691"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjN-g0-8vD" customClass="ButtonSuccess" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="243" y="715" width="120" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="hCK-0Y-JgL"/>
+                                        <constraint firstAttribute="height" constant="40" id="k1U-yy-m8b"/>
+                                    </constraints>
+                                    <state key="normal" title="Thêm mới"/>
+                                    <connections>
+                                        <action selector="userTouch:" destination="-1" eventType="touchUpInside" id="gFl-Yg-BcP"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="kjN-g0-8vD" firstAttribute="top" secondItem="FBg-3F-BAE" secondAttribute="bottom" constant="24" id="1P7-bK-fbP"/>
+                                <constraint firstAttribute="trailing" secondItem="FBg-3F-BAE" secondAttribute="trailing" id="RdO-wL-HI3"/>
+                                <constraint firstItem="FBg-3F-BAE" firstAttribute="leading" secondItem="l8e-EF-zAN" secondAttribute="leading" id="bVZ-81-kv4"/>
+                                <constraint firstAttribute="bottom" secondItem="kjN-g0-8vD" secondAttribute="bottom" priority="250" constant="12" id="be4-7O-M3A"/>
+                                <constraint firstAttribute="trailing" secondItem="kjN-g0-8vD" secondAttribute="trailing" priority="250" constant="12" id="jLc-ZQ-6SD"/>
+                                <constraint firstItem="FBg-3F-BAE" firstAttribute="top" secondItem="l8e-EF-zAN" secondAttribute="top" id="uiq-m1-o50"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="FBg-3F-BAE" firstAttribute="height" secondItem="YOx-nA-phD" secondAttribute="height" priority="1" constant="-60" id="89a-01-rqn"/>
+                        <constraint firstItem="l8e-EF-zAN" firstAttribute="leading" secondItem="YOx-nA-phD" secondAttribute="leading" id="90D-rn-jvN"/>
+                        <constraint firstAttribute="trailing" secondItem="l8e-EF-zAN" secondAttribute="trailing" id="AdG-ee-ccy"/>
+                        <constraint firstItem="FBg-3F-BAE" firstAttribute="width" secondItem="YOx-nA-phD" secondAttribute="width" id="TYD-tg-Tta"/>
+                        <constraint firstAttribute="bottom" secondItem="l8e-EF-zAN" secondAttribute="bottom" id="XDX-TS-YTb"/>
+                        <constraint firstItem="l8e-EF-zAN" firstAttribute="top" secondItem="YOx-nA-phD" secondAttribute="top" id="zCB-13-fIj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YOx-nA-phD" secondAttribute="bottom" id="44R-cE-0Nd"/>
+                <constraint firstItem="YOx-nA-phD" firstAttribute="top" secondItem="Cdj-mt-B1g" secondAttribute="bottom" id="4qh-KS-VNB"/>
+                <constraint firstItem="Cdj-mt-B1g" firstAttribute="top" secondItem="ZA6-xC-QJV" secondAttribute="top" id="Jhz-Hw-DJP"/>
+                <constraint firstAttribute="trailing" secondItem="YOx-nA-phD" secondAttribute="trailing" id="PB5-kj-Thf"/>
+                <constraint firstAttribute="trailing" secondItem="Cdj-mt-B1g" secondAttribute="trailing" id="QIo-99-Bjh"/>
+                <constraint firstItem="YOx-nA-phD" firstAttribute="leading" secondItem="ZA6-xC-QJV" secondAttribute="leading" id="R7T-WD-e3J"/>
+                <constraint firstItem="Cdj-mt-B1g" firstAttribute="leading" secondItem="ZA6-xC-QJV" secondAttribute="leading" id="xkq-wb-31T"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-554" y="-1051"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Trash" width="19" height="25"/>
+    </resources>
+</document>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HYSViewController" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="activity" destination="Uu9-F4-DT1" id="cb0-v9-VLw"/>
+                <outlet property="navigationView" destination="39T-jB-VMM" id="N0n-sZ-3CB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="xD1-X4-rlt" id="jic-zW-F7K"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39T-jB-VMM" customClass="NavigationView" customModule="LimeBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="5DL-v6-1zM"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPW-TL-fpi">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <subviews>
+                        <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xD1-X4-rlt">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </webView>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Uu9-F4-DT1">
+                            <rect key="frame" x="169" y="283" width="37" height="37"/>
+                            <color key="color" red="0.29297145920000001" green="0.66126236780000003" blue="0.7777006662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="xD1-X4-rlt" secondAttribute="trailing" id="BFW-qo-6oN"/>
+                        <constraint firstItem="xD1-X4-rlt" firstAttribute="leading" secondItem="EPW-TL-fpi" secondAttribute="leading" id="LtD-7B-jrM"/>
+                        <constraint firstItem="Uu9-F4-DT1" firstAttribute="centerY" secondItem="EPW-TL-fpi" secondAttribute="centerY" id="MVC-DD-4Ip"/>
+                        <constraint firstItem="xD1-X4-rlt" firstAttribute="top" secondItem="EPW-TL-fpi" secondAttribute="top" id="O6N-7q-mI6"/>
+                        <constraint firstAttribute="bottom" secondItem="xD1-X4-rlt" secondAttribute="bottom" id="Psh-5b-NAo"/>
+                        <constraint firstItem="Uu9-F4-DT1" firstAttribute="centerX" secondItem="EPW-TL-fpi" secondAttribute="centerX" id="g2i-lL-BAJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EPW-TL-fpi" secondAttribute="bottom" id="0ks-GO-xP9"/>
+                <constraint firstItem="EPW-TL-fpi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FBV-AA-jvq"/>
+                <constraint firstItem="39T-jB-VMM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QUU-pg-JDo"/>
+                <constraint firstAttribute="trailing" secondItem="39T-jB-VMM" secondAttribute="trailing" id="acG-GG-dn3"/>
+                <constraint firstItem="39T-jB-VMM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lH9-uE-93g"/>
+                <constraint firstItem="EPW-TL-fpi" firstAttribute="top" secondItem="39T-jB-VMM" secondAttribute="bottom" id="tnA-00-bTF"/>
+                <constraint firstAttribute="trailing" secondItem="EPW-TL-fpi" secondAttribute="trailing" id="upl-Xj-Whd"/>
+            </constraints>
+            <point key="canvasLocation" x="-129" y="42"/>
+        </view>
+    </objects>
+</document>

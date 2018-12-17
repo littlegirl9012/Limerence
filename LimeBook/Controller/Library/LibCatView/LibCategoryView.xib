@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibCategoryView" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="zvv-GB-F4o"/>
+                <outlet property="tbVIew" destination="cSd-IA-IQg" id="fTk-vw-rD7"/>
+                <outlet property="view" destination="WV0-5w-uTl" id="jiy-Bz-AwN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="WV0-5w-uTl">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="655"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cSd-IA-IQg">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="447"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="cSd-IA-IQg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2aO-U2-MTm"/>
+                        <constraint firstItem="cSd-IA-IQg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4MH-e6-TbM"/>
+                        <constraint firstAttribute="bottom" secondItem="cSd-IA-IQg" secondAttribute="bottom" constant="12" id="UdQ-of-hvM"/>
+                        <constraint firstAttribute="trailing" secondItem="cSd-IA-IQg" secondAttribute="trailing" id="t6v-DC-Ska"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="12" id="6QS-Ql-p6p"/>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="leading" secondItem="WV0-5w-uTl" secondAttribute="leading" id="AOn-7d-Xfh"/>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="top" secondItem="WV0-5w-uTl" secondAttribute="top" id="dvg-8u-Cu8"/>
+                <constraint firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="yRe-72-NB3"/>
+            </constraints>
+            <point key="canvasLocation" x="-69.5" y="-12.5"/>
+        </view>
+    </objects>
+</document>

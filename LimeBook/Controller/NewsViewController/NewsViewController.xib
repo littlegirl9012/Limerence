@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Comfortaa-Bold.ttf">
+            <string>Comfortaa-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsViewController" customModule="MiBook" customModuleProvider="target">
+            <connections>
+                <outlet property="btAdd" destination="wTM-vi-tXd" id="JHU-H6-vRw"/>
+                <outlet property="btCat" destination="W6J-iO-LeB" id="VNM-kj-PLb"/>
+                <outlet property="btMenu" destination="K3W-95-a0J" id="qtK-Q3-8gS"/>
+                <outlet property="btNote" destination="aKh-cG-ibv" id="Ii2-9P-Tsj"/>
+                <outlet property="menu" destination="vtK-9z-m1r" id="OvV-ZO-7ve"/>
+                <outlet property="simpleNavi" destination="zMb-iq-29o" id="GiA-GV-HVz"/>
+                <outlet property="tbView" destination="vWz-2j-HNh" id="hlG-WQ-hr4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" keyboardDismissMode="interactive" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWz-2j-HNh">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="OQO-1a-pPU"/>
+                        <outlet property="delegate" destination="-1" id="skI-gN-Leg"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtK-9z-m1r" customClass="NewsCategoryView" customModule="MiBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="250" id="UQ3-gx-cVH"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMb-iq-29o" customClass="SimpleNavi" customModule="MiBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTM-vi-tXd">
+                            <rect key="frame" x="331" y="20" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="5Ko-dn-Qcb"/>
+                            </constraints>
+                            <state key="normal" image="AddWhite"/>
+                            <connections>
+                                <action selector="postTouch:" destination="-1" eventType="touchUpInside" id="i9r-Au-rWz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3W-95-a0J">
+                            <rect key="frame" x="279" y="20" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="uN5-xo-7ds"/>
+                            </constraints>
+                            <state key="normal" image="home_search"/>
+                            <connections>
+                                <action selector="searchTouch:" destination="-1" eventType="touchUpInside" id="8Az-na-HDT"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6J-iO-LeB">
+                            <rect key="frame" x="227" y="20" width="44" height="44"/>
+                            <state key="normal" image="home_menu"/>
+                            <connections>
+                                <action selector="menuTouch:" destination="-1" eventType="touchUpInside" id="zva-2n-Z9a"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="W6J-iO-LeB" firstAttribute="height" secondItem="wTM-vi-tXd" secondAttribute="height" id="42W-HL-ABu"/>
+                        <constraint firstAttribute="height" constant="64" id="6rh-Ix-iF4"/>
+                        <constraint firstAttribute="bottom" secondItem="K3W-95-a0J" secondAttribute="bottom" id="GzX-A3-YPW"/>
+                        <constraint firstAttribute="bottom" secondItem="wTM-vi-tXd" secondAttribute="bottom" id="He4-jq-uYi"/>
+                        <constraint firstItem="wTM-vi-tXd" firstAttribute="top" secondItem="zMb-iq-29o" secondAttribute="top" constant="20" id="XdH-EM-hbg"/>
+                        <constraint firstAttribute="trailing" secondItem="wTM-vi-tXd" secondAttribute="trailing" id="aIt-ou-9aU"/>
+                        <constraint firstItem="K3W-95-a0J" firstAttribute="leading" secondItem="W6J-iO-LeB" secondAttribute="trailing" constant="8" id="epe-IF-Zds"/>
+                        <constraint firstItem="W6J-iO-LeB" firstAttribute="top" secondItem="wTM-vi-tXd" secondAttribute="top" id="gej-JW-SFF"/>
+                        <constraint firstItem="K3W-95-a0J" firstAttribute="top" secondItem="zMb-iq-29o" secondAttribute="top" constant="20" id="gpj-XB-Nfh"/>
+                        <constraint firstItem="W6J-iO-LeB" firstAttribute="width" secondItem="wTM-vi-tXd" secondAttribute="width" id="oMA-5m-6Dt"/>
+                        <constraint firstItem="wTM-vi-tXd" firstAttribute="leading" secondItem="K3W-95-a0J" secondAttribute="trailing" constant="8" id="oyh-nd-dOc"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aKh-cG-ibv">
+                    <rect key="frame" x="12" y="76" width="351" height="80"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="h3O-IE-0MG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="17"/>
+                    <inset key="contentEdgeInsets" minX="12" minY="12" maxX="12" maxY="12"/>
+                    <state key="normal" title="Bạn có thể đăng bài viết, chia sẽ cả xúc về một quyển sách với bạn bè tại đây"/>
+                    <connections>
+                        <action selector="nodeTouch:" destination="-1" eventType="touchUpInside" id="zrY-IT-0Oj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vWz-2j-HNh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6Eb-VD-0es"/>
+                <constraint firstItem="vtK-9z-m1r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6nT-Op-i2p"/>
+                <constraint firstAttribute="bottom" secondItem="vWz-2j-HNh" secondAttribute="bottom" id="D9N-FG-NrW"/>
+                <constraint firstAttribute="trailing" secondItem="aKh-cG-ibv" secondAttribute="trailing" constant="12" id="G61-O2-S3l"/>
+                <constraint firstItem="zMb-iq-29o" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Jtw-MB-yh6"/>
+                <constraint firstItem="vtK-9z-m1r" firstAttribute="top" secondItem="zMb-iq-29o" secondAttribute="bottom" id="S9H-0e-RE2"/>
+                <constraint firstAttribute="trailing" secondItem="vtK-9z-m1r" secondAttribute="trailing" id="TYz-zj-236"/>
+                <constraint firstItem="zMb-iq-29o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fgA-Hf-cLh"/>
+                <constraint firstItem="vWz-2j-HNh" firstAttribute="top" secondItem="zMb-iq-29o" secondAttribute="bottom" id="gEI-3T-fLC"/>
+                <constraint firstItem="aKh-cG-ibv" firstAttribute="top" secondItem="zMb-iq-29o" secondAttribute="bottom" constant="12" id="ijN-7e-pkS"/>
+                <constraint firstItem="aKh-cG-ibv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="ku7-Tm-ACI"/>
+                <constraint firstAttribute="trailing" secondItem="zMb-iq-29o" secondAttribute="trailing" id="oLX-cO-Iog"/>
+                <constraint firstAttribute="bottom" secondItem="vtK-9z-m1r" secondAttribute="bottom" id="sgq-3r-0Ws"/>
+                <constraint firstAttribute="bottom" secondItem="vWz-2j-HNh" secondAttribute="bottom" id="x9Y-TP-c2E"/>
+                <constraint firstAttribute="trailing" secondItem="vWz-2j-HNh" secondAttribute="trailing" id="z31-zs-XwQ"/>
+            </constraints>
+            <point key="canvasLocation" x="-575.20000000000005" y="-255.02248875562222"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AddWhite" width="22" height="22"/>
+        <image name="home_menu" width="20" height="26"/>
+        <image name="home_search" width="24" height="25"/>
+    </resources>
+</document>

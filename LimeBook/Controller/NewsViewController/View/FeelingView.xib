@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeelingView" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="stackView" destination="vZ4-pB-XWg" id="qqy-Xm-QlA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LMd-JS-nvu">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="1069"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R85-0l-mbd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1069"/>
+                    <subviews>
+                        <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="vZ4-pB-XWg">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1069"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="vZ4-pB-XWg" secondAttribute="bottom" id="P5P-Aq-ZFI"/>
+                        <constraint firstItem="vZ4-pB-XWg" firstAttribute="top" secondItem="R85-0l-mbd" secondAttribute="top" id="Qcn-p7-BLj"/>
+                        <constraint firstAttribute="height" priority="100" constant="300" id="dKj-dA-QWU"/>
+                        <constraint firstAttribute="trailing" secondItem="vZ4-pB-XWg" secondAttribute="trailing" id="hS0-cc-RXd"/>
+                        <constraint firstItem="vZ4-pB-XWg" firstAttribute="leading" secondItem="R85-0l-mbd" secondAttribute="leading" id="pzc-Sl-3Si"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="R85-0l-mbd" firstAttribute="leading" secondItem="LMd-JS-nvu" secondAttribute="leading" id="Vbf-Dt-WJk"/>
+                <constraint firstAttribute="bottom" secondItem="R85-0l-mbd" secondAttribute="bottom" id="kMY-aV-PSC"/>
+                <constraint firstItem="R85-0l-mbd" firstAttribute="top" secondItem="LMd-JS-nvu" secondAttribute="top" priority="250" id="vOh-Xe-imk"/>
+                <constraint firstAttribute="trailing" secondItem="R85-0l-mbd" secondAttribute="trailing" id="ykF-gd-s7N"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="154.5" y="361.5"/>
+        </view>
+    </objects>
+</document>

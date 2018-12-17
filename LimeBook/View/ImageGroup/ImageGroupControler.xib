@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageGroupControler" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="btBack" destination="dYO-wm-5Eh" id="zY9-mX-rFu"/>
+                <outlet property="btDownload" destination="8c5-qr-szX" id="Ybe-HR-e66"/>
+                <outlet property="btShare" destination="N6v-V7-Qjb" id="H3E-hi-n1b"/>
+                <outlet property="clView" destination="PZp-gV-IOA" id="ssz-g5-ulr"/>
+                <outlet property="paging" destination="qcq-QP-LhG" id="6ZS-eV-DwI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PZp-gV-IOA">
+                    <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="T3y-cg-GAE">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="P09-83-OAb"/>
+                        <outlet property="delegate" destination="-1" id="Gn7-Tl-GB7"/>
+                    </connections>
+                </collectionView>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dn9-Xt-PK6">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYO-wm-5Eh">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="lcv-aV-eQ2"/>
+                            </constraints>
+                            <connections>
+                                <action selector="backTouch:" destination="-1" eventType="touchUpInside" id="4X2-bH-xVu"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8c5-qr-szX">
+                            <rect key="frame" x="323" y="0.0" width="40" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="HJA-N2-NV8"/>
+                            </constraints>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6v-V7-Qjb">
+                            <rect key="frame" x="271" y="0.0" width="40" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="bGP-lI-MnK"/>
+                            </constraints>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8c5-qr-szX" secondAttribute="trailing" constant="12" id="5Fc-BN-zy5"/>
+                        <constraint firstItem="dYO-wm-5Eh" firstAttribute="leading" secondItem="Dn9-Xt-PK6" secondAttribute="leading" id="BuI-AV-8xy"/>
+                        <constraint firstAttribute="bottom" secondItem="N6v-V7-Qjb" secondAttribute="bottom" id="FTy-Pd-LUf"/>
+                        <constraint firstAttribute="bottom" secondItem="dYO-wm-5Eh" secondAttribute="bottom" id="UtM-Ys-t8w"/>
+                        <constraint firstItem="dYO-wm-5Eh" firstAttribute="top" secondItem="Dn9-Xt-PK6" secondAttribute="top" id="VEJ-v6-0jw"/>
+                        <constraint firstItem="N6v-V7-Qjb" firstAttribute="top" secondItem="Dn9-Xt-PK6" secondAttribute="top" id="deu-1b-RPq"/>
+                        <constraint firstItem="8c5-qr-szX" firstAttribute="leading" secondItem="N6v-V7-Qjb" secondAttribute="trailing" constant="12" id="en9-bd-WH6"/>
+                        <constraint firstAttribute="height" constant="44" id="nIR-03-ta9"/>
+                        <constraint firstItem="8c5-qr-szX" firstAttribute="top" secondItem="Dn9-Xt-PK6" secondAttribute="top" id="uiW-fB-dcN"/>
+                        <constraint firstAttribute="bottom" secondItem="8c5-qr-szX" secondAttribute="bottom" id="yjZ-my-Xhn"/>
+                    </constraints>
+                </view>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qcq-QP-LhG">
+                    <rect key="frame" x="0.0" y="586" width="375" height="37"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Dn9-Xt-PK6" firstAttribute="top" secondItem="PZp-gV-IOA" secondAttribute="bottom" id="1JD-0a-Ovk"/>
+                <constraint firstItem="Dn9-Xt-PK6" firstAttribute="top" secondItem="PZp-gV-IOA" secondAttribute="bottom" id="6oB-EB-VIz"/>
+                <constraint firstItem="Dn9-Xt-PK6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Rqc-xL-1CC"/>
+                <constraint firstAttribute="trailing" secondItem="Dn9-Xt-PK6" secondAttribute="trailing" id="V6x-sc-aHi"/>
+                <constraint firstAttribute="trailing" secondItem="PZp-gV-IOA" secondAttribute="trailing" id="ZHl-LC-ZIw"/>
+                <constraint firstItem="PZp-gV-IOA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kgm-lU-2hz"/>
+                <constraint firstItem="Dn9-Xt-PK6" firstAttribute="top" secondItem="qcq-QP-LhG" secondAttribute="bottom" id="oIp-MW-B0S"/>
+                <constraint firstItem="PZp-gV-IOA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="odv-As-E7u"/>
+                <constraint firstAttribute="bottom" secondItem="Dn9-Xt-PK6" secondAttribute="bottom" id="r7n-q2-JG1"/>
+                <constraint firstItem="qcq-QP-LhG" firstAttribute="leading" secondItem="0gQ-WJ-CBw" secondAttribute="leading" id="yEb-ni-vYk"/>
+                <constraint firstItem="0gQ-WJ-CBw" firstAttribute="trailing" secondItem="qcq-QP-LhG" secondAttribute="trailing" id="zTz-VG-Ab1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="0gQ-WJ-CBw"/>
+            <point key="canvasLocation" x="-42" y="-142"/>
+        </view>
+    </objects>
+</document>

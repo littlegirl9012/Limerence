@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookLibraryView" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="author" destination="R3C-2o-tIY" id="0Z2-mg-196"/>
+                <outlet property="cat" destination="I8Q-gc-hQQ" id="hmy-sP-KJb"/>
+                <outlet property="exten" destination="tcZ-jk-89o" id="clr-9t-Ki7"/>
+                <outlet property="feel" destination="gFw-US-f3C" id="p9A-mf-U4M"/>
+                <outlet property="imgSelectView" destination="Vzh-Ju-Kaj" id="1E0-2h-GYP"/>
+                <outlet property="isbn" destination="AuM-Kh-MBS" id="dM5-hH-aXQ"/>
+                <outlet property="name" destination="WXo-eq-SBj" id="4jF-Rc-6ze"/>
+                <outlet property="note" destination="cTq-Xl-0Mw" id="Nle-jx-fLI"/>
+                <outlet property="pageNumber" destination="o81-Lf-B92" id="7s7-sI-QzW"/>
+                <outlet property="price" destination="caw-p3-vW3" id="g5N-kG-yV7"/>
+                <outlet property="qrcode" destination="SN2-E6-Ynl" id="Tza-7F-zZA"/>
+                <outlet property="ratingView" destination="ZxZ-H1-Vm0" id="xHT-Vf-snb"/>
+                <outlet property="yearPublic" destination="Xv6-p6-tin" id="9D0-zF-XY0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4ww-tf-xjC">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="782"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHY-YR-V6w">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ảnh đính kèm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJr-yE-aqb">
+                            <rect key="frame" x="12" y="8" width="92" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vzh-Ju-Kaj" customClass="ImageSelectView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="29" width="375" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="750" constant="60" id="mNk-7r-7X1"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="height" destination="mNk-7r-7X1" id="keN-3Q-B7E"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Vzh-Ju-Kaj" secondAttribute="trailing" id="CEO-xj-V65"/>
+                        <constraint firstItem="Vzh-Ju-Kaj" firstAttribute="leading" secondItem="PHY-YR-V6w" secondAttribute="leading" id="D4t-fS-ZOS"/>
+                        <constraint firstItem="DJr-yE-aqb" firstAttribute="leading" secondItem="PHY-YR-V6w" secondAttribute="leading" constant="12" id="Vt4-f9-6my"/>
+                        <constraint firstItem="DJr-yE-aqb" firstAttribute="top" secondItem="PHY-YR-V6w" secondAttribute="top" constant="8" id="d9K-Cw-qBS"/>
+                        <constraint firstItem="Vzh-Ju-Kaj" firstAttribute="top" secondItem="DJr-yE-aqb" secondAttribute="bottom" constant="4" id="f7F-bO-tJf"/>
+                        <constraint firstAttribute="bottom" secondItem="Vzh-Ju-Kaj" secondAttribute="bottom" id="h3l-QP-kvC"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6S-sV-eUI">
+                    <rect key="frame" x="0.0" y="89" width="375" height="693"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="kj2-rI-HVu">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="564"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXo-eq-SBj" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="60" id="rDZ-cc-MgB"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3C-2o-tIY" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="60" width="375" height="50"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="60" id="BRW-Go-AYg"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-gc-hQQ" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="110" width="375" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="60" id="4MN-AW-T84"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o81-Lf-B92" userLabel="pagenumber" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="170" width="375" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="oyO-ET-Owl"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VS7-ys-I9g">
+                                    <rect key="frame" x="0.0" y="230" width="375" height="60"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuM-Kh-MBS" userLabel="isbn" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="XaK-aA-SmK"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SN2-E6-Ynl" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="tp0-16-y9R"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AZv-nK-0hd">
+                                    <rect key="frame" x="0.0" y="290" width="375" height="60"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caw-p3-vW3" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="wOM-Et-xGi"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xv6-p6-tin" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Vmp-Mz-99y"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTq-Xl-0Mw" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="350" width="375" height="90"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="3Jb-vs-0Jg"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFw-US-f3C" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="440" width="375" height="50"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxZ-H1-Vm0" customClass="RatingView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="490" width="375" height="50"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61h-OU-EvI">
+                                    <rect key="frame" x="0.0" y="540" width="375" height="24"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="GAe-Xx-SV7"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="128" id="9Gf-3K-VpV"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcZ-jk-89o">
+                            <rect key="frame" x="0.0" y="564" width="375" height="129"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" id="W5J-w6-IX5"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="tcZ-jk-89o" secondAttribute="bottom" id="9LT-9X-fyA"/>
+                        <constraint firstItem="kj2-rI-HVu" firstAttribute="leading" secondItem="P6S-sV-eUI" secondAttribute="leading" id="Fg9-1O-qHj"/>
+                        <constraint firstItem="kj2-rI-HVu" firstAttribute="top" secondItem="P6S-sV-eUI" secondAttribute="top" id="O8m-WN-sCC"/>
+                        <constraint firstItem="tcZ-jk-89o" firstAttribute="leading" secondItem="P6S-sV-eUI" secondAttribute="leading" id="Xk2-K0-nzb"/>
+                        <constraint firstAttribute="trailing" secondItem="kj2-rI-HVu" secondAttribute="trailing" id="bHc-Pv-lnd"/>
+                        <constraint firstItem="tcZ-jk-89o" firstAttribute="top" secondItem="kj2-rI-HVu" secondAttribute="bottom" id="gRv-Wi-ue3"/>
+                        <constraint firstAttribute="trailing" secondItem="tcZ-jk-89o" secondAttribute="trailing" id="z2V-hN-4cx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="P6S-sV-eUI" firstAttribute="top" secondItem="PHY-YR-V6w" secondAttribute="bottom" id="6Tu-Ku-4jL"/>
+                <constraint firstAttribute="trailing" secondItem="P6S-sV-eUI" secondAttribute="trailing" id="Hmv-FZ-mwU"/>
+                <constraint firstAttribute="trailing" secondItem="PHY-YR-V6w" secondAttribute="trailing" id="KjH-Lf-aH2"/>
+                <constraint firstItem="P6S-sV-eUI" firstAttribute="leading" secondItem="4ww-tf-xjC" secondAttribute="leading" id="NQM-We-k2x"/>
+                <constraint firstItem="PHY-YR-V6w" firstAttribute="top" secondItem="4ww-tf-xjC" secondAttribute="top" id="aSh-93-sr9"/>
+                <constraint firstItem="PHY-YR-V6w" firstAttribute="leading" secondItem="4ww-tf-xjC" secondAttribute="leading" id="kvl-aD-bZZ"/>
+                <constraint firstAttribute="bottom" secondItem="P6S-sV-eUI" secondAttribute="bottom" id="ncQ-kP-NYc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="80.5" y="153"/>
+        </view>
+    </objects>
+</document>

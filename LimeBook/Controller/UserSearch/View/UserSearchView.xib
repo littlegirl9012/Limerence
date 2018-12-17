@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserSearchView" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="btAdd" destination="NIy-nG-9Qb" id="iYs-b8-qvA"/>
+                <outlet property="btChat" destination="S2P-3q-chF" id="9fB-QD-0Rd"/>
+                <outlet property="gender" destination="9ay-uG-cVI" id="myK-Ml-wZa"/>
+                <outlet property="name" destination="VSe-FD-jQf" id="Es9-bI-N06"/>
+                <outlet property="phone" destination="4id-nU-U5s" id="Eed-99-zaN"/>
+                <outlet property="userImageView" destination="5kC-co-H2h" id="xhh-tC-6Sz"/>
+                <outlet property="view" destination="vUS-6r-Y3e" id="hsi-xS-mNJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="vUS-6r-Y3e">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WO3-bq-hS2">
+                    <rect key="frame" x="0.0" y="64" width="375" height="240"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Zor-lb-cCv">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSe-FD-jQf" customClass="UserUnitView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4id-nU-U5s" customClass="UserUnitView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="60" width="375" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ay-uG-cVI" customClass="UserUnitView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="120" width="375" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClG-jx-FFb">
+                                    <rect key="frame" x="0.0" y="180" width="375" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2P-3q-chF" customClass="ButtonSuccess" customModule="LimeBook" customModuleProvider="target">
+                                            <rect key="frame" x="363" y="14" width="0.0" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="Htx-Gl-8hw"/>
+                                                <constraint firstAttribute="width" id="RbR-mU-4xC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                            <state key="normal" title="Gửi tin nhắn"/>
+                                            <connections>
+                                                <action selector="smsAction:" destination="-1" eventType="touchUpInside" id="7mW-Ni-Fpy"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIy-nG-9Qb" customClass="ButtonSuccess" customModule="LimeBook" customModuleProvider="target">
+                                            <rect key="frame" x="283" y="14" width="80" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="P5k-UC-2cm"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                            <state key="normal" title="Kết bạn"/>
+                                            <connections>
+                                                <action selector="addAction:" destination="-1" eventType="touchUpInside" id="0rY-3s-bwd"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="NIy-nG-9Qb" firstAttribute="centerY" secondItem="S2P-3q-chF" secondAttribute="centerY" id="8da-HL-Ruy"/>
+                                        <constraint firstItem="S2P-3q-chF" firstAttribute="leading" secondItem="NIy-nG-9Qb" secondAttribute="trailing" id="Awb-lh-7gu"/>
+                                        <constraint firstAttribute="trailing" secondItem="S2P-3q-chF" secondAttribute="trailing" constant="12" id="c7d-ir-CJ5"/>
+                                        <constraint firstItem="S2P-3q-chF" firstAttribute="centerY" secondItem="ClG-jx-FFb" secondAttribute="centerY" id="kae-k2-Uq0"/>
+                                        <constraint firstItem="NIy-nG-9Qb" firstAttribute="top" secondItem="S2P-3q-chF" secondAttribute="top" id="l9B-Vg-Cw0"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="EDw-Ic-w7y"/>
+                        <constraint firstItem="Zor-lb-cCv" firstAttribute="top" secondItem="WO3-bq-hS2" secondAttribute="top" id="GET-tD-8mY"/>
+                        <constraint firstItem="Zor-lb-cCv" firstAttribute="leading" secondItem="WO3-bq-hS2" secondAttribute="leading" id="JZ1-uF-OF3"/>
+                        <constraint firstAttribute="trailing" secondItem="Zor-lb-cCv" secondAttribute="trailing" id="Qdd-XC-Lx7"/>
+                        <constraint firstAttribute="bottom" secondItem="Zor-lb-cCv" secondAttribute="bottom" id="aUk-0Q-J5F"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIq-ww-eck">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kC-co-H2h" customClass="UserImageView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="12" y="12" width="40" height="40"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="5kC-co-H2h" secondAttribute="height" multiplier="1:1" id="7ML-BJ-y8k"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="5kC-co-H2h" firstAttribute="leading" secondItem="tIq-ww-eck" secondAttribute="leading" constant="12" id="qiy-D1-UwD"/>
+                        <constraint firstItem="5kC-co-H2h" firstAttribute="top" secondItem="tIq-ww-eck" secondAttribute="top" constant="12" id="vIn-Og-obM"/>
+                        <constraint firstAttribute="height" constant="64" id="xeG-EP-SEI"/>
+                        <constraint firstItem="5kC-co-H2h" firstAttribute="centerY" secondItem="tIq-ww-eck" secondAttribute="centerY" id="zf7-g1-dQo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WO3-bq-hS2" secondAttribute="trailing" id="NXF-Fx-IUq"/>
+                <constraint firstItem="WO3-bq-hS2" firstAttribute="top" secondItem="vUS-6r-Y3e" secondAttribute="top" constant="64" id="QTe-i8-Jv1"/>
+                <constraint firstItem="tIq-ww-eck" firstAttribute="leading" secondItem="vUS-6r-Y3e" secondAttribute="leading" id="Rr6-Pm-owT"/>
+                <constraint firstItem="tIq-ww-eck" firstAttribute="top" secondItem="vUS-6r-Y3e" secondAttribute="top" id="S7H-A2-Sus"/>
+                <constraint firstAttribute="trailing" secondItem="tIq-ww-eck" secondAttribute="trailing" id="ecu-p5-Zhu"/>
+                <constraint firstAttribute="bottom" secondItem="WO3-bq-hS2" secondAttribute="bottom" priority="750" id="ovV-5p-2vd"/>
+                <constraint firstItem="WO3-bq-hS2" firstAttribute="leading" secondItem="vUS-6r-Y3e" secondAttribute="leading" id="ugE-Os-33E"/>
+            </constraints>
+            <point key="canvasLocation" x="-366" y="158"/>
+        </view>
+    </objects>
+</document>

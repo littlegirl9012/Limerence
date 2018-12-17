@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserSearchViewController" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="btSearch" destination="MKQ-Wr-xEe" id="HEe-mZ-iC6"/>
+                <outlet property="navigationView" destination="3Kc-HC-H06" id="NzP-Y4-e23"/>
+                <outlet property="resultView" destination="BYh-Pc-fY7" id="ROg-8f-zWK"/>
+                <outlet property="tfPhone" destination="vz4-cS-cSG" id="3l1-lI-6Tn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Kc-HC-H06" customClass="NavigationView" customModule="LimeBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="jgM-5X-iay"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PC-b6-TF8" customClass="GCleanView" customModule="LimeBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqh-TL-exC">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKQ-Wr-xEe" customClass="ButtonSuccess" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="283" y="14" width="80" height="32"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="80" id="Ndl-Rj-a0N"/>
+                                        <constraint firstAttribute="height" constant="32" id="y5j-wx-biK"/>
+                                    </constraints>
+                                    <state key="normal" title="Tìm">
+                                        <color key="titleColor" red="0.93006424489999995" green="0.93006424489999995" blue="0.93006424489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="searchTouch:" destination="-1" eventType="touchUpInside" id="abm-Is-TVU"/>
+                                    </connections>
+                                </button>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập số điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vz4-cS-cSG">
+                                    <rect key="frame" x="12" y="0.0" width="259" height="60"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="MKQ-Wr-xEe" firstAttribute="centerY" secondItem="vz4-cS-cSG" secondAttribute="centerY" id="IJC-SL-LiX"/>
+                                <constraint firstItem="vz4-cS-cSG" firstAttribute="top" secondItem="hqh-TL-exC" secondAttribute="top" id="Mog-lH-H6u"/>
+                                <constraint firstItem="MKQ-Wr-xEe" firstAttribute="leading" secondItem="vz4-cS-cSG" secondAttribute="trailing" constant="12" id="VKV-G7-ywI"/>
+                                <constraint firstAttribute="trailing" secondItem="MKQ-Wr-xEe" secondAttribute="trailing" constant="12" id="WkL-Hz-cXq"/>
+                                <constraint firstItem="vz4-cS-cSG" firstAttribute="leading" secondItem="hqh-TL-exC" secondAttribute="leading" constant="12" id="g6s-t6-Bd5"/>
+                                <constraint firstAttribute="height" constant="60" id="q2T-5b-GOn"/>
+                                <constraint firstAttribute="bottom" secondItem="vz4-cS-cSG" secondAttribute="bottom" id="yUy-ZV-iHK"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYh-Pc-fY7" customClass="UserSearchView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="12" y="72" width="351" height="128"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="128" id="Qgd-uh-fBr"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="hqh-TL-exC" firstAttribute="leading" secondItem="1PC-b6-TF8" secondAttribute="leading" id="YHq-hR-eTb"/>
+                        <constraint firstAttribute="trailing" secondItem="BYh-Pc-fY7" secondAttribute="trailing" constant="12" id="iIm-V7-7MP"/>
+                        <constraint firstItem="BYh-Pc-fY7" firstAttribute="top" secondItem="hqh-TL-exC" secondAttribute="bottom" constant="12" id="o1d-vC-LQR"/>
+                        <constraint firstItem="hqh-TL-exC" firstAttribute="top" secondItem="1PC-b6-TF8" secondAttribute="top" id="pou-Xa-7YQ"/>
+                        <constraint firstAttribute="trailing" secondItem="hqh-TL-exC" secondAttribute="trailing" id="wMP-P3-wac"/>
+                        <constraint firstItem="BYh-Pc-fY7" firstAttribute="leading" secondItem="1PC-b6-TF8" secondAttribute="leading" constant="12" id="ztV-oj-6pK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3Kc-HC-H06" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8rS-pu-pnE"/>
+                <constraint firstAttribute="trailing" secondItem="1PC-b6-TF8" secondAttribute="trailing" id="Kkh-FY-EcG"/>
+                <constraint firstItem="1PC-b6-TF8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="M3p-Ne-HPb"/>
+                <constraint firstAttribute="bottom" secondItem="1PC-b6-TF8" secondAttribute="bottom" id="MUq-5Z-H4C"/>
+                <constraint firstItem="1PC-b6-TF8" firstAttribute="top" secondItem="3Kc-HC-H06" secondAttribute="bottom" id="P4i-WG-JTc"/>
+                <constraint firstItem="3Kc-HC-H06" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="ifk-Yc-xXG"/>
+                <constraint firstItem="3Kc-HC-H06" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zdr-Ag-VqH"/>
+            </constraints>
+            <point key="canvasLocation" x="24" y="16"/>
+        </view>
+    </objects>
+</document>

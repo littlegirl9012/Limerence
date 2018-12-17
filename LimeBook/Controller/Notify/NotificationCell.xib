@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NotificationCell" rowHeight="82" id="KGk-i7-Jjw" customClass="NotificationCell" customModule="LimeBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="81.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bd-nB-ITv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="81.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiA-DY-wl0">
+                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="81.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEx-1G-Bc4" customClass="UserImageView" customModule="LimeBook" customModuleProvider="target">
+                                        <rect key="frame" x="21.5" y="21" width="40" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="SgB-q2-2Fw"/>
+                                            <constraint firstAttribute="width" constant="40" id="w0d-4F-T16"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LEx-1G-Bc4" firstAttribute="centerX" secondItem="OiA-DY-wl0" secondAttribute="centerX" id="5c0-mE-Dix"/>
+                                    <constraint firstAttribute="width" secondItem="OiA-DY-wl0" secondAttribute="height" multiplier="1:1" id="Y6c-rV-65K"/>
+                                    <constraint firstItem="LEx-1G-Bc4" firstAttribute="centerY" secondItem="OiA-DY-wl0" secondAttribute="centerY" id="o0k-Py-rNb"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14f-Uc-TYq">
+                                <rect key="frame" x="81.5" y="0.0" width="230.5" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hix-XE-Hhu" customClass="LineView" customModule="LimeBook" customModuleProvider="target">
+                                <rect key="frame" x="81.5" y="81" width="238.5" height="0.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="Hdm-Ck-uJ1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hix-XE-Hhu" secondAttribute="bottom" id="DJt-rm-B29"/>
+                            <constraint firstItem="14f-Uc-TYq" firstAttribute="leading" secondItem="OiA-DY-wl0" secondAttribute="trailing" id="KkI-eB-1R4"/>
+                            <constraint firstAttribute="bottom" secondItem="14f-Uc-TYq" secondAttribute="bottom" id="MnS-fX-fPH"/>
+                            <constraint firstItem="14f-Uc-TYq" firstAttribute="top" secondItem="9bd-nB-ITv" secondAttribute="top" id="SPk-0Q-ec0"/>
+                            <constraint firstItem="OiA-DY-wl0" firstAttribute="leading" secondItem="9bd-nB-ITv" secondAttribute="leading" id="TpY-ls-mfO"/>
+                            <constraint firstAttribute="trailing" secondItem="14f-Uc-TYq" secondAttribute="trailing" constant="8" id="dBc-wh-wq6"/>
+                            <constraint firstAttribute="height" priority="750" constant="64" id="klt-vh-dfc"/>
+                            <constraint firstAttribute="trailing" secondItem="hix-XE-Hhu" secondAttribute="trailing" id="uPP-Jy-DjK"/>
+                            <constraint firstItem="hix-XE-Hhu" firstAttribute="leading" secondItem="14f-Uc-TYq" secondAttribute="leading" id="uQY-Bo-Hrv"/>
+                            <constraint firstAttribute="bottom" secondItem="OiA-DY-wl0" secondAttribute="bottom" id="uWp-GT-HfW"/>
+                            <constraint firstItem="OiA-DY-wl0" firstAttribute="top" secondItem="9bd-nB-ITv" secondAttribute="top" id="zbc-QH-MMx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="9bd-nB-ITv" secondAttribute="bottom" id="0tD-YQ-YkQ"/>
+                    <constraint firstItem="9bd-nB-ITv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8OK-qj-HbA"/>
+                    <constraint firstItem="9bd-nB-ITv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OQ8-ri-qss"/>
+                    <constraint firstAttribute="trailing" secondItem="9bd-nB-ITv" secondAttribute="trailing" id="oo7-wf-jwU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgView" destination="LEx-1G-Bc4" id="bfG-b3-yXs"/>
+                <outlet property="lbName" destination="14f-Uc-TYq" id="y4o-0M-Bvp"/>
+            </connections>
+            <point key="canvasLocation" x="-137" y="65"/>
+        </tableViewCell>
+    </objects>
+</document>

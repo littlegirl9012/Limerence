@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostInsertViewController" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="btPost" destination="SZU-Lq-rRZ" id="k8H-Jo-kaq"/>
+                <outlet property="containerView" destination="Qye-QU-rWa" id="HHa-Ay-KGh"/>
+                <outlet property="mainView" destination="SH6-Va-Zjf" id="Isp-am-pU2"/>
+                <outlet property="navigationView" destination="vdF-IX-oXP" id="6oB-YL-dKC"/>
+                <outlet property="orthersR" destination="br3-si-2FE" id="jHc-oZ-CeZ"/>
+                <outlet property="reactR" destination="QUO-6F-5n4" id="dSW-tJ-chD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="394"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdF-IX-oXP" customClass="NavigationView" customModule="LimeBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="yYp-w7-a8T"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYc-qn-OCO">
+                    <rect key="frame" x="0.0" y="64" width="375" height="330"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="bGf-GC-yl1" customClass="TPKeyboardAvoidingScrollView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qye-QU-rWa" customClass="GCleanView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8eM-g0-yGl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUO-6F-5n4" userLabel="React" customClass="RadioView" customModule="LimeBook" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="br3-si-2FE" customClass="RadioView" customModule="LimeBook" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="46" width="375" height="46"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="92" id="LS4-sA-u5Y"/>
+                                            </constraints>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SH6-Va-Zjf">
+                                            <rect key="frame" x="0.0" y="100" width="375" height="150"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBN-Vg-kBf">
+                                            <rect key="frame" x="0.0" y="250" width="375" height="80"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZU-Lq-rRZ" customClass="ButtonSuccess" customModule="LimeBook" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="28" width="351" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="CMb-W1-6ST"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Đăng"/>
+                                                    <connections>
+                                                        <action selector="postTouch:" destination="-1" eventType="touchUpInside" id="Fy8-Tj-rbs"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="SZU-Lq-rRZ" firstAttribute="leading" secondItem="yBN-Vg-kBf" secondAttribute="leading" constant="12" id="LNj-Kr-THA"/>
+                                                <constraint firstAttribute="trailing" secondItem="SZU-Lq-rRZ" secondAttribute="trailing" constant="12" id="bPW-Cd-lmh"/>
+                                                <constraint firstAttribute="height" constant="80" id="sTD-gB-g9w"/>
+                                                <constraint firstAttribute="bottom" secondItem="SZU-Lq-rRZ" secondAttribute="bottom" constant="12" id="z1i-sc-2k0"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="yBN-Vg-kBf" firstAttribute="top" secondItem="SH6-Va-Zjf" secondAttribute="bottom" id="7hV-Dl-TuV"/>
+                                        <constraint firstItem="8eM-g0-yGl" firstAttribute="leading" secondItem="Qye-QU-rWa" secondAttribute="leading" id="E26-fx-mXp"/>
+                                        <constraint firstItem="yBN-Vg-kBf" firstAttribute="leading" secondItem="Qye-QU-rWa" secondAttribute="leading" id="FxR-2s-XDa"/>
+                                        <constraint firstItem="8eM-g0-yGl" firstAttribute="top" secondItem="Qye-QU-rWa" secondAttribute="top" id="MlO-HE-F6F"/>
+                                        <constraint firstAttribute="trailing" secondItem="yBN-Vg-kBf" secondAttribute="trailing" id="UOk-Bd-Ju2"/>
+                                        <constraint firstAttribute="bottom" secondItem="yBN-Vg-kBf" secondAttribute="bottom" id="Ypq-Ev-st3"/>
+                                        <constraint firstAttribute="trailing" secondItem="8eM-g0-yGl" secondAttribute="trailing" id="Z96-gr-9bj"/>
+                                        <constraint firstItem="SH6-Va-Zjf" firstAttribute="top" secondItem="8eM-g0-yGl" secondAttribute="bottom" constant="8" id="c1v-U8-AhB"/>
+                                        <constraint firstItem="SH6-Va-Zjf" firstAttribute="leading" secondItem="Qye-QU-rWa" secondAttribute="leading" id="jSS-vU-1Yf"/>
+                                        <constraint firstAttribute="trailing" secondItem="SH6-Va-Zjf" secondAttribute="trailing" id="p1i-Ah-uO2"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Qye-QU-rWa" firstAttribute="top" secondItem="bGf-GC-yl1" secondAttribute="top" id="0mM-Hl-h2g"/>
+                                <constraint firstAttribute="trailing" secondItem="Qye-QU-rWa" secondAttribute="trailing" id="3S9-YE-Pj9"/>
+                                <constraint firstAttribute="bottom" secondItem="Qye-QU-rWa" secondAttribute="bottom" constant="24" id="Qfq-3T-b8n"/>
+                                <constraint firstItem="Qye-QU-rWa" firstAttribute="leading" secondItem="bGf-GC-yl1" secondAttribute="leading" id="agl-jX-ANj"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="bGf-GC-yl1" firstAttribute="top" secondItem="CYc-qn-OCO" secondAttribute="top" id="1c3-u4-R2x"/>
+                        <constraint firstAttribute="bottom" secondItem="bGf-GC-yl1" secondAttribute="bottom" id="P4j-Y1-Qb8"/>
+                        <constraint firstItem="Qye-QU-rWa" firstAttribute="width" secondItem="CYc-qn-OCO" secondAttribute="width" id="gW7-2j-Xfj"/>
+                        <constraint firstItem="bGf-GC-yl1" firstAttribute="leading" secondItem="CYc-qn-OCO" secondAttribute="leading" id="hvD-b5-c68"/>
+                        <constraint firstAttribute="trailing" secondItem="bGf-GC-yl1" secondAttribute="trailing" id="shc-Uf-P9Y"/>
+                        <constraint firstItem="Qye-QU-rWa" firstAttribute="height" secondItem="CYc-qn-OCO" secondAttribute="height" priority="1" id="zJA-zC-n7f"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vdF-IX-oXP" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="8Bo-vr-boz"/>
+                <constraint firstAttribute="bottom" secondItem="CYc-qn-OCO" secondAttribute="bottom" id="8Z0-hQ-S3B"/>
+                <constraint firstItem="vdF-IX-oXP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8x4-pu-gzu"/>
+                <constraint firstItem="CYc-qn-OCO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eLG-Po-bzj"/>
+                <constraint firstItem="vdF-IX-oXP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vHw-Oh-8UR"/>
+                <constraint firstItem="CYc-qn-OCO" firstAttribute="top" secondItem="vdF-IX-oXP" secondAttribute="bottom" id="vJw-vG-Hye"/>
+                <constraint firstAttribute="trailing" secondItem="CYc-qn-OCO" secondAttribute="trailing" id="vtA-EU-T4e"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="170" y="-79"/>
+        </view>
+    </objects>
+</document>

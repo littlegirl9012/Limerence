@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SellPostView" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="des" destination="44U-Cg-FAO" id="9aZ-pW-xgO"/>
+                <outlet property="imgSelectView" destination="iuH-z2-2cT" id="2YV-Qq-puB"/>
+                <outlet property="name" destination="k2v-mR-Ntq" id="6SG-8A-y6x"/>
+                <outlet property="price" destination="nng-47-acP" id="28b-NX-Kt0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ujR-UN-qUx">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9eI-sO-dai">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaw-0Q-WyK">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ảnh đính kèm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BE5-z4-673">
+                                    <rect key="frame" x="8" y="8" width="92" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuH-z2-2cT" customClass="ImageSelectView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="29" width="375" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="ABV-1p-OM3"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="height" destination="ABV-1p-OM3" id="izc-zS-yz9"/>
+                                    </connections>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="BE5-z4-673" firstAttribute="leading" secondItem="vaw-0Q-WyK" secondAttribute="leading" constant="8" id="0Ag-rv-48Z"/>
+                                <constraint firstAttribute="trailing" secondItem="iuH-z2-2cT" secondAttribute="trailing" id="6pz-yI-hCc"/>
+                                <constraint firstItem="iuH-z2-2cT" firstAttribute="top" secondItem="BE5-z4-673" secondAttribute="bottom" constant="4" id="BE7-KV-g9q"/>
+                                <constraint firstItem="BE5-z4-673" firstAttribute="top" secondItem="vaw-0Q-WyK" secondAttribute="top" constant="8" id="Gd0-4Z-TzB"/>
+                                <constraint firstItem="iuH-z2-2cT" firstAttribute="leading" secondItem="vaw-0Q-WyK" secondAttribute="leading" id="jxx-dY-nYT"/>
+                                <constraint firstAttribute="bottom" secondItem="iuH-z2-2cT" secondAttribute="bottom" id="rNR-ra-QhT"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2v-mR-Ntq" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="96.5" width="375" height="426.5"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="60" id="kCV-mC-woB"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nng-47-acP" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="531" width="375" height="60"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="60" id="7AY-7Y-0R8"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44U-Cg-FAO" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="599" width="375" height="60"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="60" id="DDd-yq-tBg"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="vaw-0Q-WyK" firstAttribute="leading" secondItem="9eI-sO-dai" secondAttribute="leading" id="0C3-Ly-3D1"/>
+                        <constraint firstItem="k2v-mR-Ntq" firstAttribute="top" secondItem="vaw-0Q-WyK" secondAttribute="bottom" constant="8" id="DA8-bt-TXU"/>
+                        <constraint firstAttribute="trailing" secondItem="vaw-0Q-WyK" secondAttribute="trailing" id="Ey8-SP-H6H"/>
+                        <constraint firstItem="k2v-mR-Ntq" firstAttribute="leading" secondItem="9eI-sO-dai" secondAttribute="leading" id="FLF-P8-Fkr"/>
+                        <constraint firstItem="44U-Cg-FAO" firstAttribute="top" secondItem="nng-47-acP" secondAttribute="bottom" constant="8" id="HPH-qf-gkK"/>
+                        <constraint firstAttribute="trailing" secondItem="k2v-mR-Ntq" secondAttribute="trailing" id="J4C-xR-kzd"/>
+                        <constraint firstItem="nng-47-acP" firstAttribute="top" secondItem="k2v-mR-Ntq" secondAttribute="bottom" constant="8" id="O1H-fv-uOR"/>
+                        <constraint firstItem="vaw-0Q-WyK" firstAttribute="top" secondItem="9eI-sO-dai" secondAttribute="top" id="R6Y-b8-0nB"/>
+                        <constraint firstItem="44U-Cg-FAO" firstAttribute="centerX" secondItem="nng-47-acP" secondAttribute="centerX" id="dUR-RS-Xcv"/>
+                        <constraint firstItem="44U-Cg-FAO" firstAttribute="leading" secondItem="nng-47-acP" secondAttribute="leading" id="hZ1-qV-nou"/>
+                        <constraint firstAttribute="bottom" secondItem="44U-Cg-FAO" secondAttribute="bottom" constant="8" id="uqD-ed-qD2"/>
+                        <constraint firstItem="nng-47-acP" firstAttribute="leading" secondItem="9eI-sO-dai" secondAttribute="leading" id="vcB-WB-QMR"/>
+                        <constraint firstAttribute="trailing" secondItem="nng-47-acP" secondAttribute="trailing" id="zsN-4J-AnL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="9eI-sO-dai" firstAttribute="top" secondItem="ujR-UN-qUx" secondAttribute="top" id="1c7-BD-2i5"/>
+                <constraint firstAttribute="trailing" secondItem="9eI-sO-dai" secondAttribute="trailing" id="QF7-VT-eSO"/>
+                <constraint firstItem="9eI-sO-dai" firstAttribute="leading" secondItem="ujR-UN-qUx" secondAttribute="leading" id="sAT-5O-VQx"/>
+                <constraint firstAttribute="bottom" secondItem="9eI-sO-dai" secondAttribute="bottom" id="saQ-hh-PZE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="mdE-gW-hUu"/>
+            <point key="canvasLocation" x="-189" y="-623"/>
+        </view>
+    </objects>
+</document>

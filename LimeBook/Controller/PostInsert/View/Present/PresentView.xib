@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PresentView" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="author" destination="Yj2-hc-8nZ" id="ZDW-pu-K7d"/>
+                <outlet property="des" destination="nL4-tu-B7i" id="WE5-zi-YAm"/>
+                <outlet property="name" destination="hQf-ar-WUK" id="FLR-6U-WWh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="qA5-3m-j5F">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVa-so-i04">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqc-Ra-jfE">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ảnh đính kèm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RA7-Ub-MIT">
+                                    <rect key="frame" x="8" y="8" width="92" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOW-Vd-ZRG" customClass="ImageSelectView" customModule="LimeBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="29" width="375" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="vPv-tu-AbB"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="height" destination="vPv-tu-AbB" id="Boc-l7-O4r"/>
+                                    </connections>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="YOW-Vd-ZRG" firstAttribute="leading" secondItem="aqc-Ra-jfE" secondAttribute="leading" id="2la-EQ-Gsr"/>
+                                <constraint firstAttribute="trailing" secondItem="YOW-Vd-ZRG" secondAttribute="trailing" id="5Y2-Ev-ItU"/>
+                                <constraint firstItem="YOW-Vd-ZRG" firstAttribute="top" secondItem="RA7-Ub-MIT" secondAttribute="bottom" constant="4" id="9aW-MY-Axv"/>
+                                <constraint firstItem="RA7-Ub-MIT" firstAttribute="top" secondItem="aqc-Ra-jfE" secondAttribute="top" constant="8" id="Q1I-rs-fkx"/>
+                                <constraint firstAttribute="bottom" secondItem="YOW-Vd-ZRG" secondAttribute="bottom" id="dQ8-LJ-TC7"/>
+                                <constraint firstItem="RA7-Ub-MIT" firstAttribute="leading" secondItem="aqc-Ra-jfE" secondAttribute="leading" constant="8" id="gDt-QM-bNe"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQf-ar-WUK" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="96.5" width="375" height="426.5"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="60" id="i3U-eA-vEn"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yj2-hc-8nZ" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="531" width="375" height="60"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="60" id="URa-qu-Hkw"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nL4-tu-B7i" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="599" width="375" height="60"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="60" id="tXY-J1-L0N"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="nL4-tu-B7i" firstAttribute="top" secondItem="Yj2-hc-8nZ" secondAttribute="bottom" constant="8" id="E5C-uc-tYO"/>
+                        <constraint firstItem="Yj2-hc-8nZ" firstAttribute="top" secondItem="hQf-ar-WUK" secondAttribute="bottom" constant="8" id="H6j-tQ-2g2"/>
+                        <constraint firstItem="nL4-tu-B7i" firstAttribute="leading" secondItem="Yj2-hc-8nZ" secondAttribute="leading" id="KR8-Lw-PCH"/>
+                        <constraint firstAttribute="trailing" secondItem="hQf-ar-WUK" secondAttribute="trailing" id="T4F-Nh-b1O"/>
+                        <constraint firstItem="Yj2-hc-8nZ" firstAttribute="leading" secondItem="qVa-so-i04" secondAttribute="leading" id="To8-cJ-4dx"/>
+                        <constraint firstItem="hQf-ar-WUK" firstAttribute="top" secondItem="aqc-Ra-jfE" secondAttribute="bottom" constant="8" id="Ybl-Kt-fWS"/>
+                        <constraint firstItem="aqc-Ra-jfE" firstAttribute="top" secondItem="qVa-so-i04" secondAttribute="top" id="clU-9t-5wJ"/>
+                        <constraint firstAttribute="trailing" secondItem="Yj2-hc-8nZ" secondAttribute="trailing" id="fDz-MI-sUH"/>
+                        <constraint firstItem="nL4-tu-B7i" firstAttribute="centerX" secondItem="Yj2-hc-8nZ" secondAttribute="centerX" id="pTH-7e-AAz"/>
+                        <constraint firstAttribute="trailing" secondItem="aqc-Ra-jfE" secondAttribute="trailing" id="uyp-jq-L9T"/>
+                        <constraint firstItem="aqc-Ra-jfE" firstAttribute="leading" secondItem="qVa-so-i04" secondAttribute="leading" id="w93-ck-1z8"/>
+                        <constraint firstItem="hQf-ar-WUK" firstAttribute="leading" secondItem="qVa-so-i04" secondAttribute="leading" id="wEO-Nb-3Av"/>
+                        <constraint firstAttribute="bottom" secondItem="nL4-tu-B7i" secondAttribute="bottom" constant="8" id="yL2-yW-o6R"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qVa-so-i04" secondAttribute="bottom" id="Hyw-Pd-DVR"/>
+                <constraint firstAttribute="trailing" secondItem="qVa-so-i04" secondAttribute="trailing" id="UPP-nd-CDd"/>
+                <constraint firstItem="qVa-so-i04" firstAttribute="leading" secondItem="qA5-3m-j5F" secondAttribute="leading" id="h0z-Kl-GRV"/>
+                <constraint firstItem="qVa-so-i04" firstAttribute="top" secondItem="qA5-3m-j5F" secondAttribute="top" id="nC0-4v-Bv0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="2YE-uC-kzl"/>
+            <point key="canvasLocation" x="-254" y="-695"/>
+        </view>
+    </objects>
+</document>

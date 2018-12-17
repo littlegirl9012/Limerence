@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReactBarView" customModule="LimeBook" customModuleProvider="target">
+            <connections>
+                <outlet property="btDetail" destination="sh6-6d-W2v" id="LWG-zr-cqg"/>
+                <outlet property="commentView" destination="fFR-7J-2Eq" id="y3s-Yv-3r1"/>
+                <outlet property="heartView" destination="Oga-e6-ZHC" id="1Le-fz-lkv"/>
+                <outlet property="view" destination="iN0-l3-epB" id="tSh-bm-kSe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oga-e6-ZHC" customClass="ReactUserView" customModule="LimeBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="31.5" width="54" height="38"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="UUo-8I-ds2"/>
+                        <constraint firstAttribute="width" priority="250" constant="54" id="vNC-Il-6qI"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFR-7J-2Eq" customClass="ReactUserView" customModule="LimeBook" customModuleProvider="target">
+                    <rect key="frame" x="62" y="30.5" width="80" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" priority="250" constant="80" id="65M-q1-iHF"/>
+                        <constraint firstAttribute="height" constant="40" id="fvg-uG-JL5"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sh6-6d-W2v">
+                    <rect key="frame" x="331" y="31.5" width="44" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="v2q-fO-I1C"/>
+                    </constraints>
+                    <state key="normal" image="MenuDetail"/>
+                    <connections>
+                        <action selector="rightTouch:" destination="-1" eventType="touchUpInside" id="JKO-e8-lt9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sh6-6d-W2v" firstAttribute="height" secondItem="Oga-e6-ZHC" secondAttribute="height" id="Ju7-bM-r8Y"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sh6-6d-W2v" secondAttribute="trailing" id="RDB-Zw-9Hn"/>
+                <constraint firstItem="fFR-7J-2Eq" firstAttribute="centerY" secondItem="Oga-e6-ZHC" secondAttribute="centerY" id="Rzq-yK-Dm5"/>
+                <constraint firstItem="Oga-e6-ZHC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gQD-cK-ckr"/>
+                <constraint firstItem="Oga-e6-ZHC" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="jV3-Zb-8zS"/>
+                <constraint firstItem="fFR-7J-2Eq" firstAttribute="leading" secondItem="Oga-e6-ZHC" secondAttribute="trailing" constant="8" id="kW5-24-je0"/>
+                <constraint firstItem="sh6-6d-W2v" firstAttribute="centerY" secondItem="Oga-e6-ZHC" secondAttribute="centerY" id="sHn-ZM-CQp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-61" y="83"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="MenuDetail" width="6" height="24"/>
+    </resources>
+</document>

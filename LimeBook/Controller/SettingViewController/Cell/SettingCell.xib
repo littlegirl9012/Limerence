@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="114" id="KGk-i7-Jjw" customClass="SettingCell" customModule="LimeBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="113.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnc-ZT-mv0">
+                        <rect key="frame" x="12" y="12" width="296" height="101.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCA-a0-H1q" customClass="UserImageView" customModule="LimeBook" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="48" height="89.5"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="48" id="0qY-2S-1RC"/>
+                                    <constraint firstAttribute="width" constant="48" id="IGM-Qa-vsp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cf8-sQ-jBd">
+                                <rect key="frame" x="60" y="0.0" width="248" height="101.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ex-b4-uL7">
+                                        <rect key="frame" x="0.0" y="36.5" width="248" height="17"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gds-5j-tAn">
+                                                <rect key="frame" x="0.0" y="0.0" width="248" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="gds-5j-tAn" secondAttribute="trailing" id="GJL-Ju-BXh"/>
+                                            <constraint firstAttribute="bottom" secondItem="gds-5j-tAn" secondAttribute="bottom" id="PW1-gJ-bWF"/>
+                                            <constraint firstItem="gds-5j-tAn" firstAttribute="leading" secondItem="7ex-b4-uL7" secondAttribute="leading" id="rcT-D4-K30"/>
+                                            <constraint firstItem="gds-5j-tAn" firstAttribute="top" secondItem="7ex-b4-uL7" secondAttribute="top" id="zHN-xb-lbl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7ex-b4-uL7" secondAttribute="trailing" id="bRm-T5-bsa"/>
+                                    <constraint firstItem="7ex-b4-uL7" firstAttribute="leading" secondItem="Cf8-sQ-jBd" secondAttribute="leading" id="tzl-ix-zz8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rCA-a0-H1q" secondAttribute="bottom" constant="12" id="9AA-0x-PhO"/>
+                            <constraint firstItem="Cf8-sQ-jBd" firstAttribute="top" secondItem="Egv-Ph-6tP" secondAttribute="top" id="HGz-8G-edV"/>
+                            <constraint firstItem="rCA-a0-H1q" firstAttribute="top" secondItem="vnc-ZT-mv0" secondAttribute="top" id="K8h-2w-Qev"/>
+                            <constraint firstItem="rCA-a0-H1q" firstAttribute="leading" secondItem="vnc-ZT-mv0" secondAttribute="leading" id="QWf-aK-SrE"/>
+                            <constraint firstItem="Cf8-sQ-jBd" firstAttribute="trailing" secondItem="Egv-Ph-6tP" secondAttribute="trailing" constant="12" id="QwG-7n-Slh"/>
+                            <constraint firstAttribute="bottom" secondItem="Cf8-sQ-jBd" secondAttribute="bottom" id="Tpl-ZK-wYd"/>
+                            <constraint firstItem="Cf8-sQ-jBd" firstAttribute="leading" secondItem="rCA-a0-H1q" secondAttribute="trailing" constant="12" id="Ys0-C4-eAg"/>
+                            <constraint firstItem="7ex-b4-uL7" firstAttribute="centerY" secondItem="rCA-a0-H1q" secondAttribute="centerY" id="iLP-0g-VDl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Egv-Ph-6tP"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="vnc-ZT-mv0" secondAttribute="bottom" id="3MS-5Y-C8E"/>
+                    <constraint firstAttribute="trailing" secondItem="vnc-ZT-mv0" secondAttribute="trailing" constant="12" id="H11-65-rdm"/>
+                    <constraint firstItem="vnc-ZT-mv0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="HbF-52-9Fd"/>
+                    <constraint firstItem="vnc-ZT-mv0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="t95-fQ-rMe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lbName" destination="gds-5j-tAn" id="EF9-zB-7gJ"/>
+                <outlet property="userImageView" destination="rCA-a0-H1q" id="Un2-Aj-qYV"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="-49"/>
+        </tableViewCell>
+    </objects>
+</document>
