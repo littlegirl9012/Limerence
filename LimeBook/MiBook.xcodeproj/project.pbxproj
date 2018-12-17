@@ -2425,14 +2425,8 @@
 		51B21C2B2123C5A80017191B = {
 			isa = PBXGroup;
 			children = (
-				51C571D521AEF12F008F6347 /* TFHpple.h */,
-				51C571D921AEF130008F6347 /* TFHpple.m */,
-				51C571D621AEF12F008F6347 /* TFHppleElement.h */,
-				51C571DA21AEF130008F6347 /* TFHppleElement.m */,
-				51C571D721AEF130008F6347 /* XPathQuery.h */,
-				51C571D821AEF130008F6347 /* XPathQuery.m */,
-				510D160321A9296B004CD2DE /* template2.html */,
-				510D15D921A84771004CD2DE /* template.html */,
+				51B9071221C74F5C00E20510 /* New Group */,
+				51B9071121C74F2000E20510 /* TIkiData */,
 				519FDC7F212ECA5D003DE031 /* Resource */,
 				519FDC70212DCAF4003DE031 /* Services */,
 				517D5D5521248C1B00EC32AD /* View */,
@@ -2550,6 +2544,28 @@
 				51C80DFE216E7E6500F825EA /* FeelingListView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		51B9071121C74F2000E20510 /* TIkiData */ = {
+			isa = PBXGroup;
+			children = (
+				51C571D521AEF12F008F6347 /* TFHpple.h */,
+				51C571D921AEF130008F6347 /* TFHpple.m */,
+				51C571D621AEF12F008F6347 /* TFHppleElement.h */,
+				51C571DA21AEF130008F6347 /* TFHppleElement.m */,
+				51C571D721AEF130008F6347 /* XPathQuery.h */,
+				51C571D821AEF130008F6347 /* XPathQuery.m */,
+				510D160321A9296B004CD2DE /* template2.html */,
+				510D15D921A84771004CD2DE /* template.html */,
+			);
+			path = TIkiData;
+			sourceTree = "<group>";
+		};
+		51B9071221C74F5C00E20510 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		51B94B58218D700800AF9531 /* NewsSearch */ = {
