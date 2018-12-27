@@ -12,8 +12,9 @@ import UIKit
 
 
 
-class NewsDetailViewController: MasterViewController,NewsCommentCellDelegate, UITableViewDelegate, UITableViewDataSource, ComposeViewDelegate, BookInfoDetailCellDelegate, BookActionViewDelegate, BookTakeUserViewDelegate, BookFeelCellDelegate{
+class NewsDetailViewController: MasterViewController,NewsCommentCellDelegate, UITableViewDelegate, UITableViewDataSource, ComposeViewDelegate, BookInfoDetailCellDelegate, BookActionViewDelegate, BookTakeUserViewDelegate, BookFeelCellDelegate, ReportViewDelegate{
     
+    @IBOutlet weak var btWarning: UIButton!
     @IBOutlet weak var compose: ComposerView!
     @IBOutlet weak var btAction: UIButton!
     var book  : Book!
@@ -63,6 +64,12 @@ class NewsDetailViewController: MasterViewController,NewsCommentCellDelegate, UI
         {
             navigationView.bringSubview(toFront: self.btAction)
         }
+        
+        if(book.user_id != userInstance.user.id)
+        {
+            navigationView.bringSubview(toFront: self.btWarning)
+        }
+
     }
     deinit {
         compose.removeObser()
@@ -231,5 +238,28 @@ class NewsDetailViewController: MasterViewController,NewsCommentCellDelegate, UI
             push(chat)
         }
     }
-
+    @IBAction func reportTouch(_ sender: Any) {
+        let reportView = ReportView.init()
+        reportView.delegate = self;
+        view.alertBox(reportView)
+    }
+    
+    func reportViewDidClose() {
+        view.hideAlertBox()
+    }
+    
+    func reportViewDidSend(_ content: String) {
+        view.hideAlertBox()
+        let request = BookReport_Request()
+        request.user_id = userInstance.user.id
+        request.book_id = self.book.id
+        request.content = content
+        
+        weak var weakself = self;
+        services.bookReport(request, success: {
+            weakself?.view.info(title: "Thông Báo", desc: "Gửi báo cáo thành công. Chúng tôi sẽ xem xét yêu cầu của bạn")
+        }) { (error) in
+            
+        }
+    }
 }

@@ -35,7 +35,7 @@ enum AlertButton {
 let AnyViewTag = 101
 
 
-let ALERTBOXCONTAINERTAG =  9001
+let ALERTBOXCONTAINERTAG =  9009
 let ALERTBOXALPHATAG =  9001
 
 public extension UIView

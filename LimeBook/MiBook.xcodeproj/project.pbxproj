@@ -1303,13 +1303,6 @@
 			path = GeneralPost;
 			sourceTree = "<group>";
 		};
-		511342E12131DE0D008A33B5 /* UserSimpleInfo */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UserSimpleInfo;
-			sourceTree = "<group>";
-		};
 		5113846E213252F8003EFFFE /* ImageSelect */ = {
 			isa = PBXGroup;
 			children = (
@@ -1733,7 +1726,6 @@
 				51B0C5FA21A0832D00376CB0 /* BookUserView */,
 				51B0C5F421A020E500376CB0 /* BookTakeView */,
 				51A3DB33219896290012D8C0 /* BookAddActionView */,
-				51A3DB32219896100012D8C0 /* BookAddFromLibrary */,
 				51A3DB2C2196B95D0012D8C0 /* BookTakeUserView */,
 				5100ED062180E889005EE308 /* UserSearchEngineViewController */,
 				51C8685A2164B45F007260AD /* AuthorInfo */,
@@ -1752,7 +1744,6 @@
 				5195B249213D507D00819ACC /* SearchEngine */,
 				5195B231213C2CC900819ACC /* Notify */,
 				5194C3B52136C5A400530964 /* Feed */,
-				511342E12131DE0D008A33B5 /* UserSimpleInfo */,
 				511342CA21317E78008A33B5 /* Book */,
 				511342BF21317328008A33B5 /* PostInsert */,
 				519FDC77212DCF22003DE031 /* Consulant */,
@@ -2362,13 +2353,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		51A3DB32219896100012D8C0 /* BookAddFromLibrary */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BookAddFromLibrary;
-			sourceTree = "<group>";
-		};
 		51A3DB33219896290012D8C0 /* BookAddActionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2852,8 +2836,8 @@
 		51FFAF0721C2D03500BB0459 /* ReportView */ = {
 			isa = PBXGroup;
 			children = (
-				51FFAF0821C2D25500BB0459 /* ReportView.xib */,
 				51FFAF0A21C2D27100BB0459 /* ReportView.swift */,
+				51FFAF0821C2D25500BB0459 /* ReportView.xib */,
 			);
 			path = ReportView;
 			sourceTree = "<group>";

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostInsertViewController: MasterViewController , RadioViewDelegate{
+class PostInsertViewController: MasterViewController ,LegancyViewDelegate, RadioViewDelegate{
 
     
     
@@ -42,6 +42,7 @@ class PostInsertViewController: MasterViewController , RadioViewDelegate{
         if(!isAcceptLegancy)
         {
             let legancyView = LegancyView()
+            legancyView.delegate = self;
             view.alertBox(legancyView, ratio: 0.9)
         }
         
@@ -219,6 +220,10 @@ class PostInsertViewController: MasterViewController , RadioViewDelegate{
         }) { (error) in
             self.view.hideHub()
         }
+    }
+    
+    func LegancyViewDidClose() {
+        view.hideAlertBox()
     }
     
 }

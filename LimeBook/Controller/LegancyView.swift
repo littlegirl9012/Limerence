@@ -8,9 +8,15 @@
 
 import UIKit
 import WebKit
+protocol LegancyViewDelegate :class
+{
+    func LegancyViewDidClose()
+}
+
 class LegancyView: GreenView, RadioViewDelegate {
-    @IBOutlet weak var webView: WKWebView!
     
+    weak var delegate : LegancyViewDelegate?
+    @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var btClose: ButtonSuccess!
     @IBOutlet weak var rView: RadioView!
     /*
@@ -22,7 +28,7 @@ class LegancyView: GreenView, RadioViewDelegate {
     */
     @IBAction func closeAction(_ sender: Any) {
         
-        super.hideAlertBox()
+        delegate?.LegancyViewDidClose()
     }
     
     override func initStyle() {

@@ -445,6 +445,27 @@ router.post('/like',function(req,res)
     });
 });
 
+
+router.post('/report',function(req,res)
+{
+
+    var user_id = req.param('user_id');
+    var book_id = req.param('book_id');
+    var content = req.param('content');
+
+    connection.query("CALL  book_report(?,?,?) ;",[user_id,book_id,content],function(err,rows)
+    {
+        if(!err)
+        {
+            res.status(200).send(Mi.responseProcess(err, rows[0]));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+});
+
 router.post('/trading',function(req,res)
 {
 

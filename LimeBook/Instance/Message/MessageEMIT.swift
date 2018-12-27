@@ -82,11 +82,17 @@ class UserSearchEngine_Request : Mi
     @objc dynamic var keyword = "" ;
 }
 
-
-
 class BookAuthor_Request : Mi
 {
     @objc dynamic var keyword = "" ;
+}
+
+class BookReport_Request : Mi
+{
+    @objc dynamic var user_id = -1 ;
+    @objc dynamic var book_id = -1 ;
+    @objc dynamic var content = "" ;
+
 }
 
 

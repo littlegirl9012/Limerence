@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController" customModule="LimeBook" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController" customModule="MiBook" customModuleProvider="target">
             <connections>
                 <outlet property="btAction" destination="szj-fe-fNd" id="0wV-9C-lOQ"/>
+                <outlet property="btWarning" destination="xUU-XI-HhM" id="2VR-Ck-Udj"/>
                 <outlet property="compose" destination="abB-Ee-Lcl" id="prA-fi-rw5"/>
                 <outlet property="navigationView" destination="78p-Wr-6Rg" id="vKR-RD-Bax"/>
                 <outlet property="tbView" destination="NUZ-lw-W1d" id="fNK-ge-pig"/>
@@ -23,9 +24,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78p-Wr-6Rg" customClass="NavigationView" customModule="LimeBook" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78p-Wr-6Rg" customClass="NavigationView" customModule="MiBook" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUU-XI-HhM">
+                            <rect key="frame" x="289" y="20" width="46" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="Tou-zS-mhl"/>
+                            </constraints>
+                            <state key="normal" image="k_warning"/>
+                            <connections>
+                                <action selector="reportTouch:" destination="-1" eventType="touchUpInside" id="C0p-Jj-MPs"/>
+                            </connections>
+                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szj-fe-fNd">
                             <rect key="frame" x="335" y="20" width="40" height="44"/>
                             <constraints>
@@ -39,8 +50,11 @@
                     </subviews>
                     <color key="backgroundColor" red="0.071262716130000001" green="0.45187341450000001" blue="0.91223826139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="szj-fe-fNd" firstAttribute="leading" secondItem="xUU-XI-HhM" secondAttribute="trailing" id="BFb-IY-hPm"/>
                         <constraint firstAttribute="bottom" secondItem="szj-fe-fNd" secondAttribute="bottom" id="Cu9-Tp-e4O"/>
+                        <constraint firstItem="xUU-XI-HhM" firstAttribute="top" secondItem="szj-fe-fNd" secondAttribute="top" id="cnV-Wh-7ly"/>
                         <constraint firstAttribute="height" constant="64" id="hT0-iP-6D7"/>
+                        <constraint firstAttribute="bottom" secondItem="xUU-XI-HhM" secondAttribute="bottom" id="iRM-8I-Icd"/>
                         <constraint firstItem="szj-fe-fNd" firstAttribute="top" secondItem="78p-Wr-6Rg" secondAttribute="top" constant="20" id="xLJ-tO-QFH"/>
                         <constraint firstAttribute="trailing" secondItem="szj-fe-fNd" secondAttribute="trailing" id="yag-TN-UuX"/>
                     </constraints>
@@ -55,7 +69,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCu-hW-vh8" customClass="LineView" customModule="LimeBook" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCu-hW-vh8" customClass="LineView" customModule="MiBook" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="562" width="375" height="1"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -74,7 +88,7 @@
                                 <constraint firstAttribute="trailing" secondItem="LCu-hW-vh8" secondAttribute="trailing" id="m6x-ys-j8B"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abB-Ee-Lcl" customClass="ComposerView" customModule="LimeBook" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abB-Ee-Lcl" customClass="ComposerView" customModule="MiBook" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="563" width="375" height="40"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -112,5 +126,6 @@
     </objects>
     <resources>
         <image name="book_action" width="18" height="23"/>
+        <image name="k_warning" width="21" height="18"/>
     </resources>
 </document>

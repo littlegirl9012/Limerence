@@ -768,6 +768,19 @@ extension Services
         }
     }
     
+    func bookReport(_ request :  BookReport_Request, success :@escaping (()->Void), failure: ((String)->Void))
+    {
+        DispatchQueue.global(qos: .background).async {
+            services.request(api: .bookReport, param: request.dictionary(), success: { (response) in
+                success()
+            }) { (error) in
+                
+            }
+        }
+    }
+
+    
+    
     func bookSearchAll(_ request :  BookSearch_Request, success :@escaping (([Book])->Void), failure: ((String)->Void))
     {
         DispatchQueue.global(qos: .background).async {
