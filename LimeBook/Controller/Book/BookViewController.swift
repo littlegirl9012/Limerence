@@ -93,9 +93,8 @@ class BookViewController: MasterViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(user.isMe())
         {
-            let add = BookAddViewController()
+            let add = BookDetailViewController()
             add.book = self.book[indexPath.row]
-            add.isEdit = true ;
             push(add)
         }
     }

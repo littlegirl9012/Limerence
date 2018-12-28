@@ -13,12 +13,7 @@ extension UIImageView
 {
     func setSD(_ url : String)
     {
-        weak var weakself = self;
-        let job = BlockOperation.init
-        {
-            weakself?.sd_setImage(with: URL(string: url), placeholderImage: "userbackground.jpg".image(), options: .refreshCached)
-        }
-        mediaQueue.mQueue.addOperation(job)
+        sd_setImage(with: URL(string: url), placeholderImage: "userbackground.jpg".image(), options: .refreshCached)
     }
 
 }

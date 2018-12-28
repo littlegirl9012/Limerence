@@ -522,6 +522,8 @@
 		51F23DEB21C1052400846E50 /* Legancy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51F23DE821C1052300846E50 /* Legancy@2x.png */; };
 		51F23DEC21C1052400846E50 /* Legancy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51F23DE921C1052400846E50 /* Legancy@3x.png */; };
 		51F23DED21C1052400846E50 /* Legancy.png in Resources */ = {isa = PBXBuildFile; fileRef = 51F23DEA21C1052400846E50 /* Legancy.png */; };
+		51F3B4F821D5496F00B38990 /* BookDetailTradingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F3B4F721D5496E00B38990 /* BookDetailTradingView.swift */; };
+		51F3B4FB21D5505400B38990 /* BookDetailTradingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F3B4FA21D5505400B38990 /* BookDetailTradingView.xib */; };
 		51FFAF0921C2D25500BB0459 /* ReportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FFAF0821C2D25500BB0459 /* ReportView.xib */; };
 		51FFAF0B21C2D27100BB0459 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FFAF0A21C2D27100BB0459 /* ReportView.swift */; };
 /* End PBXBuildFile section */
@@ -1075,6 +1077,9 @@
 		51F23DE821C1052300846E50 /* Legancy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Legancy@2x.png"; sourceTree = "<group>"; };
 		51F23DE921C1052400846E50 /* Legancy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Legancy@3x.png"; sourceTree = "<group>"; };
 		51F23DEA21C1052400846E50 /* Legancy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Legancy.png; sourceTree = "<group>"; };
+		51F3B4F721D5496E00B38990 /* BookDetailTradingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailTradingView.swift; sourceTree = "<group>"; };
+		51F3B4F921D54B0800B38990 /* sdfdfs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = sdfdfs.xib; path = /Volumes/Data/Limerence/LimeBook/Controller/BookDetail/sdfdfs.xib; sourceTree = "<absolute>"; };
+		51F3B4FA21D5505400B38990 /* BookDetailTradingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailTradingView.xib; sourceTree = "<group>"; };
 		51FFAF0821C2D25500BB0459 /* ReportView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportView.xib; sourceTree = "<group>"; };
 		51FFAF0A21C2D27100BB0459 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		A60518A3DF727616F1EDACD4 /* Pods_LimeBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LimeBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1814,7 +1819,6 @@
 		517D5D5521248C1B00EC32AD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				51FFAF0621C2D01F00BB0459 /* Re */,
 				5111D5EC21B9039C00FF408A /* ContactView */,
 				510333FC21706F5F00552469 /* ImageBook */,
 				519B8706216A0CCA00A94A8D /* SimpleNavi */,
@@ -1822,7 +1826,6 @@
 				517E8CD3214D1A8500C2DF3B /* ImageDisplayView */,
 				517E8CD8214D1B4000C2DF3B /* View */,
 				5195B230213C0D1100819ACC /* HTTableView */,
-				5195B21E213C03B400819ACC /* GeneralFoo */,
 				5195B215213A52FF00819ACC /* Hud */,
 				51846AF621371825002D60EC /* Line */,
 				5194C3E42137000900530964 /* ImageGroup */,
@@ -2149,13 +2152,6 @@
 				5195B217213A52FF00819ACC /* MIHud.xib */,
 			);
 			path = Hud;
-			sourceTree = "<group>";
-		};
-		5195B21E213C03B400819ACC /* GeneralFoo */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GeneralFoo;
 			sourceTree = "<group>";
 		};
 		5195B223213C0B9400819ACC /* View */ = {
@@ -2677,6 +2673,9 @@
 			children = (
 				51C80CF8216B0CFE00F825EA /* BookDetailViewController.swift */,
 				51C80CF9216B0CFE00F825EA /* BookDetailViewController.xib */,
+				51F3B4F721D5496E00B38990 /* BookDetailTradingView.swift */,
+				51F3B4FA21D5505400B38990 /* BookDetailTradingView.xib */,
+				51F3B4F921D54B0800B38990 /* sdfdfs.xib */,
 			);
 			path = BookDetail;
 			sourceTree = "<group>";
@@ -2824,13 +2823,6 @@
 				51F23DE621C0F8F500846E50 /* LegancyView.xib */,
 			);
 			name = LegancyView;
-			sourceTree = "<group>";
-		};
-		51FFAF0621C2D01F00BB0459 /* Re */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Re;
 			sourceTree = "<group>";
 		};
 		51FFAF0721C2D03500BB0459 /* ReportView */ = {
@@ -3096,6 +3088,7 @@
 				5194C3E82137003F00530964 /* ImageGroup1.xib in Resources */,
 				510B00C6215AAFD500EFC8E4 /* ReactView.xib in Resources */,
 				517D5CFA2123CB7200EC32AD /* GPhone.png in Resources */,
+				51F3B4FB21D5505400B38990 /* BookDetailTradingView.xib in Resources */,
 				51B8525E215CE030007CF97D /* ReactUserView.xib in Resources */,
 				5103340221706FA400552469 /* ImageBook.xib in Resources */,
 				515A4EBE2147FF0A000CF66D /* RegisterViewController.xib in Resources */,
@@ -3436,6 +3429,7 @@
 				5195B23A213CDAAC00819ACC /* UserViewController.swift in Sources */,
 				51B8522A215C016A007CF97D /* LibraryDetailCell.swift in Sources */,
 				51C571DB21AEF131008F6347 /* XPathQuery.m in Sources */,
+				51F3B4F821D5496F00B38990 /* BookDetailTradingView.swift in Sources */,
 				517D5D4C21248A7300EC32AD /* MessageTargetCell.swift in Sources */,
 				5118A24421B31BD600036DE9 /* CommunicateTopView.swift in Sources */,
 				5188B4DE214FE49E00190188 /* UserEditViewController.swift in Sources */,

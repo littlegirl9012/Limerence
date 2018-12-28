@@ -466,6 +466,64 @@ router.post('/report',function(req,res)
     });
 });
 
+
+
+
+router.post('/update/type',function(req,res)
+{
+
+    var user_id = req.param('user_id');
+    var book_id = req.param('book_id');
+    var content = req.param('content');
+    var price = req.param('price');
+    var images = req.param('images');
+    var book_type = req.param('book_type');
+
+
+
+    var feature_image = "";
+
+    if(images.length > 0)
+    {
+        feature_image =  images[0];
+    }
+
+    if(images.length > 0)
+    {
+        var records = [] ;
+        for (var i in images) 
+        {
+            var unit = images[i];
+            records.push([book_id,unit]) ;
+        }
+
+
+
+        connection.query("CALL  book_image_delete(?);",[book_id],function(err,rows)
+        {
+            var query = "INSERT INTO book_image(book_id,image) VALUES ?";
+            connection.query(query, [records], function(err2, result) {
+            });
+
+        });
+    }
+
+
+    connection.query("CALL  book_update_type(?,?,?,?,?,?);",[user_id,book_id,book_type,content,price,feature_image],function(err,rows)
+    {
+        if(!err)
+        {
+            res.status(200).send(Mi.responseProcess(err, rows[0]));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+});
+
+
+
 router.post('/trading',function(req,res)
 {
 

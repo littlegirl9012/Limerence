@@ -617,6 +617,16 @@ class BookDetail_Request: Mi
     @objc dynamic var user_id = -1;
 }
 
+class BookUpdateType_Request: Mi
+{
+    @objc dynamic var book_id = -1;
+    @objc dynamic var user_id = -1;
+    @objc dynamic var images  : [String] = [];
+    @objc dynamic var price = 0.0;
+    @objc dynamic var content = "";
+    @objc dynamic var book_type = 1;
+
+}
 
 
 extension Services
@@ -837,5 +847,15 @@ extension Services
         }
     }
 
+    func bookUpdateType(_ request :  BookUpdateType_Request, success :@escaping (()->Void), failure: ((String)->Void))
+    {
+        DispatchQueue.global(qos: .background).async {
+            services.request(api: .bookUpdateType, param: request.dictionary(), success: { (response) in
+                success()
+            }) { (error) in
+                
+            }
+        }
+    }
 
 }

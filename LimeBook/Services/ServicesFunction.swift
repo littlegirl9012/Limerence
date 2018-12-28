@@ -27,6 +27,7 @@ enum APIFunction : String
     case bookTrading    = "book/trading"
     case bookFeed       = "book/feed"
     case bookReport     = "book/report"
+    case bookUpdateType     = "book/update/type"
 
     
     
