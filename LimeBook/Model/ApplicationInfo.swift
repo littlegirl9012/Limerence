@@ -12,10 +12,7 @@ class ApplicationInfo: Mi {
 
     @objc dynamic var id = -1;
     @objc dynamic var name = "";
-    @objc dynamic var version = "";
-    @objc dynamic var maintenance = false;
-    @objc dynamic var appstore_link = "";
-    @objc dynamic var google_store_link = "";
+    @objc dynamic var value = "";
 
     class func  list(data : [Dictionary<String, Any>]) -> [ApplicationInfo]
     {

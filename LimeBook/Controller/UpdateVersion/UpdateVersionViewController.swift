@@ -17,8 +17,6 @@ class UpdateVersionViewController: MasterViewController {
     }
     @IBAction func versionTouch(_ sender: Any)
     {
-        UIApplication.shared.openURL(NSURL(string:userInstance.appInfo.appstore_link)! as URL)
-
     }
     
     override func didReceiveMemoryWarning() {

@@ -28,7 +28,6 @@ class PNServicesInstance: NSObject {
         let dictionary = info["message"]
         let newMessate = PNMessage.init(dictionary: dictionary as! NSDictionary)
         UNUserNotificationCenter.current().getDeliveredNotifications { (nodes) in
-            
             var uniqueIden : [String] = []
             for item in nodes
             {

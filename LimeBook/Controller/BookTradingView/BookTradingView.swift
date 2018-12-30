@@ -9,6 +9,7 @@
 import UIKit
 protocol BookTradingViewDelegate : class {
     func bookTradingAddSuccess()
+    func bookTradingMessageTouch (_ book : Book)
 }
 
 class BookTradingView: GreenView {
@@ -64,5 +65,11 @@ class BookTradingView: GreenView {
     @IBAction func closeTouch(_ sender: Any) {
         superview!.hideAlertBox()
     }
+    
+    @IBAction func sendMessageTouch(_ sender: Any)
+    {
+        delegate?.bookTradingMessageTouch(self.book)
+    }
+
     
 }

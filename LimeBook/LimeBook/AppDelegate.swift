@@ -169,14 +169,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]){ (granted, error) in }
         application.registerForRemoteNotifications()
         
-        startApp()
+       
         
         
-        
-        
-        
-        
-        
+        self.window?.rootViewController = IntroViewController()
         
         
         return true
@@ -187,31 +183,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func startApp()
     {
-        services.applicationInfo(success: { (response) in
-            if(response.count > 0)
-            {
-                let appInfo = response.last
-                userInstance.setApplicationInfo(appInfo!)
-                if(appInfo?.maintenance)!
-                {
-                    self.maintenance()
-                    return
-                }
-                if(device.Version == appInfo?.version)
-                {
-                    self.matchVersion()
-                    return
-                }
-                else
-                {
-                    self.errorVersion()
-                }
-            }
-            
-            
-        }) { (error) in
-            
-        }
         
     }
     
@@ -284,7 +255,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             self.loginNavi = UINavigationController.init(rootViewController: loginVC)
             self.window?.rootViewController  = self.loginNavi
             self.loginNavi.isNavigationBarHidden = true ;
-            
         }
     }
     
@@ -315,11 +285,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func applicationWillResignActive(_ application: UIApplication)
     {
-        //        print("applicationWillResignActive")
-        //        if(userInstance.isLogin)
-        //        {
-        //            messageInstance.disConnectSocket()
-        //        }
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {

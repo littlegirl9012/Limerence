@@ -198,9 +198,9 @@
                                 <constraint firstAttribute="height" constant="44" id="lpj-EA-bP1"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="17"/>
-                            <state key="normal" title="Thêm vào giỏ hàng"/>
+                            <state key="normal" title="Trò chuyện với người bán"/>
                             <connections>
-                                <action selector="addTouch:" destination="-1" eventType="touchUpInside" id="GOJ-4r-Vrz"/>
+                                <action selector="sendMessageTouch:" destination="-1" eventType="touchUpInside" id="cmW-1d-2rl"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZ8-sv-x9Z">
@@ -209,7 +209,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="0GT-YN-lth"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="17"/>
                             <state key="normal" title="Đóng"/>
                             <connections>
                                 <action selector="closeTouch:" destination="-1" eventType="touchUpInside" id="39i-LE-naP"/>

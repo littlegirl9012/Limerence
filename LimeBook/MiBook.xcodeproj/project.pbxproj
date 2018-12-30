@@ -524,6 +524,9 @@
 		51F23DED21C1052400846E50 /* Legancy.png in Resources */ = {isa = PBXBuildFile; fileRef = 51F23DEA21C1052400846E50 /* Legancy.png */; };
 		51F3B4F821D5496F00B38990 /* BookDetailTradingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F3B4F721D5496E00B38990 /* BookDetailTradingView.swift */; };
 		51F3B4FB21D5505400B38990 /* BookDetailTradingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F3B4FA21D5505400B38990 /* BookDetailTradingView.xib */; };
+		51F3B4FE21D5E04F00B38990 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F3B4FC21D5E04F00B38990 /* IntroViewController.swift */; };
+		51F3B4FF21D5E04F00B38990 /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F3B4FD21D5E04F00B38990 /* IntroViewController.xib */; };
+		51F3B50121D5E1E800B38990 /* AppInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F3B50021D5E1E800B38990 /* AppInstance.swift */; };
 		51FFAF0921C2D25500BB0459 /* ReportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FFAF0821C2D25500BB0459 /* ReportView.xib */; };
 		51FFAF0B21C2D27100BB0459 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FFAF0A21C2D27100BB0459 /* ReportView.swift */; };
 /* End PBXBuildFile section */
@@ -1080,6 +1083,9 @@
 		51F3B4F721D5496E00B38990 /* BookDetailTradingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailTradingView.swift; sourceTree = "<group>"; };
 		51F3B4F921D54B0800B38990 /* sdfdfs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = sdfdfs.xib; path = /Volumes/Data/Limerence/LimeBook/Controller/BookDetail/sdfdfs.xib; sourceTree = "<absolute>"; };
 		51F3B4FA21D5505400B38990 /* BookDetailTradingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailTradingView.xib; sourceTree = "<group>"; };
+		51F3B4FC21D5E04F00B38990 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		51F3B4FD21D5E04F00B38990 /* IntroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
+		51F3B50021D5E1E800B38990 /* AppInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInstance.swift; sourceTree = "<group>"; };
 		51FFAF0821C2D25500BB0459 /* ReportView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportView.xib; sourceTree = "<group>"; };
 		51FFAF0A21C2D27100BB0459 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		A60518A3DF727616F1EDACD4 /* Pods_LimeBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LimeBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1673,6 +1679,7 @@
 				51615CB82157F91700389CDD /* MediaQueue.swift */,
 				51E362D121594B75002C875F /* CategoryInstance.swift */,
 				516D3B02217F55BD00BCE156 /* XMPPServices.swift */,
+				51F3B50021D5E1E800B38990 /* AppInstance.swift */,
 			);
 			path = Instance;
 			sourceTree = "<group>";
@@ -1765,6 +1772,8 @@
 				517D5D35212489D400EC32AD /* Contact */,
 				51B94B58218D700800AF9531 /* NewsSearch */,
 				51D5858621959D3700D4DF09 /* BookActionView */,
+				51F3B4FC21D5E04F00B38990 /* IntroViewController.swift */,
+				51F3B4FD21D5E04F00B38990 /* IntroViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3210,6 +3219,7 @@
 				5188B4EC214FF90200190188 /* CalendarInputView.xib in Resources */,
 				51B21C3D2123C5A80017191B /* Main.storyboard in Resources */,
 				5176454521B660E100CAA2A9 /* BookTradingViewController.xib in Resources */,
+				51F3B4FF21D5E04F00B38990 /* IntroViewController.xib in Resources */,
 				519B86FC21686A7F00A94A8D /* PostSelectView.xib in Resources */,
 				51A3DB242195DEF20012D8C0 /* BookActionView.xib in Resources */,
 				519B870021687D2800A94A8D /* RatingView.xib in Resources */,
@@ -3389,6 +3399,7 @@
 				517D5D122123CB7300EC32AD /* GreenCheckbox.swift in Sources */,
 				51A735AF213FFD2300070872 /* NotificationCell.swift in Sources */,
 				519FDC65212D6DA2003DE031 /* FriendViewController.swift in Sources */,
+				51F3B50121D5E1E800B38990 /* AppInstance.swift in Sources */,
 				510B00CF215AB9DA00EFC8E4 /* BookSelectViewController.swift in Sources */,
 				517D5D232123CB9F00EC32AD /* NotifyInstance.swift in Sources */,
 				51176B6A21736883003ECCAF /* BookFeelCell.swift in Sources */,
@@ -3529,6 +3540,7 @@
 				511384992132C71A003EFFFE /* OthersPostView.swift in Sources */,
 				5195B247213D008B00819ACC /* UserInfoViewController.swift in Sources */,
 				51C8677E216299A6007260AD /* CommentInnerView.swift in Sources */,
+				51F3B4FE21D5E04F00B38990 /* IntroViewController.swift in Sources */,
 				51C80CFA216B0CFE00F825EA /* BookDetailViewController.swift in Sources */,
 				51C80DFD216E7E3900F825EA /* FeelingListView.swift in Sources */,
 				517D5D252123CB9F00EC32AD /* UserInstance.swift in Sources */,

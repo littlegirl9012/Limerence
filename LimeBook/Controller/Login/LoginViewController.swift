@@ -47,7 +47,6 @@ class LoginViewController: MasterViewController,RegisterDelegate {
         
         passwordField.setSecurity(security: true)
 
-//        btLogin.backgroundColor = templace.mainAColor
         btLogin.setTitleColor(UIColor.white, for: .normal)
         btLogin.drawRadius(4)
         
@@ -133,7 +132,7 @@ class LoginViewController: MasterViewController,RegisterDelegate {
             if(response.count > 0)
             {
                 userInstance.login(response[0])
-                userInstance.setPassword(self.passwordField.content)
+                userInstance.setPassword(user.password)
 
                 if(response[0].info_success)
                 {

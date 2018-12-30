@@ -164,14 +164,12 @@ public extension String
     }
     
     
-    public func toBool() -> Bool?
+    public func toBool() -> Bool
     {
-        switch self
+        switch self.uppercased()
         {
-        case "True", "true", "yes", "1":
+        case "TRUE", "YES", "1":
             return true
-        case "False", "false", "no", "0","2":
-            return false
         default:
             return false
         }

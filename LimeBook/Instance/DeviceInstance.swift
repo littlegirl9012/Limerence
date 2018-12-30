@@ -46,8 +46,6 @@ class DeviceInstance: NSObject {
     func appVersion()
     {
         let dictionary = Bundle.main.infoDictionary!
-        self.Version = dictionary["CFBundleShortVersionString"] as! String
-        self.revision = dictionary["CFBundleVersion"] as! String
         
         self.Name =   UIDevice.current.name
         self.OS =     UIDevice.current.systemVersion

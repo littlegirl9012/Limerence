@@ -43,8 +43,6 @@ var application = require('./routes/application');
 app.use('/application', application);
 
 
-
-
 var device = require('./routes/device');
 app.use('/device', device);
 

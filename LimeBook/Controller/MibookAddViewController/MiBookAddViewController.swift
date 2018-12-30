@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MiBookAddViewController: MasterViewController , BookCategoryViewDelegate{
+class MiBookAddViewController: MasterViewController, LegancyViewDelegate , BookCategoryViewDelegate{
     @IBOutlet weak var nameField: PostUnitView!
     @IBOutlet weak var authorField: PostUnitView!
     @IBOutlet weak var categoryField: PostUnitView!
@@ -52,6 +52,15 @@ class MiBookAddViewController: MasterViewController , BookCategoryViewDelegate{
             bookCat.delegate = self;
             self.push(bookCat)
         }
+        
+        let isAcceptLegancy = userInstance.getAcceptLagency()
+        if(!isAcceptLegancy)
+        {
+            let legancyView = LegancyView()
+            legancyView.delegate = self;
+            view.alertBox(legancyView, ratio: 0.9)
+        }
+
 
     }
     
@@ -184,6 +193,10 @@ class MiBookAddViewController: MasterViewController , BookCategoryViewDelegate{
         yearField.clear()
         categorySelect.removeAll()
         imgSelectView.clear()
+    }
+    
+    func LegancyViewDidClose() {
+        view.hideAlertBox()
     }
 
 }

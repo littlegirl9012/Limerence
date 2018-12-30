@@ -51,8 +51,8 @@ enum APIFunction : String
     case contactAccept = "contact/accpet"
     case contactDelete = "contact/delete"
 
-    case applicationInfo = "application/info"
-    
+    case applicationInfo = "application/get/info"
+
     case deviceUpdate = "device/update"
 
     case categoryList = "category/list"

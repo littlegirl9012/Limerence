@@ -75,4 +75,15 @@ class BookTradingViewController: MasterViewController , UITableViewDelegate,UITa
         view.hideAlertBox()
         view.info(title: "Thông báo", desc: "Đã thêm sách vào giỏ hàng.")
     }
+    
+    func bookTradingMessageTouch(_ book: Book) {
+        view.hideAlertBox()
+        let user = User()
+        user.aliasname = book.aliasname
+        user.id = book.user_id
+        let chat = ChatViewController()
+        chat.target = user
+        push(chat)
+
+    }
 }

@@ -47,16 +47,6 @@ class UserInstance: NSObject
     
     func setApplicationInfo(_ appInfo : ApplicationInfo)
     {
-        self.appInfo = appInfo
-        
-        if(appInfo.version == device.Version)
-        {
-            self.isMatchVersion = true;
-        }
-        else
-        {
-            self.isMatchVersion = false;
-        }
     }
     
     func login(_ userLogin : User)
