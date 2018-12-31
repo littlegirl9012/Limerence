@@ -67,8 +67,6 @@ class FunctionViewController: MasterViewController, UITableViewDelegate, UITable
         tbView.setIdentifier("SettingCell");
         tbView.setIdentifier("SettingItemCell");
         
-        
-        
         let bookRound = SettingItem.init("Sách quanh tôi", "BookRound".image())
         bookRound.settingType = . bookMap
         bookRound.color = "33A068".hexColor()
@@ -86,16 +84,9 @@ class FunctionViewController: MasterViewController, UITableViewDelegate, UITable
         store.settingType = . store
         store.color = "e46e49".hexColor()
         
-        
         items.append(face)
         items.append(bookRound)
-        
-#if DEBUG
         items.append(store)
-#endif
-
-        
-        
         simpleNavi.set("MiBook.vn")
         tbView.reloadData()
         
