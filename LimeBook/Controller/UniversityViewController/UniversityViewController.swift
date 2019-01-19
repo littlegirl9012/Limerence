@@ -14,11 +14,6 @@ protocol UniversityViewControllerDelegate : class {
 
 
 class UniversityViewController: MasterViewController , NavigationViewDelegate, UITableViewDelegate,UITableViewDataSource {
-    func navigationViewClearTouch() {
-        displayValue.removeAll()
-        displayValue.append(contentsOf: data)
-        tbView.reloadData()
-    }
     
     var data : [University] = []
     var displayValue : [University] = []
@@ -53,7 +48,12 @@ class UniversityViewController: MasterViewController , NavigationViewDelegate, U
         navigationView.delegate = self;
         navigationView.setSearchPlaholder("Nhập tên trường đại học, cao đẳng..")
     }
-    
+    func navigationViewClearTouch() {
+        displayValue.removeAll()
+        displayValue.append(contentsOf: data)
+        tbView.reloadData()
+    }
+
     func navigationViewSearching(_ searchText: String) {
         
         

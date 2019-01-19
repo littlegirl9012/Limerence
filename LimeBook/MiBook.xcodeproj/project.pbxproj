@@ -424,6 +424,15 @@
 		51A9F34E21F252F400561B24 /* Quicksand-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51A9F34721F252F300561B24 /* Quicksand-BoldItalic.otf */; };
 		51A9F34F21F252F400561B24 /* Quicksand-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51A9F34821F252F400561B24 /* Quicksand-Italic.otf */; };
 		51A9F35021F252F400561B24 /* Quicksand-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51A9F34921F252F400561B24 /* Quicksand-LightItalic.otf */; };
+		51A9F35C21F322A300561B24 /* DistrictCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A9F35621F322A200561B24 /* DistrictCell.swift */; };
+		51A9F35D21F322A300561B24 /* DistrictCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A9F35721F322A200561B24 /* DistrictCell.xib */; };
+		51A9F35E21F322A300561B24 /* ProvinceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A9F35821F322A200561B24 /* ProvinceCell.swift */; };
+		51A9F35F21F322A300561B24 /* ProvinceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A9F35921F322A200561B24 /* ProvinceCell.xib */; };
+		51A9F36021F322A300561B24 /* ProvinceSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A9F35A21F322A200561B24 /* ProvinceSelectedViewController.swift */; };
+		51A9F36121F322A300561B24 /* ProvinceSelectedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A9F35B21F322A200561B24 /* ProvinceSelectedViewController.xib */; };
+		51A9F36321F322E000561B24 /* DHMProvince.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A9F36221F322E000561B24 /* DHMProvince.swift */; };
+		51A9F36521F3230F00561B24 /* AddressInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A9F36421F3230F00561B24 /* AddressInstance.swift */; };
+		51A9F36721F3233500561B24 /* DHMDistrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A9F36621F3233500561B24 /* DHMDistrict.swift */; };
 		51B0C5F721A0210600376CB0 /* BookTakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B0C5F621A0210600376CB0 /* BookTakeView.swift */; };
 		51B0C5F921A0210E00376CB0 /* BookTakeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B0C5F821A0210E00376CB0 /* BookTakeView.xib */; };
 		51B0C5FC21A0834200376CB0 /* BookUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B0C5FB21A0834200376CB0 /* BookUserView.swift */; };
@@ -1025,6 +1034,15 @@
 		51A9F34721F252F300561B24 /* Quicksand-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-BoldItalic.otf"; sourceTree = "<group>"; };
 		51A9F34821F252F400561B24 /* Quicksand-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Italic.otf"; sourceTree = "<group>"; };
 		51A9F34921F252F400561B24 /* Quicksand-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-LightItalic.otf"; sourceTree = "<group>"; };
+		51A9F35621F322A200561B24 /* DistrictCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistrictCell.swift; sourceTree = "<group>"; };
+		51A9F35721F322A200561B24 /* DistrictCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DistrictCell.xib; sourceTree = "<group>"; };
+		51A9F35821F322A200561B24 /* ProvinceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceCell.swift; sourceTree = "<group>"; };
+		51A9F35921F322A200561B24 /* ProvinceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProvinceCell.xib; sourceTree = "<group>"; };
+		51A9F35A21F322A200561B24 /* ProvinceSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceSelectedViewController.swift; sourceTree = "<group>"; };
+		51A9F35B21F322A200561B24 /* ProvinceSelectedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProvinceSelectedViewController.xib; sourceTree = "<group>"; };
+		51A9F36221F322E000561B24 /* DHMProvince.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHMProvince.swift; sourceTree = "<group>"; };
+		51A9F36421F3230F00561B24 /* AddressInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressInstance.swift; sourceTree = "<group>"; };
+		51A9F36621F3233500561B24 /* DHMDistrict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHMDistrict.swift; sourceTree = "<group>"; };
 		51B0C5F621A0210600376CB0 /* BookTakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTakeView.swift; sourceTree = "<group>"; };
 		51B0C5F821A0210E00376CB0 /* BookTakeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTakeView.xib; sourceTree = "<group>"; };
 		51B0C5FB21A0834200376CB0 /* BookUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookUserView.swift; sourceTree = "<group>"; };
@@ -1868,6 +1886,7 @@
 				51E362D121594B75002C875F /* CategoryInstance.swift */,
 				516D3B02217F55BD00BCE156 /* XMPPServices.swift */,
 				51F3B50021D5E1E800B38990 /* AppInstance.swift */,
+				51A9F36421F3230F00561B24 /* AddressInstance.swift */,
 			);
 			path = Instance;
 			sourceTree = "<group>";
@@ -1880,9 +1899,11 @@
 				51E3B8AA21464AF50019F6F4 /* ApplicationInfo.swift */,
 				5195B20A2139307E00819ACC /* Comment.swift */,
 				517D5D302124845900EC32AD /* LimeMessage.swift */,
+				51A9F36621F3233500561B24 /* DHMDistrict.swift */,
 				517D5D5A212552C500EC32AD /* Conversation.swift */,
 				5188B4F0215148FE00190188 /* DeviceInfo.swift */,
 				51ED16F921282C4A000757B5 /* User.swift */,
+				51A9F36221F322E000561B24 /* DHMProvince.swift */,
 				5109ACA221352B0E009AA38D /* Book.swift */,
 				5109ACA421354312009AA38D /* MediaFile.swift */,
 				519B86EF21682FEC00A94A8D /* Author.swift */,
@@ -1915,6 +1936,7 @@
 		517D5D34212489CC00EC32AD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				51A9F35521F322A200561B24 /* ProvinceSelected */,
 				517E58C621EB945700084534 /* OrderHistoryDetail */,
 				5147C55321EA53A5001B12CA /* OrderHistoryViewController */,
 				51073BC921E447550020C169 /* DrawViewController */,
@@ -2608,6 +2630,19 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		51A9F35521F322A200561B24 /* ProvinceSelected */ = {
+			isa = PBXGroup;
+			children = (
+				51A9F35621F322A200561B24 /* DistrictCell.swift */,
+				51A9F35721F322A200561B24 /* DistrictCell.xib */,
+				51A9F35821F322A200561B24 /* ProvinceCell.swift */,
+				51A9F35921F322A200561B24 /* ProvinceCell.xib */,
+				51A9F35A21F322A200561B24 /* ProvinceSelectedViewController.swift */,
+				51A9F35B21F322A200561B24 /* ProvinceSelectedViewController.xib */,
+			);
+			path = ProvinceSelected;
+			sourceTree = "<group>";
+		};
 		51B0C5F421A020E500376CB0 /* BookTakeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3226,11 +3261,13 @@
 				517D5D0C2123CB7300EC32AD /* Refresh.png in Resources */,
 				5191E61E2129F6C500A40638 /* shame.jpg in Resources */,
 				517D5D0A2123CB7300EC32AD /* Panel.png in Resources */,
+				51A9F35D21F322A300561B24 /* DistrictCell.xib in Resources */,
 				51C80CFB216B0CFE00F825EA /* BookDetailViewController.xib in Resources */,
 				51E362E021595CD2002C875F /* LibCatCell.xib in Resources */,
 				51ED16EA2128112B000757B5 /* SettingViewController.xib in Resources */,
 				5147C55B21EA5AD7001B12CA /* OrderHistoryCell.xib in Resources */,
 				5100E8DC21E25C53003FCF78 /* CartItemCell.xib in Resources */,
+				51A9F36121F322A300561B24 /* ProvinceSelectedViewController.xib in Resources */,
 				5108C19D21BCEFBD00D0B04E /* TradingUnitView.xib in Resources */,
 				510B00D4215ABBC600EFC8E4 /* BookSelectCell.xib in Resources */,
 				517D5D032123CB7200EC32AD /* GUser.png in Resources */,
@@ -3463,6 +3500,7 @@
 				5147AD9121DF2F9300BBF92C /* UniversityViewController.xib in Resources */,
 				51B85233215C0514007CF97D /* LibraryCommentCell.xib in Resources */,
 				515A4EC821483F4C000CF66D /* MaintenanceViewController.xib in Resources */,
+				51A9F35F21F322A300561B24 /* ProvinceCell.xib in Resources */,
 				51A3DB37219896730012D8C0 /* BookAddActionView.xib in Resources */,
 				51A9F34D21F252F400561B24 /* Quicksand_Dash.otf in Resources */,
 				5113429B213114A5008A33B5 /* UserSearchViewController.xib in Resources */,
@@ -3636,6 +3674,7 @@
 				5194C3922135C5BB00530964 /* ImageVfdgs.swift in Sources */,
 				5194C3FD213703E300530964 /* NewsDetailCell.swift in Sources */,
 				51E362D621594DA5002C875F /* LibraryViewController.swift in Sources */,
+				51A9F35E21F322A300561B24 /* ProvinceCell.swift in Sources */,
 				51ED16E521280B3D000757B5 /* MainTabbarViewController.swift in Sources */,
 				5188B4EB214FF90200190188 /* GenderInputView.swift in Sources */,
 				5191E6152129B65B00A40638 /* ConversationCell.swift in Sources */,
@@ -3650,6 +3689,7 @@
 				51B851E7215BA60F007CF97D /* BookReference.swift in Sources */,
 				519B86FE21687CAD00A94A8D /* RatingView.swift in Sources */,
 				51B0C5F721A0210600376CB0 /* BookTakeView.swift in Sources */,
+				51A9F36521F3230F00561B24 /* AddressInstance.swift in Sources */,
 				5108C19321BCD90E00D0B04E /* Order.swift in Sources */,
 				5113848521326FDF003EFFFE /* TPKeyboardAvoidingScrollView.m in Sources */,
 				5194C3C92136C7C500530964 /* FeedCellPlaintext.swift in Sources */,
@@ -3673,6 +3713,7 @@
 				51B56E5A21414E8C008D2A71 /* UnitInfoEditView.swift in Sources */,
 				51C8682C2163F443007260AD /* CommentUnitView.swift in Sources */,
 				5100ED092180E8AC005EE308 /* UserSearchEngineViewController.swift in Sources */,
+				51A9F36021F322A300561B24 /* ProvinceSelectedViewController.swift in Sources */,
 				51C80D86216CF49D00F825EA /* BookOthersCell.swift in Sources */,
 				51073C0821E666740020C169 /* CartAcceptView.swift in Sources */,
 				51A735AB213FE53300070872 /* LimeNotification.swift in Sources */,
@@ -3710,6 +3751,7 @@
 				5188B4F1215148FE00190188 /* DeviceInfo.swift in Sources */,
 				517E58C421EB944900084534 /* OrderHistoryDetailViewController.swift in Sources */,
 				51073BCC21E447A60020C169 /* DrawViewController.swift in Sources */,
+				51A9F36321F322E000561B24 /* DHMProvince.swift in Sources */,
 				517D5CE42123CB7200EC32AD /* GreenTextView.swift in Sources */,
 				5113429A213114A5008A33B5 /* UserSearchViewController.swift in Sources */,
 				517D5CD62123CB7200EC32AD /* GreenExtension+UIImage.swift in Sources */,
@@ -3737,6 +3779,7 @@
 				51B8525C215CE024007CF97D /* ReactUserView.swift in Sources */,
 				5118A26D21B4C9EA00036DE9 /* FunctionViewController.swift in Sources */,
 				51E3B8E42146B7280019F6F4 /* MD5Digest.swift in Sources */,
+				51A9F35C21F322A300561B24 /* DistrictCell.swift in Sources */,
 				5195B218213A52FF00819ACC /* MIHud.swift in Sources */,
 				51C8678321629DAA007260AD /* TPKeyboardAvoidingTableView.m in Sources */,
 				51B94B5C218D726800AF9531 /* NewsSearchCell.swift in Sources */,
@@ -3755,6 +3798,7 @@
 				517D5CDA2123CB7200EC32AD /* GreenExtention+UILabel.swift in Sources */,
 				5191E647212B2CA400A40638 /* SettingCell.swift in Sources */,
 				51073C0521E5FB1B0020C169 /* CartAddressCell.swift in Sources */,
+				51A9F36721F3233500561B24 /* DHMDistrict.swift in Sources */,
 				51C80D75216CBA8000F825EA /* GreenExtension+NSAttributeString.swift in Sources */,
 				51C571DD21AEF131008F6347 /* TFHppleElement.m in Sources */,
 				5191E61B2129E91400A40638 /* MessageLoadmoreCell.swift in Sources */,

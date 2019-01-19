@@ -14,9 +14,11 @@ router.post('/login',function(req,res)
     {
         if(!err)
         {
-            if(rows[0].length != 0)
+
+            if(rows[0])
             {
-                 res.status(200).send(Mi.responseProcess(err, rows[0]));
+                res.status(200).send(Mi.responseProcess(err, rows[0]));
+
             }
             else
             {
@@ -334,6 +336,8 @@ router.post('/changepass',function(req,res)
 router.post('/update/info',function(req,res)
 {
 
+
+
     var user_id = req.param('user_id');
     var aliasname = req.param('aliasname');
     var phone = req.param('phone');
@@ -341,13 +345,28 @@ router.post('/update/info',function(req,res)
     var gender = req.param('gender');
     var university_id = req.param('university_id');
 
+    var province_id = req.param('province_id');
+    var district_id = req.param('district_id');
+
+
+    if(!province_id)
+    {
+        province_id = -1;
+    }
+
+    if(!district_id)
+    {
+        district_id = -1;
+    }
+
+
 
     if(!university_id)
     {
         university_id = -1;
     }
 
-    connection.query("CALL  user_update_info(?,?,?,?,?,?);",[user_id,aliasname,phone,dob,gender,university_id],function(err,rows)
+    connection.query("CALL  user_update_info(?,?,?,?,?,?,?,?);",[user_id,aliasname,phone,dob,gender,university_id,province_id,district_id],function(err,rows)
     {
         if(!err)
         {

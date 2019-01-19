@@ -58,7 +58,8 @@ enum APIFunction : String
     case orderDetail = "order/detail"
     case orderChange = "order/change"
 
-    
+    case addressNode      =    "address/node"
+
     case test = "place/location/service"
 //
 //

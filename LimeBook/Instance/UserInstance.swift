@@ -70,6 +70,14 @@ class UserInstance: NSObject
         user.gender = value.gender
         user.dob = value.dob
         user.cover = value.cover
+        
+        user.university_name = value.university_name
+        user.university_id = value.university_id
+        user.province_id = value.province_id
+        user.province_name = value.province_name
+        user.district_id = value.district_id
+        user.district_name = value.district_name
+
     }
     
     func logout()
@@ -90,6 +98,7 @@ class UserInstance: NSObject
         messageInstance.initSocket()
         messageInstance.connectSocket()
         categoryInstance.loadCategory()
+        addressInstance.getProvinceDistrict()
         categoryInstance.loadType()
         setAlreadyLogin(true)
         

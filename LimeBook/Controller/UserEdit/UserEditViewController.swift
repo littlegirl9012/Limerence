@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
 
-class UserEditViewController: MasterViewController, UniversityViewControllerDelegate, CaIVDelegate, GIVDelegate {
+class UserEditViewController: MasterViewController, UniversityViewControllerDelegate, CaIVDelegate, GIVDelegate , ProvinceControllerDelegate{
 
     @IBOutlet weak var headerInfo: MasterHeaderView!
     @IBOutlet weak var passwordConfirm: EditSingleLineView!
@@ -22,9 +24,20 @@ class UserEditViewController: MasterViewController, UniversityViewControllerDele
     @IBOutlet weak var phone: EditSingleLineView!
     @IBOutlet weak var gender: EditSingleLineView!
     @IBOutlet weak var dob: EditSingleLineView!
-    @IBOutlet weak var univerField: EditSingleLineView!
-    var univerSelected  : University!
+    var univerSelected  = University()
+    
+    var provinceSelected  : DHMProvince = DHMProvince()
+    var districtSelected  : DHMDistrict = DHMDistrict()
+
     @IBOutlet weak var univerHeaderView: MasterHeaderView!
+    @IBOutlet weak var lbAddress: UILabel!
+    
+    @IBOutlet weak var addressView: UIView!
+    
+    @IBOutlet weak var masterAddressView: MasterHeaderView!
+    
+    
+    
     
     @IBOutlet weak var univerVIew: UIView!
     var dateSelect : Date!
@@ -42,18 +55,17 @@ class UserEditViewController: MasterViewController, UniversityViewControllerDele
         }
         
         
-        
-        
         let request  = UserUpdateInfo_Request()
         request.user_id = userInstance.user.id
         request.aliasname = (name.tfContent.text?.trim())!
         request.gender = genderSelect
+        request.province_id = provinceSelected.id
+        request.district_id = districtSelected.id
+        request.university_id = univerSelected.id
+
         request.dob =  dateSelect.stringValue()
         request.phone = (phone.tfContent.text?.trim())!
-        if(univerSelected != nil)
-        {
-            request.university_id = univerSelected.id
-        }
+        request.university_id = univerSelected.id
 
         view.showHud()
         services.userUpdateInfo(request: request, success: { (response) in
@@ -65,7 +77,6 @@ class UserEditViewController: MasterViewController, UniversityViewControllerDele
         }) { (errror) in
             self.view.hideHub()
         }
-        
     }
     
     func getError () ->String?
@@ -92,7 +103,14 @@ class UserEditViewController: MasterViewController, UniversityViewControllerDele
 
         return nil
     }
+    @IBAction func univerTouch(_ sender: Any) {
+        let university = UniversityViewController()
+        university.delegate = self;
+        self.push(university)
+
+    }
     
+    @IBOutlet weak var lbUniver: UILabel!
     
     override func viewDidLoad() {
         
@@ -102,9 +120,21 @@ class UserEditViewController: MasterViewController, UniversityViewControllerDele
         dateSelect = userInstance.user.dob.vnDate()
 
         infoView.drawRadius(4)
-        
+        addressView.drawRadius(4)
         univerVIew.drawRadius(4)
         univerHeaderView.set("Trường học")
+        masterAddressView.set("Địa chỉ")
+        
+        
+        
+        
+        
+        provinceSelected.id = userInstance.user.province_id
+        districtSelected.id = userInstance.user.district_id
+        univerSelected.id = userInstance.user.university_id
+        lbUniver.textR = userInstance.user.university_name
+        
+        
 
         view.backgroundColor = template.backgroundColor
         headerInfo.set("Thông tin người dùng")
@@ -112,13 +142,11 @@ class UserEditViewController: MasterViewController, UniversityViewControllerDele
             self.pop()
         }
         
+        lbAddress.textR = userInstance.user.addressDisplay()
         name.set("Tên", userInstance.user.aliasname)
         phone.set("Điện thoại", userInstance.user.phone)
         gender.set("Giới tính", userInstance.user.genderDisplay())
         dob.set("Ngày sinh", userInstance.user.dob)
-        
-        univerField.set("Trường Học", "")
-
         dob.hidenLine()
         
         dob.setInput(calendarInput)
@@ -127,16 +155,12 @@ class UserEditViewController: MasterViewController, UniversityViewControllerDele
         genderInput.delegate = self;
     
         weak var weakself = self;
-        univerField.setTouch {
-            let university = UniversityViewController()
-            university.delegate = self;
-            weakself?.push(university)
-        }
         
     }
     
     func UniversityViewControllerDidSelect(_ university: University) {
-        univerField.set("Trường Học", university.name)
+        lbUniver.textR = university.name
+        univerSelected = university
 
     }
     
@@ -157,4 +181,24 @@ class UserEditViewController: MasterViewController, UniversityViewControllerDele
         dob.dismiss()
         dob.setContent(date.stringValue())
     }
+    
+    
+    @IBAction func addressTouch(_ sender: Any)
+    {
+        let province = ProvinceSelectedViewController()
+        province.delegate = self;
+        push(province)
+    }
+    
+    func provinceControllerDidSelect(_ province: DHMProvince, district: DHMDistrict) {
+        self.provinceSelected = province
+        self.districtSelected = district
+        
+        let disply = provinceSelected.name + ", " + districtSelected.name
+        lbAddress.textR = disply
+
+        
+    }
+    
+    
 }

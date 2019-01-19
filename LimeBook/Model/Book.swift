@@ -130,6 +130,7 @@ class Book: Mi {
     @objc dynamic var content = "";
     @objc dynamic var price = 0.0;
     @objc dynamic var rate = 0.0;
+    @objc dynamic var province_id = -1;
 
     @objc dynamic var author = "";
     @objc dynamic var status = 0;

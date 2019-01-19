@@ -155,8 +155,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //        
         _ = confernceDataStore
         _ = audioInstance
-        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
+
         
+        
+        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
         UIApplication.shared.statusBarStyle = .lightContent
         
         

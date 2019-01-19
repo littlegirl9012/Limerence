@@ -132,7 +132,7 @@ class LoginViewController: MasterViewController,RegisterDelegate {
             if(response.count > 0)
             {
                 userInstance.login(response[0])
-                userInstance.setPassword(user.password)
+                userInstance.setPassword(request.password)
 
                 if(response[0].info_success)
                 {

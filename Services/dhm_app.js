@@ -56,6 +56,10 @@ app.use('/university', university);
 var order = require('./routes/order');
 app.use('/order', order);
 
+var address = require('./routes/address');
+app.use('/address', address);
+
+
 
 app.listen(9886);
 

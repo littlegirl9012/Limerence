@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsDetailWebViewController: MasterViewController {
+class NewsDetailWebViewController: MasterViewController, UIWebViewDelegate {
 
     var book : Book!
     override func viewDidLoad() {
@@ -19,11 +19,11 @@ class NewsDetailWebViewController: MasterViewController {
         self.navigationView.set(style: .back, title: "Chi Tiết") {
             weakself?.pop()
         }
-        
-        
+        webView.delegate = self;
         
         services.wpRequestPost(id: String(book.wp_id), success: { (response) in
             
+            self.view.showHud()
             let dictionary = response as! NSDictionary
             let content = dictionary.value(forKey: "content") as! NSDictionary
             let render = content.value(forKey: "rendered") as! String
@@ -32,16 +32,16 @@ class NewsDetailWebViewController: MasterViewController {
                 do {
                     var text = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
                     text = text.replacingOccurrences(of: "MICONTENT", with: render)
-                    text = text.replacingOccurrences(of: "MITITLE", with: self.book.title.lowercased().capitalizingFirstLetter())
-                    self.webView.loadHTMLString(text, baseURL: nil)
+                    text = text.replacingOccurrences(of: "MITITLE", with: weakself?.book.title.lowercased().capitalizingFirstLetter() ?? "")
+                    weakself?.webView.loadHTMLString(text, baseURL: nil)
                 } catch {
                 }
             } else {
-            }
+}
 
             
         }) { (error) in
-            
+
         }
 
         
@@ -52,6 +52,10 @@ class NewsDetailWebViewController: MasterViewController {
 //
         
         
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        view.hideHub()
     }
 
     @IBOutlet weak var webView: UIWebView!

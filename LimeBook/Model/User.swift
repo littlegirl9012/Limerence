@@ -41,6 +41,8 @@ class User: Mi {
     @objc dynamic var cover = ""
     @objc dynamic var caption = ""
     @objc dynamic var phone = ""
+    @objc dynamic var address = ""
+
     @objc dynamic var dob = ""
     @objc dynamic var gender = 0
     @objc dynamic var user_type = 0
@@ -51,6 +53,27 @@ class User: Mi {
     @objc dynamic var info_success = false
     @objc dynamic var isOnline = false
     @objc dynamic var status = -1
+    
+    
+    @objc dynamic var university_id = -1
+    @objc dynamic var university_name = ""
+
+    @objc dynamic var province_id = -1
+    @objc dynamic var province_name = ""
+    @objc dynamic var district_id = -1
+    @objc dynamic var district_name = ""
+
+    
+    
+    func addressDisplay()->String
+    {
+        if(province_name.length > 0)
+        {
+            return province_name + ", " + district_name
+        }
+        return "-"
+    }
+    
     @objc dynamic var mediaAvatar : MediaFile!
     var user_store_n = UserStore.personal
     var status_n = ContactStatus.answer
@@ -215,6 +238,8 @@ class UserUpdateInfo_Request : Mi
 {
     @objc dynamic var user_id = 1
     @objc dynamic var university_id = -1
+    @objc dynamic var province_id = -1
+    @objc dynamic var district_id = -1
 
     @objc dynamic var gender = 0
     @objc dynamic var phone = ""
