@@ -559,19 +559,19 @@ router.post('/feed',function(req,res)
             var query = "" ;
             var response = rows[0];
             var user_id_arr = [];
-            var book_type =  [4,9,2,3];
+            var book_type =  [4,9,2,3,12];
             user_id_arr.push(user_id);
 
             if(last_date.length == 0)
             {
-                query = "SELECT  book.user_id ,book.date, book.id ,book.title,book.book_type,user.avatar,book.content,book.author,book.image,book.date,user.aliasname FROM book  LEFT JOIN user ON (user.id = book.user_id) where (book.user_id in (?)) AND ( book.book_type  IN (?)) OR (? =  'A') ORDER BY book.date DESC LIMIT 0,6";
+                query = "SELECT  book.user_id ,book.date, book.id , book.wp_id ,book.title,book.book_type,user.avatar,book.content,book.author,book.image,book.date,user.aliasname FROM book  LEFT JOIN user ON (user.id = book.user_id) where ((book.user_id in (?)) AND ( book.book_type  IN (?))) OR (book.book_type =  12) ORDER BY book.date DESC LIMIT 0,6";
                                 console.log("%s","0");
 
             }
             else if (load_type == 0)
             {
 
-            query = "SELECT  book.user_id,book.date , book.id ,book.title,book.book_type,user.avatar,book.content,book.author,book.image,book.date,user.aliasname FROM book  LEFT JOIN user ON (user.id = book.user_id) where (book.user_id in (?)) AND ( book.book_type  IN (?)) AND (book.date > DATE_FORMAT(?, '%Y-%m-%dT%TZ'))  ORDER BY book.date DESC LIMIT 0,6";
+            query = "SELECT  book.user_id,book.date , book.id, book.wp_id ,book.title,book.book_type,user.avatar,book.content,book.author,book.image,book.date,user.aliasname FROM book  LEFT JOIN user ON (user.id = book.user_id) where ((book.user_id in (?)) AND ( book.book_type  IN (?)) OR (book.book_type = 12)) AND (book.date > DATE_FORMAT(?, '%Y-%m-%dT%TZ'))  ORDER BY book.date DESC LIMIT 0,6";
                                 console.log("%s","1");
 
 
@@ -579,7 +579,7 @@ router.post('/feed',function(req,res)
             else
             {
 
-                query = "SELECT  book.user_id,book.date , book.id ,book.title,book.book_type,user.avatar,book.content,book.author,book.image,book.date,user.aliasname FROM book  LEFT JOIN user ON (user.id = book.user_id) where (book.user_id in (?)) AND ( book.book_type  IN (?)) AND (book.date < DATE_FORMAT(?, '%Y-%m-%dT%TZ')) ORDER BY book.date DESC LIMIT 0,6";
+                query = "SELECT  book.user_id,book.date , book.id , book.wp_id,book.title,book.book_type,user.avatar,book.content,book.author,book.image,book.date,user.aliasname FROM book  LEFT JOIN user ON (user.id = book.user_id) where ((book.user_id in (?)) AND ( book.book_type  IN (?)) OR (book.book_type =  12) )AND (book.date < DATE_FORMAT(?, '%Y-%m-%dT%TZ')) ORDER BY book.date DESC LIMIT 0,6";
                                 console.log("%s","2");
             }
 

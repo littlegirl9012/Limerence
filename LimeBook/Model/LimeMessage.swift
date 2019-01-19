@@ -47,10 +47,7 @@ class LimeMessage: Mi {
     @objc dynamic var message_type = 1
     @objc dynamic var date = ""
     @objc dynamic var date_io = Date()
-    @objc dynamic var  timeDisplay = ""
-
-    @objc dynamic var next : LimeMessage!
-    @objc weak dynamic var  previous : LimeMessage!
+    @objc dynamic var timeDisplay = ""
     @objc dynamic var id = -1
     @objc dynamic var user_id = 1
     @objc dynamic var target_user_id = 2
@@ -58,7 +55,9 @@ class LimeMessage: Mi {
     @objc dynamic var avatar = ""
     @objc dynamic var attri : NSMutableAttributedString!
 
-    
+    @objc dynamic var next : LimeMessage!
+    @objc weak dynamic var  previous : LimeMessage!
+
     
     func getKeyID()->Int
     {

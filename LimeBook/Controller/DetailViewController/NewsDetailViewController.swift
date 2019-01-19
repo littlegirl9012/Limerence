@@ -262,4 +262,18 @@ class NewsDetailViewController: MasterViewController,NewsCommentCellDelegate, UI
             
         }
     }
+    
+    func bookInfoDetailCellUserTouch(_ book: Book) {
+        if(userInstance.user.id != book.user_id)
+        {
+            let chat = ChatViewController()
+            let user = User()
+            user.id = book.user_id
+            user.avatar = book.avatar
+            user.aliasname = book.aliasname
+            user.processMedia()
+            chat.target = user
+            push(chat)
+        }
+    }
 }

@@ -45,6 +45,8 @@ class InitInfoViewController: MasterViewController, UITextFieldDelegate {
             grapInfo()
         }
         
+        tfName.attributedPlaceholder = NSAttributedString(string: "Nhập tên của bạn",
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
     /*
      let grap = FBSDKGraphRequest.init(graphPath: "me", parameters:  ["fields": "id, name, picture.type(large),cover,gender,birthday,user_location,user_gender"])
@@ -170,16 +172,22 @@ class InitInfoViewController: MasterViewController, UITextFieldDelegate {
     func callLibrary()
     {
         let libraryViewController = CameraViewController.imagePickerViewController(croppingParameters: croppingParameters) { [weak self] image, asset in
-            self?.image = ImageSelect.init(image!)
+            if(image != nil)
+            {
+                self?.imgAvatar.image = image
+                self?.image = ImageSelect.init(image!)
+            }
             self?.dismiss(animated: false, completion: nil)
-            self?.imgAvatar.image = image
         }
         present(libraryViewController, animated: false, completion: nil)
     }
     
     
     
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        tfName.resignFirstResponder()
+        return true
+    }
     
     
     

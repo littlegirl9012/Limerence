@@ -10,6 +10,8 @@ import UIKit
 protocol BookTradingViewDelegate : class {
     func bookTradingAddSuccess()
     func bookTradingMessageTouch (_ book : Book)
+    func bookTradingClose()
+
 }
 
 class BookTradingView: GreenView {
@@ -39,6 +41,8 @@ class BookTradingView: GreenView {
         
         btAdd.setTitleColor(template.primaryColor, for: .normal)
         btClose.setTitleColor(template.dangerColor, for: .normal)
+        
+        btClose.setTitleColor(template.dangerColor, for: .normal)
 
     }
     deinit {
@@ -59,11 +63,11 @@ class BookTradingView: GreenView {
     }
     @IBAction func addTouch(_ sender: Any)
     {
-        delegate?.bookTradingAddSuccess()
         cart.addProduct(self.book)
+        delegate?.bookTradingAddSuccess()
     }
     @IBAction func closeTouch(_ sender: Any) {
-        superview!.hideAlertBox()
+        delegate?.bookTradingClose()
     }
     
     @IBAction func sendMessageTouch(_ sender: Any)

@@ -13,12 +13,10 @@ enum APIFunction : String
     case userNear =                 "user/near"
     case userSearch =               "user/search"
     case userInfo =                 "user/info"
-
     case uploadMedia = "upload/media"
     case bookInsert = "book/insert"
     case bookUpdate = "book/update"
     case bookTypeList = "book_24/type/list"
-
     case bookLatest     = "book_24/latest"
     case bookSearch     = "book/search"
     case bookTake       = "book/take"
@@ -28,50 +26,45 @@ enum APIFunction : String
     case bookFeed       = "book/feed"
     case bookReport     = "book/report"
     case bookUpdateType     = "book/update/type"
-
-    
-    
-    
     case bookCommentList = "book/comment/list"
     case bookCommentInsert = "book/comment/insert"
     case bookUser = "book_24/user"
     case bookUserSelect = "book/user/select"
-
     case bookUserAll = "book/user/all"
     case bookDetail = "book_24/detail"
     case bookDelete = "book/delete"
     case bookLocation = "book/location"
     case bookLike = "book/like"
-
     case notificationSubscribe = "notification/subscribe"
     case notificationList = "notification/list"
     case notificationDelete = "notification/delete"
-
     case contactList = "contact/list"
     case contactAccept = "contact/accpet"
     case contactDelete = "contact/delete"
-
     case applicationInfo = "application/get/info"
-
     case deviceUpdate = "device/update"
-
     case categoryList = "category/list"
     case bookLibrary = "book/library"
-    
-    
-    
-    
     case authorList =               "authorList"
     case authorSearch =             "author/search"
-
     case feelingInsert = "feeling/insert"
     case feelingList = "feeling/list"
-    
-    
-    
-    
-    
+    case universityList = "university/list"
     case adminBookTikiInsert = "admin/book/tiki/insert"
+    
+    
+    case orderInsert = "order/insert"
+    case orderList = "order/list"
+    case orderDetail = "order/detail"
+    case orderChange = "order/change"
+
+    
+    case test = "place/location/service"
+//
+//
+//    ?locationId=08f6f30f-4667-49e5-8050-fd0488594d6e
+//
+
     
 }
 

@@ -27,20 +27,24 @@ class PNServicesInstance: NSObject {
     {
         let dictionary = info["message"]
         let newMessate = PNMessage.init(dictionary: dictionary as! NSDictionary)
-        UNUserNotificationCenter.current().getDeliveredNotifications { (nodes) in
-            var uniqueIden : [String] = []
-            for item in nodes
-            {
-                let message = PNMessage.init(dictionary: item.request.content.userInfo["message"] as! NSDictionary)
-                if(message.user_id ==  newMessate.user_id)
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().getDeliveredNotifications { (nodes) in
+                var uniqueIden : [String] = []
+                for item in nodes
                 {
-                    if(message.interval() != newMessate.interval())
+                    let message = PNMessage.init(dictionary: item.request.content.userInfo["message"] as! NSDictionary)
+                    if(message.user_id ==  newMessate.user_id)
                     {
-                        uniqueIden.append(item.request.identifier)
+                        if(message.interval() != newMessate.interval())
+                        {
+                            uniqueIden.append(item.request.identifier)
+                        }
                     }
                 }
+                
             }
-            
+        } else {
+            // Fallback on earlier versions
         }
     }
 }

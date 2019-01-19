@@ -10,14 +10,15 @@ import UIKit
 
 protocol BookInfoDetailCellDelegate : class{
     func bookInfoDetailCellRequestUploadCell()
+    func bookInfoDetailCellUserTouch(_ book : Book)
+
+    
 }
 
 class BookInfoDetailCell: UITableViewCell {
 
     
     weak var delegate : BookInfoDetailCellDelegate?
-    
-    
     @IBOutlet weak var imgView: UIImageView!
     
     
@@ -136,6 +137,10 @@ class BookInfoDetailCell: UITableViewCell {
         
     }
     
+    
+    @IBAction func userTouch(_ sender: Any) {
+        delegate?.bookInfoDetailCellUserTouch(self.book)
+    }
 
     
 }

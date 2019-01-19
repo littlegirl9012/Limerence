@@ -332,4 +332,76 @@ class Services: NSObject {
     }
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    func requestLocation(api : APIFunction, param : Dictionary <String, AnyObject>, success :@escaping ((APIResponse)->Void), failure :@escaping ((String)->Void))
+    {
+        if(!device.isConnectedNetwork())
+        {
+            failure("Lỗi kết nối. Vui lòng kiểm tra lại internet.")
+            return
+        }
+        weak var weakself = self
+        let dataRequest = repareRequestLocation(api: api, parameter: param)
+        
+        
+        do {
+            let data = try JSONSerialization.data(withJSONObject: param, options: [])
+            let json = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+            if let json = json {
+                print("JSON: \(json)")
+            }
+        } catch {
+            print("JSON serialization failed:  \(error)")
+        }
+        
+//
+//        let headers: HTTPHeaders = [
+//            "Content-Type": "application/json",
+//            "Accept": "application/json;charset=utf-8",
+//            "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIrODQ5NzczNzY0ODYiLCJleHAiOjE1NDgwNDA0ODJ9.eKfFPGggrKgEqE4oNmEHaTSnjBWGIrro_awhrhBM9Knr6M7WDk42DdwR-rWSj06XcCMJwyYskrt7Qc_qCtIP1"
+//        ]
+        
+        let headers = [
+            "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIrODQ5NzczNzY0ODYiLCJleHAiOjE1NDgwNDA0ODJ9.eKfFPGggrKgEqE4oNmEHaTSnjBWGIrro_awhrhBM9Knr6M7WDk42DdwR-rWSj06XcCMJwyYskrt7Qc_qCtIP1",
+            "Accept": "*/*",
+            "Content-Type": "application/json",
+            "Cache-Control": "no-cache"
+        ]
+        
+        
+        Alamofire.request(dataRequest.0, method: .get, parameters: dataRequest.1, encoding: URLEncoding.default, headers: nil)
+            .responseJSON { response in
+                print("api : \(api.rawValue) \n  response :  \(response.result.value)")   // result of response serialization
+                let apiResponse = weakself?.processReponse(response: response)
+                if(apiResponse?.success)!
+                {
+                    success(apiResponse!)
+                }
+                else
+                {
+                    failure((apiResponse?.message)!)
+                }
+        }
+    }
+    
+    func repareRequestLocation(api : APIFunction, parameter : Dictionary <String,AnyObject>) -> (String, Parameters)
+    {
+        var endParameter : Parameters = [:]
+        for  (k,v) in  parameter
+        {
+            endParameter[k] = v
+        }
+        return (servicesConfig.testURL.appending(api.rawValue),endParameter)
+    }
+
+    
+    
 }

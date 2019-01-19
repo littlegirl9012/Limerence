@@ -17,7 +17,6 @@ app.use(bodyParser.json());
 var user = require('./routes/user');
 app.use('/user', user);
 
-
 var upload = require('./routes/upload');
 app.use('/upload', upload);
 
@@ -33,39 +32,29 @@ app.use('/notification', notification);
 var category = require('./routes/category');
 app.use('/category', category);
 
-
-
 var contact = require('./routes/contact');
 app.use('/contact', contact);
-
 
 var application = require('./routes/application');
 app.use('/application', application);
 
-
 var device = require('./routes/device');
 app.use('/device', device);
-
 
 var author = require('./routes/author');
 app.use('/author', author);
 
-
-
 var feeling = require('./routes/feeling');
 app.use('/feeling', feeling);
-
-
 
 var admin = require('./routes/admin');
 app.use('/admin', admin);
 
+var university = require('./routes/university');
+app.use('/university', university);
 
-app.get('/push',function(req,res)
-{
-		pn_services.limerencePush(1,1,1,1);
-
-});
+var order = require('./routes/order');
+app.use('/order', order);
 
 
 app.listen(9886);

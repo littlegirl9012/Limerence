@@ -159,7 +159,6 @@ class UserInfo_Request: Mi
 {
     @objc dynamic var user_id = userInstance.user.id;
     @objc dynamic var target_user_id = -1;
-
 }
 
 
@@ -215,6 +214,8 @@ class UserUpdateAvatar_Request : Mi
 class UserUpdateInfo_Request : Mi
 {
     @objc dynamic var user_id = 1
+    @objc dynamic var university_id = -1
+
     @objc dynamic var gender = 0
     @objc dynamic var phone = ""
     @objc dynamic var aliasname = ""

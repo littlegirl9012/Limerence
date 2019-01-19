@@ -25,6 +25,7 @@ class NewsViewController: MasterViewController,LoadmoreViewDelegate, UITableView
     @IBOutlet weak var btMenu: UIButton!
     var books  : [Book] = []
     var  query_id : [Int] = [-1]
+    var canLoad = true;
     
     
     @IBOutlet weak var tbView: GreenTableView!
@@ -41,7 +42,6 @@ class NewsViewController: MasterViewController,LoadmoreViewDelegate, UITableView
         tbView.setIdentifier("NewsDetailCell_2")
         tbView.setIdentifier("NewsDetailCell_3")
         tbView.setIdentifier("NewsDetailCell_4")
-
         tbView.setIdentifier("NewsDetailCellBook")
         tbView.setIdentifier("NewsDetailCellBook_0")
         tbView.setIdentifier("NewsDetailCellBook_1")
@@ -111,8 +111,8 @@ class NewsViewController: MasterViewController,LoadmoreViewDelegate, UITableView
             return
         }
 
-        let request = BookLatest_Request()
-        request.query_id = self.query_id;
+        let request = BookFeed_Request()
+//        request.query_id = self.query_id;
         request.load_type = loadType
         if(books.count == 0)
         {
@@ -173,9 +173,16 @@ class NewsViewController: MasterViewController,LoadmoreViewDelegate, UITableView
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.books.removeAll()
-        self.tbView.reloadData()
-        loadData(loadType: 0)
+        if(canLoad)
+        {
+            self.books.removeAll()
+            self.tbView.reloadData()
+            loadData(loadType: 0)
+        }
+        else
+        {
+            canLoad = true
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -213,6 +220,7 @@ class NewsViewController: MasterViewController,LoadmoreViewDelegate, UITableView
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        canLoad = false ;
         let book = self.books[indexPath.row]
         if(book.book_type_n == .web)
         {

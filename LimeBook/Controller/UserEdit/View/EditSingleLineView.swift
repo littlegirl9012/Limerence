@@ -9,16 +9,18 @@
 import UIKit
 
 class EditSingleLineView: GreenView {
-    @IBOutlet weak var tfContent: UITextField!
+    @IBOutlet weak var tfContent: UITextView!
     @IBOutlet weak var line: UIView!
     
+    @IBOutlet weak var lbContent: UILabel!
     @IBOutlet weak var lbTitle: UILabel!
     
     var actionBlock  : (()->Void)!
     override func initStyle() {
         lbTitle.textColor = template.generalTextColor
         tfContent.textColor = template.subTextColor
-        
+        lbContent.textColor = template.subTextColor
+
 //        lbLine.backgroundColor = template.subTextColor
 //        lbLine.alpha = 0.24
         
@@ -27,17 +29,21 @@ class EditSingleLineView: GreenView {
         
         view.backgroundColor = UIColor.white
         btTouch.isHidden = true
-        
+        lbContent.isHidden = true ;
     }
+    
     @IBOutlet weak var btTouch: UIButton!
     
     @IBAction func touchIn(_ sender: Any)
     {
-//        if(actionBlock != nil)
-//        {
-//            actionBlock();
-//        }
-        tfContent.becomeFirstResponder()
+        if(actionBlock != nil)
+        {
+            actionBlock();
+        }
+        else
+        {
+            tfContent.becomeFirstResponder()
+        }
     }
     func hidenLine()
     {
@@ -48,6 +54,8 @@ class EditSingleLineView: GreenView {
     {
         self.actionBlock = action;
         self.btTouch.isHidden = false
+        tfContent.isHidden = true
+        lbContent.isHidden = false ;
     }
     
     func setContent(_ value : String)
@@ -63,6 +71,7 @@ class EditSingleLineView: GreenView {
     {
         lbTitle.text = name;
         tfContent.text = value
+        lbContent.text = value
     }
     
     func setColor(_ value : UIColor)

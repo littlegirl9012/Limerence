@@ -17,7 +17,8 @@ class AppInstance: NSObject {
     
     var is_maintenance = false
     var ios_version = ""
-    
+    var ios_link = ""
+
     
     
     func updateInfo(_ values : [ApplicationInfo])
@@ -32,6 +33,13 @@ class AppInstance: NSObject {
             {
                 is_maintenance = item.value.toBool()
             }
+            if(item.name == "ios_link")
+            {
+                ios_link = item.value
+            }
+
+            
+            
         }
     }
     

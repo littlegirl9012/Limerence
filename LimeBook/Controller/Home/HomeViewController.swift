@@ -36,6 +36,7 @@ class HomeViewController: MasterViewController, HomeNaviViewDelegate
     var item6Selected : UIImage! = UIImage(named: "function_enable")?.withRenderingMode(.alwaysOriginal)
     var item3Selected : UIImage! = UIImage(named: "user_enable")?.withRenderingMode(.alwaysOriginal)
 
+    @IBOutlet weak var bottomContraits: NSLayoutConstraint!
     
     
    // @IBOutlet weak var topView: HomeTopView!
@@ -44,9 +45,7 @@ class HomeViewController: MasterViewController, HomeNaviViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         self.homeNavi.delegate = self;
-        
         conversation.homeNavi = self.homeNavi
         contact.homeNavi = self.homeNavi
         news.homeNavi = self.homeNavi
@@ -98,11 +97,32 @@ class HomeViewController: MasterViewController, HomeNaviViewDelegate
 
         mainTabar.setTabBarSwipe(enabled: false)
         mainTabar.isSwipeEnabled = false
-        
         mainTabar.selectedIndex = 4
-
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if(apppInstance.isMatchVersion())
+        {
+            
+        }
+        else
+        {
+            #if !DEBUG
+            bottomContraits.constant = 36
+            #endif
+        }
+    }
+    @IBAction func updateTouch(_ sender: Any) {
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL.init(string: apppInstance.ios_link)!, options: [:]) { (response) in
+                
+            }
+        } else
+        {
+            UIApplication.shared.openURL(URL.init(string: apppInstance.ios_link)!)
+        }
+    }
     
     @objc func contactRefresh()
     {
@@ -122,7 +142,7 @@ class HomeViewController: MasterViewController, HomeNaviViewDelegate
     
     @objc func refreshConversation()
     {
-        let tabRT = mainTabar.tabBar.items![1]
+        let tabRT = mainTabar.tabBar.items![2]
         let count = confernceDataStore.conversationNotifyUnreadMessage()
 
         if(count > 0)
@@ -141,7 +161,6 @@ class HomeViewController: MasterViewController, HomeNaviViewDelegate
         searchEngineViewController  = SearchEngineViewController()
         contentView.addSubview(searchEngineViewController.view)
         self .addChildViewController(searchEngineViewController)
-
     }
     
     func disabelSearch()

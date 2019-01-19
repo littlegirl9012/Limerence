@@ -64,6 +64,15 @@ class NavigationView: GreenView , UITextFieldDelegate{
         self.completion()
     }
     
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 300, height: 64)
+    }
+    
+    override class var requiresConstraintBasedLayout: Bool {
+        return true
+    }
+
+    
     func set(style : NavigationStyle, title : String, completion : @escaping (()->Void))
     {
         self.completion = completion

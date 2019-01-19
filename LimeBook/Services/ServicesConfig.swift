@@ -15,6 +15,8 @@ class ServicesConfig: NSObject {
     let baseURL = "http://dephoanmy.vn:9886/"
 
     let url = "http://dephoanmy.vn:9886/"
+    
+    let testURL = "https://backend.loyaworld.com:7443/"
 
     static var instance: ServicesConfig!
     class func sharedInstance() -> ServicesConfig

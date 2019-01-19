@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitInfoViewController" customModule="LimeBook" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitInfoViewController" customModule="MiBook" customModuleProvider="target">
             <connections>
                 <outlet property="avatarView" destination="1Jz-0E-N9M" id="wRk-cs-RQT"/>
                 <outlet property="btNext" destination="aK5-FX-naC" id="Uv9-2G-Fec"/>
@@ -27,25 +26,25 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userbackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zz0-8V-mjh">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3y-v8-gKe" customClass="GCleanView" customModule="LimeBook" customModuleProvider="target">
-                    <rect key="frame" x="67.5" y="207" width="240" height="120"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3y-v8-gKe" customClass="GCleanView" customModule="MiBook" customModuleProvider="target">
+                    <rect key="frame" x="67.5" y="187" width="240" height="160"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Jz-0E-N9M">
-                            <rect key="frame" x="90" y="0.0" width="60" height="60"/>
+                            <rect key="frame" x="80" y="0.0" width="80" height="80"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PictureSelect" translatesAutoresizingMaskIntoConstraints="NO" id="Nlg-Wg-bRq">
-                                    <rect key="frame" x="20.5" y="21" width="18" height="18"/>
+                                    <rect key="frame" x="31" y="31" width="18" height="18"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="18" id="AP6-vU-NZu"/>
                                         <constraint firstAttribute="height" constant="18" id="yuh-Xu-gB8"/>
                                     </constraints>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ajy-m3-kFG">
-                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QF-l9-9HF">
-                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                     <connections>
                                         <action selector="touchAva:" destination="-1" eventType="touchUpInside" id="rgx-y1-OeK"/>
                                     </connections>
@@ -56,8 +55,8 @@
                                 <constraint firstItem="ajy-m3-kFG" firstAttribute="top" secondItem="1Jz-0E-N9M" secondAttribute="top" id="1Q0-eO-4Qq"/>
                                 <constraint firstItem="ajy-m3-kFG" firstAttribute="leading" secondItem="1Jz-0E-N9M" secondAttribute="leading" id="4n1-UU-e10"/>
                                 <constraint firstAttribute="trailing" secondItem="ajy-m3-kFG" secondAttribute="trailing" id="LfI-4z-pOF"/>
-                                <constraint firstAttribute="height" constant="60" id="SoG-cf-8L6"/>
-                                <constraint firstAttribute="width" constant="60" id="Whw-ZR-8ED"/>
+                                <constraint firstAttribute="height" constant="80" id="SoG-cf-8L6"/>
+                                <constraint firstAttribute="width" constant="80" id="Whw-ZR-8ED"/>
                                 <constraint firstItem="0QF-l9-9HF" firstAttribute="leading" secondItem="1Jz-0E-N9M" secondAttribute="leading" id="XFp-cS-xXJ"/>
                                 <constraint firstAttribute="bottom" secondItem="0QF-l9-9HF" secondAttribute="bottom" id="ZoL-jH-UCA"/>
                                 <constraint firstAttribute="trailing" secondItem="0QF-l9-9HF" secondAttribute="trailing" id="bw3-vo-FuX"/>
@@ -68,30 +67,44 @@
                             </constraints>
                         </view>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Nhập tên của bạn" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SpT-BR-6jI">
-                            <rect key="frame" x="40" y="84" width="160" height="20"/>
+                            <rect key="frame" x="30" y="104" width="180" height="40"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="160" id="vL7-bn-xoV"/>
+                                <constraint firstAttribute="height" constant="40" id="1MV-oU-bFZ"/>
+                                <constraint firstAttribute="width" constant="180" id="vL7-bn-xoV"/>
                             </constraints>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="DJS-r1-eBC"/>
+                            </connections>
                         </textField>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6b-JS-AF1">
+                            <rect key="frame" x="30" y="143.5" width="180" height="0.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="sU9-8j-Z8g"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="H6b-JS-AF1" firstAttribute="centerX" secondItem="SpT-BR-6jI" secondAttribute="centerX" id="1Uo-cP-1gI"/>
                         <constraint firstItem="SpT-BR-6jI" firstAttribute="centerX" secondItem="1Jz-0E-N9M" secondAttribute="centerX" id="28Q-18-mCf"/>
                         <constraint firstItem="SpT-BR-6jI" firstAttribute="top" secondItem="1Jz-0E-N9M" secondAttribute="bottom" constant="24" id="3Zt-cq-7nm"/>
                         <constraint firstItem="1Jz-0E-N9M" firstAttribute="top" secondItem="q3y-v8-gKe" secondAttribute="top" id="53p-6d-LZs"/>
                         <constraint firstAttribute="width" constant="240" id="Q1M-pv-3HS"/>
-                        <constraint firstAttribute="height" constant="120" id="kA7-xF-dHL"/>
+                        <constraint firstItem="H6b-JS-AF1" firstAttribute="bottom" secondItem="SpT-BR-6jI" secondAttribute="bottom" id="ShP-Bg-Xfi"/>
+                        <constraint firstAttribute="height" constant="160" id="kA7-xF-dHL"/>
+                        <constraint firstItem="H6b-JS-AF1" firstAttribute="width" secondItem="SpT-BR-6jI" secondAttribute="width" id="mFX-cg-dSl"/>
                         <constraint firstItem="1Jz-0E-N9M" firstAttribute="centerX" secondItem="q3y-v8-gKe" secondAttribute="centerX" id="yNS-qm-AEz"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aK5-FX-naC">
-                    <rect key="frame" x="323" y="615" width="40" height="40"/>
+                    <rect key="frame" x="303" y="615" width="60" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="3Xc-ql-OHe"/>
-                        <constraint firstAttribute="width" constant="40" id="dQc-Op-XmF"/>
+                        <constraint firstAttribute="width" constant="60" id="dQc-Op-XmF"/>
                     </constraints>
                     <state key="normal" image="Next"/>
                     <connections>
@@ -110,7 +123,7 @@
                 <constraint firstAttribute="trailing" secondItem="aK5-FX-naC" secondAttribute="trailing" constant="12" id="h0w-67-Vir"/>
                 <constraint firstItem="q3y-v8-gKe" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.8" id="tX2-vM-g2u"/>
             </constraints>
-            <point key="canvasLocation" x="-1003" y="359"/>
+            <point key="canvasLocation" x="-1004" y="358.4707646176912"/>
         </view>
     </objects>
     <resources>

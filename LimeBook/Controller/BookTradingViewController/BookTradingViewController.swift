@@ -9,6 +9,10 @@
 import UIKit
 
 class BookTradingViewController: MasterViewController , UITableViewDelegate,UITableViewDataSource, BookTradingViewDelegate{
+    func bookTradingClose() {
+        view.hideAlertBox()
+    }
+    
     @IBOutlet weak var tbView: UITableView!
     @IBOutlet weak var btAdd: UIButton!
 
@@ -22,9 +26,6 @@ class BookTradingViewController: MasterViewController , UITableViewDelegate,UITa
         
         
         tbView.setIdentifier("BookTradingCell")
-        let request = BookTrading_Request()
-        request.load_type = 0
-        request.last_date = ""
         
         weak var weakself = self;
 
@@ -32,15 +33,26 @@ class BookTradingViewController: MasterViewController , UITableViewDelegate,UITa
             weakself?.pop()
         }
         
+        
+        cartUpdateItem()
+        notifyInstance.add(self, .cartUpdateItem, selector: #selector(cartUpdateItem))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let request = BookTrading_Request()
+        request.load_type = 0
+        request.last_date = ""
+        weak var weakself = self;
+        books.removeAll()
+        tbView.reloadData()
         services.bookTrading(request, success: { (response) in
             weakself?.books.append(contentsOf: response)
             weakself?.tbView.reloadData()
         }) { (errror) in
             
         }
-        
-        cartUpdateItem()
-        notifyInstance.add(self, .cartUpdateItem, selector: #selector(cartUpdateItem))
+
     }
 
     @objc func cartUpdateItem()
@@ -76,6 +88,10 @@ class BookTradingViewController: MasterViewController , UITableViewDelegate,UITa
         view.info(title: "Thông báo", desc: "Đã thêm sách vào giỏ hàng.")
     }
     
+    @IBAction func gotoCart(_ sender: Any)
+    {
+        push(CartViewController())
+    }
     func bookTradingMessageTouch(_ book: Book) {
         view.hideAlertBox()
         let user = User()

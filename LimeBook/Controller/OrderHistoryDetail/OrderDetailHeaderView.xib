@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderDetailHeaderView" customModule="MiBook" customModuleProvider="target">
+            <connections>
+                <outlet property="lbTitle" destination="AKb-D4-P7u" id="wMj-Wg-ZeM"/>
+                <outlet property="view" destination="iN0-l3-epB" id="MsH-OL-8pl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYJ-XJ-Rfw">
+                    <rect key="frame" x="8" y="8" width="359" height="659"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKb-D4-P7u">
+                            <rect key="frame" x="8" y="0.0" width="351" height="659"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTC-cm-DMj" customClass="LineView" customModule="MiBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="658.5" width="359" height="0.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="ICO-rh-mXe"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="AKb-D4-P7u" firstAttribute="top" secondItem="TYJ-XJ-Rfw" secondAttribute="top" id="25p-Dn-zsg"/>
+                        <constraint firstItem="uTC-cm-DMj" firstAttribute="leading" secondItem="TYJ-XJ-Rfw" secondAttribute="leading" id="Aea-Fr-PMX"/>
+                        <constraint firstItem="AKb-D4-P7u" firstAttribute="leading" secondItem="TYJ-XJ-Rfw" secondAttribute="leading" constant="8" id="PVf-6n-JJK"/>
+                        <constraint firstAttribute="trailing" secondItem="uTC-cm-DMj" secondAttribute="trailing" id="X3q-SI-33a"/>
+                        <constraint firstAttribute="trailing" secondItem="AKb-D4-P7u" secondAttribute="trailing" id="XiT-fK-WOp"/>
+                        <constraint firstAttribute="bottom" secondItem="AKb-D4-P7u" secondAttribute="bottom" id="h7e-p7-C17"/>
+                        <constraint firstAttribute="bottom" secondItem="uTC-cm-DMj" secondAttribute="bottom" id="igq-pb-8GB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TYJ-XJ-Rfw" secondAttribute="bottom" id="8VN-0r-dXg"/>
+                <constraint firstAttribute="trailing" secondItem="TYJ-XJ-Rfw" secondAttribute="trailing" constant="8" id="Lky-hC-eW0"/>
+                <constraint firstItem="TYJ-XJ-Rfw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="YgY-7Y-bRw"/>
+                <constraint firstItem="TYJ-XJ-Rfw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ZDh-tG-G3B"/>
+            </constraints>
+            <point key="canvasLocation" x="97" y="124"/>
+        </view>
+    </objects>
+</document>

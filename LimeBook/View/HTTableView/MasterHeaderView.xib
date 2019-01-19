@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MasterHeaderView" customModule="LimeBook" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MasterHeaderView" customModule="MiBook" customModuleProvider="target">
             <connections>
                 <outlet property="lbName" destination="5lp-hu-csf" id="rju-qm-CNA"/>
                 <outlet property="view" destination="nHs-uA-KrJ" id="Ig7-mL-PVQ"/>
@@ -25,10 +25,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="reP-W8-aqu">
-                            <rect key="frame" x="12" y="0.0" width="363" height="667"/>
+                            <rect key="frame" x="8" y="0.0" width="367" height="667"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lp-hu-csf">
-                                    <rect key="frame" x="0.0" y="0.0" width="363" height="663"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="367" height="663"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="reP-W8-aqu" secondAttribute="bottom" id="MkP-oJ-mOf"/>
-                        <constraint firstItem="reP-W8-aqu" firstAttribute="leading" secondItem="BF0-Ue-hWY" secondAttribute="leading" constant="12" id="Xpo-zG-rAy"/>
+                        <constraint firstItem="reP-W8-aqu" firstAttribute="leading" secondItem="BF0-Ue-hWY" secondAttribute="leading" constant="8" id="Xpo-zG-rAy"/>
                         <constraint firstItem="reP-W8-aqu" firstAttribute="top" secondItem="BF0-Ue-hWY" secondAttribute="top" id="dFf-6c-2kX"/>
                         <constraint firstAttribute="trailing" secondItem="reP-W8-aqu" secondAttribute="trailing" id="pAF-va-vgQ"/>
                     </constraints>

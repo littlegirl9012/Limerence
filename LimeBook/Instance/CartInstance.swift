@@ -31,6 +31,8 @@ class CartInstance: NSObject {
             let newOrder = Order()
             newOrder.user_id = book.user_id
             newOrder.aliasname = book.aliasname
+            newOrder.avatar = book.avatar
+            newOrder.product.append(book)
             order.append(newOrder)
         }
         else
@@ -41,5 +43,29 @@ class CartInstance: NSObject {
             }
         }
         notifyInstance.post(.cartUpdateItem, nil)
+    }
+    
+    func remove(_ product : Book)
+    {
+        let targetIndex = order.index{$0.user_id == product.user_id}
+        let targetOrder = order[targetIndex!]
+        
+        let targetIndexProduct = targetOrder.product.index{$0.id == product.id}
+        targetOrder.product.remove(at: targetIndexProduct!)
+        
+        if(targetOrder.product.count == 0)
+        {
+            order.remove(at: targetIndex!)
+        }
+    }
+    
+    func clear()
+    {
+        for item in cart.order
+        {
+            item.product.removeAll()
+        }
+        
+        cart.order.removeAll()
     }
 }

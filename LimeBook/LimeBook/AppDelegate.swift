@@ -159,35 +159,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         UIApplication.shared.statusBarStyle = .lightContent
         
-        self.window?.makeKeyAndVisible()
         
         GMSServices.provideAPIKey("AIzaSyAJSrKxx17Zp37q5VIdSNvTmmISuqJgur8")
         GMSPlacesClient.provideAPIKey("AIzaSyAJSrKxx17Zp37q5VIdSNvTmmISuqJgur8")
+
         
-        UNUserNotificationCenter.current().delegate = self;
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().delegate = self
+        } else {
+            // Fallback on earlier versions
+        };
         
-        UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]){ (granted, error) in }
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]){ (granted, error) in }
+        } else {
+            // Fallback on earlier versions
+        }
+        self.window?.makeKeyAndVisible()
+
         application.registerForRemoteNotifications()
         
-       
+        
+        
+        
+        
+        
+        
         
         
         self.window?.rootViewController = IntroViewController()
-        
-        
+//        self.window?.rootViewController = DrawViewController()
         return true
     }
-    
-    
-    
-    
-    func startApp()
-    {
-        
-    }
-    
-    
-    
     
     func maintenance()
     {
@@ -195,57 +198,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         self.window?.rootViewController = mt ;
         
     }
-    
-    func errorVersion()
-    {
-        #if DEBUG
-        matchVersion()
-        #else
-        self.window?.rootViewController = UpdateVersionViewController()
-        #endif
-    }
-    
-    func matchVersion()
-    {
-        userInstance.isMatchVersion = true
-        if(userInstance.alreadyLogin())
-        {
-            
-            let request = UserLogin_Request()
-            request.username = userInstance.getUsername()
-            request.password = userInstance.getPassword()
-            services.userLogin(request, success: { (response) in
-                if(response.count > 0)
-                {
-                    let userLogin = response[0]
-                    userInstance.login(userLogin)
-                    if(userLogin.info_success)
-                    {
-                        self.home()
-                    }
-                    else
-                    {
-                        if(userLogin.user_type == 1)
-                        {
-                            self.infoFace()
-                        }
-                        else
-                        {
-                            self.info()
-                        }
-                    }
-                }
-            }) { (error) in
-                
-                self.login()
-            }
-        }
-        else
-        {
-            login()
-        }
-    }
-    
     
     func login()
     {
@@ -294,20 +246,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         print("applicationWillEnterForeground")
-        if(userInstance.isLogin)
-        {
-            //            messageInstance.reconnect()
-        }
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         application.applicationIconBadgeNumber = 0
-        
-        if(!userInstance.isMatchVersion)
-        {
-            startApp()
-        }
-    }
+            }
     
     func applicationWillTerminate(_ application: UIApplication) {
         print("applicationWillTerminate")
@@ -337,11 +280,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     
+    @available(iOS 10.0, *)
     func userNotificationCenter(center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: (UNNotificationPresentationOptions) -> Void) {
         userInstance.setCustomKey("Receuve")
         
     }
     
+    @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
         userInstance.setCustomKey("Receuve")
@@ -350,6 +295,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
     }
     
+    @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
         

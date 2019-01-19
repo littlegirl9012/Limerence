@@ -51,6 +51,9 @@
                     <color key="tintColor" red="1" green="0.34858992319999998" blue="0.27067857350000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                     <state key="normal" image="Cart_Default"/>
+                    <connections>
+                        <action selector="gotoCart:" destination="-1" eventType="touchUpInside" id="stv-Io-nxT"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

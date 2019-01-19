@@ -18,10 +18,13 @@ class MasterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("Current --------- \(self.nibName!)")
-        messageInstance.reconnect()
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     func setTitleWithBackAction(_ value : String)
     {
         navigationView.set(style: .back, title: value) {

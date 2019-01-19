@@ -27,6 +27,7 @@ enum SettingType : Int
     case library = 4
     case admin = 5
     case store = 6
+    case order = 7
 
     
 }
@@ -84,10 +85,14 @@ class FunctionViewController: MasterViewController, UITableViewDelegate, UITable
         store.settingType = . store
         store.color = "e46e49".hexColor()
         
+        
+        
         items.append(face)
         items.append(bookRound)
         items.append(store)
         simpleNavi.set("MiBook.vn")
+        
+
         tbView.reloadData()
         
     }
@@ -127,6 +132,11 @@ class FunctionViewController: MasterViewController, UITableViewDelegate, UITable
             }
             push(trading)
         }
+        if(stype == .order)
+        {
+            push(OrderHistoryViewController())
+        }
+
     }
     
     

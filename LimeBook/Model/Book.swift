@@ -447,6 +447,20 @@ class Book: Mi {
         return output
     }
     
+    
+    class func  simpleList(data : [Dictionary<String, Any>]) -> [Book]
+    {
+        var output  : [Book]  = []
+        for item in data
+        {
+            let unit = Book.init(dictionary: item as NSDictionary)
+            output.append(unit)
+        }
+        return output
+    }
+
+    
+    
     func attributeText(_ value : String) -> NSMutableAttributedString
     {
         
@@ -564,14 +578,11 @@ class BookCommentInsert_Request: BookGeneral_Request
 
 }
 
-class BookLatest_Request: Mi
+class BookFeed_Request: Mi
 {
-    @objc dynamic var last_date : String = ""
-    @objc dynamic var load_type = 0;
+    @objc dynamic var last_date : String = "" // truyền ngày của object cuối cùng, sever trả về sao, đưa lên y chang vậy, ko chế biế //
+    @objc dynamic var load_type = 0; //1 là load old, 0 là load news
     @objc dynamic var user_id = userInstance.user.id;
-    @objc dynamic var query_id : [Int]  = [];
-
-
 }
 
 class BookUser_Request: Mi
@@ -650,7 +661,7 @@ extension Services
     }
 
     
-    func bookLatest(_ request : BookLatest_Request, success :@escaping (([Book])->Void), failure: @escaping ((String)->Void))
+    func bookLatest(_ request : BookFeed_Request, success :@escaping (([Book])->Void), failure: @escaping ((String)->Void))
     {
         services.request(api: .bookLatest, param: request.dictionary(), success: { (response) in
             success(Book.list(data: response.data as! [Dictionary<String, Any>]))
@@ -836,7 +847,7 @@ extension Services
             }
         }
     }
-    func bookFeed(_ request :  BookLatest_Request, success :@escaping (([Book])->Void), failure: ((String)->Void))
+    func bookFeed(_ request :  BookFeed_Request, success :@escaping (([Book])->Void), failure: ((String)->Void))
     {
         DispatchQueue.global(qos: .background).async {
             services.request(api: .bookFeed, param: request.dictionary(), success: { (response) in

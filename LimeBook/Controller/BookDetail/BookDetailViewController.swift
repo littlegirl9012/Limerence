@@ -138,6 +138,7 @@ class BookDetailViewController: MasterViewController,BookTypeViewDelegate{
     
     func updateBook()
     {
+        weak var weakself = self
         request.book_id = self.book.id
         request.user_id = userInstance.user.id
         request.images = imagePath
@@ -153,7 +154,7 @@ class BookDetailViewController: MasterViewController,BookTypeViewDelegate{
         }
         
         services.bookUpdateType(request, success: {
-            
+            weakself?.view.info(title: "Thông Báo", desc: "Cập nhật sách thành công")
         }) { (error) in
             
         }

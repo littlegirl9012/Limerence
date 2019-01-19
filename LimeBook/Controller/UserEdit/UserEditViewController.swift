@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserEditViewController: MasterViewController, CaIVDelegate, GIVDelegate {
+class UserEditViewController: MasterViewController, UniversityViewControllerDelegate, CaIVDelegate, GIVDelegate {
 
     @IBOutlet weak var headerInfo: MasterHeaderView!
     @IBOutlet weak var passwordConfirm: EditSingleLineView!
@@ -22,8 +22,11 @@ class UserEditViewController: MasterViewController, CaIVDelegate, GIVDelegate {
     @IBOutlet weak var phone: EditSingleLineView!
     @IBOutlet weak var gender: EditSingleLineView!
     @IBOutlet weak var dob: EditSingleLineView!
+    @IBOutlet weak var univerField: EditSingleLineView!
+    var univerSelected  : University!
+    @IBOutlet weak var univerHeaderView: MasterHeaderView!
     
-    
+    @IBOutlet weak var univerVIew: UIView!
     var dateSelect : Date!
     var genderSelect : Int! ;
     let genderInput  = GenderInputView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 160))
@@ -40,11 +43,17 @@ class UserEditViewController: MasterViewController, CaIVDelegate, GIVDelegate {
         
         
         
+        
         let request  = UserUpdateInfo_Request()
         request.user_id = userInstance.user.id
         request.aliasname = (name.tfContent.text?.trim())!
         request.gender = genderSelect
         request.dob =  dateSelect.stringValue()
+        request.phone = (phone.tfContent.text?.trim())!
+        if(univerSelected != nil)
+        {
+            request.university_id = univerSelected.id
+        }
 
         view.showHud()
         services.userUpdateInfo(request: request, success: { (response) in
@@ -87,30 +96,48 @@ class UserEditViewController: MasterViewController, CaIVDelegate, GIVDelegate {
     
     override func viewDidLoad() {
         
-        
+        super.viewDidLoad()
+
         self.genderSelect = userInstance.user.gender
         dateSelect = userInstance.user.dob.vnDate()
 
         infoView.drawRadius(4)
         
+        univerVIew.drawRadius(4)
+        univerHeaderView.set("Trường học")
+
         view.backgroundColor = template.backgroundColor
         headerInfo.set("Thông tin người dùng")
         self.navigationView.set(style: .back, title: "Thay Đổi Thông Tin Cá Nhân") {
             self.pop()
         }
-        super.viewDidLoad()
         
         name.set("Tên", userInstance.user.aliasname)
         phone.set("Điện thoại", userInstance.user.phone)
         gender.set("Giới tính", userInstance.user.genderDisplay())
         dob.set("Ngày sinh", userInstance.user.dob)
+        
+        univerField.set("Trường Học", "")
+
         dob.hidenLine()
         
         dob.setInput(calendarInput)
         gender.setInput(genderInput)
-        
         calendarInput.delegate = self;
         genderInput.delegate = self;
+    
+        weak var weakself = self;
+        univerField.setTouch {
+            let university = UniversityViewController()
+            university.delegate = self;
+            weakself?.push(university)
+        }
+        
+    }
+    
+    func UniversityViewControllerDidSelect(_ university: University) {
+        univerField.set("Trường Học", university.name)
+
     }
     
     func givDidSelect(_ genderValue: Int) {

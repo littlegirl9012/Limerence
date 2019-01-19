@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserInfoHeaderView" customModule="LimeBook" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserInfoHeaderView" customModule="MiBook" customModuleProvider="target">
             <connections>
                 <outlet property="lbName" destination="hNV-8u-918" id="wII-Bp-8vc"/>
                 <outlet property="userImageView" destination="YCK-wD-QmM" id="3JK-h6-J9p"/>
@@ -22,19 +21,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUU-4y-oAh" customClass="GCleanView" customModule="LimeBook" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUU-4y-oAh" customClass="GCleanView" customModule="MiBook" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7iY-3r-Eny">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6J-Nu-0Aq" customClass="GCleanView" customModule="LimeBook" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6J-Nu-0Aq" customClass="GCleanView" customModule="MiBook" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="200" width="375" height="84"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6c-Uj-HgQ" customClass="GCleanView" customModule="LimeBook" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6c-Uj-HgQ" customClass="GCleanView" customModule="MiBook" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCK-wD-QmM" customClass="UserImageView" customModule="LimeBook" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCK-wD-QmM" customClass="UserImageView" customModule="MiBook" customModuleProvider="target">
                                             <rect key="frame" x="12" y="12" width="60" height="60"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -61,7 +60,7 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNV-8u-918">
-                                    <rect key="frame" x="84" y="33" width="41.5" height="19.5"/>
+                                    <rect key="frame" x="84" y="32.5" width="41.5" height="19.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -98,7 +97,7 @@
                 <constraint firstAttribute="bottom" secondItem="TUU-4y-oAh" secondAttribute="bottom" id="p5W-pV-BB7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="38.5" y="32"/>
+            <point key="canvasLocation" x="124" y="1"/>
         </view>
     </objects>
     <resources>

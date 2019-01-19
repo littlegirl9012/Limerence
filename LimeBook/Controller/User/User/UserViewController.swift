@@ -14,6 +14,8 @@ enum UserInfoMenu : Int
     case infoDetail = 0
     case book = 1
     case news = 2
+    case order = 3
+
 }
 
 class UserDetailMenu : NSObject
@@ -39,7 +41,6 @@ class UserViewController: MasterViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tbView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         tbView.setIdentifier("UserDetailCell")
         
@@ -49,13 +50,15 @@ class UserViewController: MasterViewController, UITableViewDelegate, UITableView
         item0.menuType = .infoDetail
         let item1 = UserDetailMenu.init("Tủ sách")
         item1.menuType = .book
-        menu.append(contentsOf: [item0,item1])
+        
+        let item2 = UserDetailMenu.init("Đơn sách")
+        item2.menuType = .order
+
+        menu.append(contentsOf: [item0,item1,item2])
         tbView.reloadData()
 
     }
 
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tbView.dequeueReusableCell(withIdentifier: "UserDetailCell") as! UserDetailCell
@@ -64,13 +67,10 @@ class UserViewController: MasterViewController, UITableViewDelegate, UITableView
         
     }
     
-    
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
     {
         headerView.set(userInstance.user)
         return headerView;
-        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -89,6 +89,11 @@ class UserViewController: MasterViewController, UITableViewDelegate, UITableView
         {
             let page = BookViewController()
             page.user = userInstance.user
+            push(page)
+        }
+        if(item.menuType == .order)
+        {
+            let page = OrderHistoryViewController()
             push(page)
         }
     }

@@ -24,16 +24,42 @@ router.post('/list',function(req,res)
 });
 
 
-router.post('/detail',function(req,res)
+
+router.post('/change',function(req,res)
 {
-    var OrderID =  req.param('order_id');
-    connection.query("CALL  orders_detail(?);",[OrderID],function(err,rows)
+    var order_id = req.param('order_id');
+    var user_id = req.param('user_id');
+    var status = req.param('status');
+    connection.query("CALL  orders_change_status(?,?,?);",[order_id,status,user_id],function(err,rows)
     {
         if(!err)
         {
             var result = {}
-            result.Order =  rows[0][0];
-            result.Product =  rows[1];
+            result.order =  rows[0][0];
+            result.product =  rows[1];
+
+            res.status(200).send(Mi.responseProcess(err, result));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+});
+
+
+router.post('/detail',function(req,res)
+{
+    var order_id =  req.param('order_id');      
+    var user_id =  req.param('user_id');
+
+    connection.query("CALL  orders_detail(?,?);",[user_id,order_id],function(err,rows)
+    {
+        if(!err)
+        {
+            var result = {}
+            result.order =  rows[0][0];
+            result.product =  rows[1];
 
             res.status(200).send(Mi.responseProcess(err, result));
         }
@@ -50,75 +76,56 @@ router.post('/detail',function(req,res)
 router.post('/insert',function(req,res)
 {
 
-    var product = req.param('product');
-    var UserID = req.param('user_id');
-    var Name = req.param('name');
-    var ProvinceID = req.param('province_id');
-    var DistrictID = req.param('district_id');
-    var Phone = req.param('phone');
-    var Address = req.param('address');
-    var CouponID = req.param('coupon_id');
+    var user_id = req.param('user_id');
+    var phone = req.param('phone');
+    var address = req.param('address');
+    var orders =  req.param('orders') ;
 
-    var ProductPrice = 1;
-    var ShippingPrice = 20;
-
-    for (var i in product) 
+    'use strict';
+    for (let i in orders)
     {
-        var unit = product[i];
-        ProductPrice = ProductPrice + unit.price ;
-    }
+        let orderItem = orders[i];
+        let product_price = 0;
 
-    var TotalPrice = ProductPrice + ShippingPrice ;
-
-
-    if(!CouponID)
-    {
-        CouponID = -1;
-    }
-
-    if(!UserID)
-    {
-        UserID = -1 ;
-    }
-
-
-
-
-
-    connection.query("CALL  orders_insert(?,?,?,?,?,?,?,?,?,?);",[UserID,Name,Phone,ProvinceID,DistrictID,Address,CouponID,ProductPrice,ShippingPrice,TotalPrice],function(err,rows)
-    {
-        if(!err)
+        for (let j in orderItem.products)
         {
-            var orderID = rows[0][0].id;
-            var records = [] ;
-            for (var i in product) 
-            {
-                var unit = product[i];
-            records.push([orderID,unit.id,unit.price,unit.quantity]) ;
+            product_price = product_price + orderItem.products[j].price ;
+        }
 
+        connection.query("CALL orders_insert (?,?,?,?,?)", [user_id,orderItem.user_id,phone,address,product_price], function(err2, result) {
+        
+
+            if(!err2)
+            {
+                let order_id = result[0][0].id;
+                let records = [] ;
+                let product_list = orderItem.products ;
+                for( let j in product_list)
+                {
+                    let product_id = product_list[j].id;
+                    let product_price = product_list[j].price;
+                    records.push([order_id,product_id,product_price]) ;
+                }
+
+                let query = "INSERT INTO orders_product(orders_id,product_id,price) VALUES ?";
+
+                connection.query(query, [records], function(err3, result3) {
+
+
+                });
+            }
+            else
+            {
+               if(i == orders.length - 1)
+                {
+
+                }
             }
 
+        });
 
-            var query = "INSERT INTO orders_product(orders_id,product_id, price, quantity) VALUES ?";
-
-            connection.query(query, [records], function(err2, result) {
-
-                if(!err2)
-                {
-                    res.status(200).send(Mi.responseProcess(err2,orderID));
-                }
-                else
-                {
-                    res.status(200).send(Mi.responseProcess(records));
-                }
-            });
-
-         }
-        else
-        {
-            res.status(200).send(Mi.responseProcess(err, "err"));
-        }
-    });
+    }
+    res.status(200).send(Mi.responseProcess("",1));
 
 });
 

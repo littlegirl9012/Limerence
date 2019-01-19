@@ -339,9 +339,15 @@ router.post('/update/info',function(req,res)
     var phone = req.param('phone');
     var dob = req.param('dob');
     var gender = req.param('gender');
+    var university_id = req.param('university_id');
 
 
-    connection.query("CALL  user_update_info(?,?,?,?,?);",[user_id,aliasname,phone,dob,gender],function(err,rows)
+    if(!university_id)
+    {
+        university_id = -1;
+    }
+
+    connection.query("CALL  user_update_info(?,?,?,?,?,?);",[user_id,aliasname,phone,dob,gender,university_id],function(err,rows)
     {
         if(!err)
         {
