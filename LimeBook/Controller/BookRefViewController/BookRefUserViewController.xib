@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookRefUserViewController" customModule="MiBook" customModuleProvider="target">
+            <connections>
+                <outlet property="tbView" destination="9wf-mD-cGF" id="02D-fZ-0NK"/>
+                <outlet property="topView" destination="M1i-wR-ni9" id="4eB-LC-Vod"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9wf-mD-cGF">
+                    <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="TQj-6W-QBX"/>
+                        <outlet property="delegate" destination="-1" id="xgY-UF-t0h"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1i-wR-ni9">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sách Đã Đăng" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdA-hT-TpV">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="cdA-hT-TpV" secondAttribute="bottom" id="ZLd-bd-tap"/>
+                        <constraint firstItem="cdA-hT-TpV" firstAttribute="leading" secondItem="M1i-wR-ni9" secondAttribute="leading" id="acd-fL-MzF"/>
+                        <constraint firstAttribute="height" constant="40" id="jGW-mY-z0Y"/>
+                        <constraint firstItem="cdA-hT-TpV" firstAttribute="top" secondItem="M1i-wR-ni9" secondAttribute="top" id="u0f-jV-byv"/>
+                        <constraint firstAttribute="trailing" secondItem="cdA-hT-TpV" secondAttribute="trailing" id="uUr-aV-PX2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="M1i-wR-ni9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9gP-6L-MFh"/>
+                <constraint firstAttribute="trailing" secondItem="9wf-mD-cGF" secondAttribute="trailing" id="AaA-Tj-XVZ"/>
+                <constraint firstItem="M1i-wR-ni9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Aid-Yc-yeD"/>
+                <constraint firstAttribute="bottom" secondItem="9wf-mD-cGF" secondAttribute="bottom" id="OUD-Em-dDg"/>
+                <constraint firstItem="9wf-mD-cGF" firstAttribute="top" secondItem="M1i-wR-ni9" secondAttribute="bottom" id="c2r-0m-3Vb"/>
+                <constraint firstItem="9wf-mD-cGF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hX6-AH-ufk"/>
+                <constraint firstAttribute="trailing" secondItem="M1i-wR-ni9" secondAttribute="trailing" id="pGn-T1-Gc0"/>
+            </constraints>
+            <point key="canvasLocation" x="-66.400000000000006" y="250.52473763118442"/>
+        </view>
+    </objects>
+</document>

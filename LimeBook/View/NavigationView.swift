@@ -52,7 +52,6 @@ class NavigationView: GreenView , UITextFieldDelegate{
         tfSearcg.delegate = self;
         
         lbTitle.textColor = .white;
-        weak var weakself = self;
         
         shadowView.dropShadow(radius: 1, width: 1, height: 1, opacity: 0.12, shadowRadius: 1)
         lbTitle.textColor = .white;

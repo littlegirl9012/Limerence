@@ -24,6 +24,17 @@ enum APIFunction : String
     case bookSearchAll  = "book/search/all"
     case bookTrading    = "book/trading"
     case bookFeed       = "book/feed"
+    case bookRef       = "book/ref"
+    case bookRefGroup       = "book/ref/group"
+    case bookRefInsert     = "book/ref/insert"
+    case referenceGroupDetail     = "book/ref/detail"
+    case referenceUser     = "book/ref/user"
+    case referenceDelete     = "book/ref/delete"
+
+    
+    
+    
+    
     case bookReport     = "book/report"
     case bookUpdateType     = "book/update/type"
     case bookCommentList = "book/comment/list"
@@ -57,16 +68,17 @@ enum APIFunction : String
     case orderList = "order/list"
     case orderDetail = "order/detail"
     case orderChange = "order/change"
-
+    
     case addressNode      =    "address/node"
-
+    
     case test = "place/location/service"
-//
-//
-//    ?locationId=08f6f30f-4667-49e5-8050-fd0488594d6e
-//
-
+    //
+    //
+    //    ?locationId=08f6f30f-4667-49e5-8050-fd0488594d6e
+    //
+    
     
 }
+
 
 

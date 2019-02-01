@@ -14,7 +14,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationView" customModule="LimeBook" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationView" customModule="MiBook" customModuleProvider="target">
             <connections>
                 <outlet property="btRight" destination="Bem-Wj-MTg" id="N9A-n5-s1W"/>
                 <outlet property="contentView" destination="HTX-Qm-Ynw" id="Jjq-29-Cqk"/>

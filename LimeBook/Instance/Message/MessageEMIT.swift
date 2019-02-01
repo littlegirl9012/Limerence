@@ -52,7 +52,7 @@ class MessageLatest_Request : Mi
         self.message_id = message_id
     }
     
-    required public override init() {
+    required public init() {
         fatalError("init() has not been implemented")
     }
 }
@@ -139,14 +139,6 @@ extension   MessageInstance {
     {
         socket.emit(ConferenceNotify.conversationMarkRead.rawValue, with: [request.dictionary()])
     }
-
-    
-    
-
-    
-    
-    
-    
     
     func bookSearch(_ request : BookSearch_Request)
     {
@@ -163,11 +155,6 @@ extension   MessageInstance {
     {
         socket.emit(ConferenceNotify.newsSearch.rawValue, with: [request.dictionary()])
     }
-
-
-    
-    
-    
 
     func bookAuthor(_ request : AuthorSearch_Request)
     {

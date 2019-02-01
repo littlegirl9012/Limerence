@@ -20,10 +20,9 @@ class NewsDetailWebViewController: MasterViewController, UIWebViewDelegate {
             weakself?.pop()
         }
         webView.delegate = self;
-        
+        self.view.showHud()
         services.wpRequestPost(id: String(book.wp_id), success: { (response) in
-            
-            self.view.showHud()
+            weakself?.hideHub()
             let dictionary = response as! NSDictionary
             let content = dictionary.value(forKey: "content") as! NSDictionary
             let render = content.value(forKey: "rendered") as! String

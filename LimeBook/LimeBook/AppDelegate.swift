@@ -186,7 +186,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
         
-        
+        bookRef.getRef()
+
         
         
         self.window?.rootViewController = IntroViewController()

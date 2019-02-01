@@ -67,12 +67,6 @@ class LoginViewController: MasterViewController,RegisterDelegate {
         {
             FBSDKAccessToken.setCurrent(nil)
         }
-        /*
-         var grap = FBSDKGraphRequest.init(graphPath: "me", parameters:  ["fields": "id, name, email, picture.type(large),cover,email, gender, user_birthday, phone"])
-
-         */
-
-//        fbLogin.loginBehavior = FBSDKLoginBehavior.web
         fbLogin.logIn(withReadPermissions: ["public_profile"], from: self) { (response, error) in
             if(error == nil)
             {

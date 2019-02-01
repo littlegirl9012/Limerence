@@ -149,7 +149,7 @@
                 <outlet property="lbTitle" destination="Y8Y-oO-hj7" id="mV2-P8-MsW"/>
                 <outlet property="tfPhone" destination="gTn-Ys-iI7" id="HSP-R8-KJK"/>
             </connections>
-            <point key="canvasLocation" x="1240" y="4.9475262368815596"/>
+            <point key="canvasLocation" x="1022" y="4"/>
         </tableViewCell>
     </objects>
 </document>

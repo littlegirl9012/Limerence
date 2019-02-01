@@ -23,6 +23,9 @@ class CartInstance: NSObject {
     }
 
     
+    
+    
+    
     func addProduct(_ book : Book)
     {
         let targetIndex = self.order.index{$0.user_id == book.user_id}

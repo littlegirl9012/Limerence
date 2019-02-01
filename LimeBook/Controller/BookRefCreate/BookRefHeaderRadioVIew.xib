@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookRefHeaderRadioVIew" customModule="MiBook" customModuleProvider="target">
+            <connections>
+                <outlet property="buyView" destination="LZa-H0-aKo" id="Fmg-yL-kIM"/>
+                <outlet property="giftView" destination="dCy-RU-Sng" id="e79-Ta-xoW"/>
+                <outlet property="view" destination="ddZ-zp-cZo" id="OOW-PK-p9A"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ddZ-zp-cZo">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
+                    <rect key="frame" x="8" y="8" width="359" height="659"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCy-RU-Sng" customClass="RadioView" customModule="MiBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="179.5" height="659"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <viewLayoutGuide key="safeArea" id="HXR-OF-VHR"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZa-H0-aKo" customClass="RadioView" customModule="MiBook" customModuleProvider="target">
+                            <rect key="frame" x="179.5" y="0.0" width="179.5" height="659"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <viewLayoutGuide key="safeArea" id="RVA-sB-pgW"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="dCy-RU-Sng" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CTW-Cr-Gdo"/>
+                        <constraint firstItem="LZa-H0-aKo" firstAttribute="leading" secondItem="dCy-RU-Sng" secondAttribute="trailing" id="Cz0-NS-TVw"/>
+                        <constraint firstItem="LZa-H0-aKo" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="FQh-uw-Dwz"/>
+                        <constraint firstItem="dCy-RU-Sng" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LAU-su-ApR"/>
+                        <constraint firstItem="LZa-H0-aKo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PAS-8r-QIZ"/>
+                        <constraint firstItem="dCy-RU-Sng" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="bvL-0v-LPJ"/>
+                        <constraint firstItem="LZa-H0-aKo" firstAttribute="width" secondItem="dCy-RU-Sng" secondAttribute="width" id="nyt-ao-CEH"/>
+                        <constraint firstItem="LZa-H0-aKo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="xWR-Oq-sD9"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agt-4N-AGE" customClass="LineView" customModule="MiBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="666.5" width="375" height="0.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="Q45-bd-NRg"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="s4E-dv-4qY"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="trailing" secondItem="bSx-Iq-NGU" secondAttribute="trailing" constant="-8" id="91s-wZ-m8d"/>
+                <constraint firstItem="agt-4N-AGE" firstAttribute="bottom" secondItem="bSx-Iq-NGU" secondAttribute="bottom" id="K9g-Uj-9dY"/>
+                <constraint firstItem="agt-4N-AGE" firstAttribute="leading" secondItem="bSx-Iq-NGU" secondAttribute="leading" id="RxY-oF-lb2"/>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="top" secondItem="ddZ-zp-cZo" secondAttribute="top" constant="8" id="tUf-nW-r0G"/>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="bottom" secondItem="bSx-Iq-NGU" secondAttribute="bottom" id="uob-JU-upT"/>
+                <constraint firstItem="agt-4N-AGE" firstAttribute="trailing" secondItem="bSx-Iq-NGU" secondAttribute="trailing" id="wIB-7m-Gxw"/>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="leading" secondItem="bSx-Iq-NGU" secondAttribute="leading" constant="8" id="wwG-Ti-D4A"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="bSx-Iq-NGU"/>
+        </view>
+    </objects>
+</document>

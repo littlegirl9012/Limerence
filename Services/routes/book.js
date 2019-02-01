@@ -914,6 +914,172 @@ router.post('/user/all',function(req,res)
     });
 });
 
+
+router.post('/ref',function(req,res)
+{
+    connection.query("CALL  book_ref() ;",[],function(err,rows)
+    {
+        if(!err)
+        {
+            var node = {} ;
+            node.book_reference = rows[0];
+            node.book_reference_type = rows[1];
+
+            res.status(200).send(Mi.responseProcess(err, node));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+});
+
+
+
+router.post('/ref/group',function(req,res)
+{
+
+    var province_id = req.param('province_id');
+    var district_id = req.param('district_id');
+    var reference_type_id = req.param('reference_type_id');
+
+
+    connection.query("CALL  reference_group_list(?,?,?) ;",[reference_type_id,province_id,district_id],function(err,rows)
+    {
+        if(!err)
+        {
+
+
+
+
+            res.status(200).send(Mi.responseProcess(err, rows[0]));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+});
+
+router.post('/ref/delete',function(req,res)
+{
+
+    var reference_group_id = req.param('reference_group_id');
+
+
+    connection.query("CALL  reference_group_delete(?) ;",[reference_group_id],function(err,rows)
+    {
+        if(!err)
+        {
+
+
+
+
+            res.status(200).send(Mi.responseProcess(err, rows[0]));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+});
+
+
+
+router.post('/ref/user',function(req,res)
+{
+
+    var user_id = req.param('user_id');
+
+
+    connection.query("CALL  reference_group_user(?) ;",[user_id],function(err,rows)
+    {
+        if(!err)
+        {
+
+
+
+
+            res.status(200).send(Mi.responseProcess(err, rows[0]));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+});
+
+
+router.post('/ref/detail',function(req,res)
+{
+
+    var reference_group_id = req.param('reference_group_id');
+    connection.query("CALL  reference_group_detail(?) ;",[reference_group_id],function(err,rows)
+    {
+        if(!err)
+        {
+            var result = {} ;
+            result.info = rows[0][0];
+            result.item = rows[1];
+            res.status(200).send(Mi.responseProcess(err, result));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+
+});
+
+
+
+router.post('/ref/insert',function(req,res)
+{
+
+    var user_id = req.param('user_id');
+    var reference_type_id = req.param('reference_type_id');
+    var province_id = req.param('province_id');
+    var district_id = req.param('district_id');
+    var price = req.param('price');
+    var note = req.param('note');
+
+
+    var book_reference =  req.param('book_reference');
+
+
+
+    connection.query("CALL  reference_group_create(?,?,?,?,?,?) ;",[user_id,reference_type_id,province_id,district_id,price,note],function(err,rows)
+    {
+        if(!err)
+        {
+            var group_id = rows[0][0].id ;
+            var records = [] ;
+            for (let j in book_reference)
+            {
+                let book_ref_id  = book_reference[j].id ;
+                records.push([group_id,book_ref_id]) ;
+            }
+
+            let query = "INSERT INTO book_reference_group(reference_group_id,book_reference_id) VALUES ?";
+            connection.query(query, [records], function(err3, result3) {
+                res.status(200).send(Mi.responseProcess(err, rows[0]));
+            });
+
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+
+});
+
+
+
+
+
+
+
 router.post('/user/list',function(req,res)
 {
     var book_id = req.param('book_id');

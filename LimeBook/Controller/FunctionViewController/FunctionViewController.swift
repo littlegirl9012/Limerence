@@ -28,6 +28,8 @@ enum SettingType : Int
     case admin = 5
     case store = 6
     case order = 7
+    case school = 8
+
 
     
 }
@@ -67,10 +69,12 @@ class FunctionViewController: MasterViewController, UITableViewDelegate, UITable
         
         tbView.setIdentifier("SettingCell");
         tbView.setIdentifier("SettingItemCell");
+        simpleNavi.set("MiBook.vn")
+
         
         let bookRound = SettingItem.init("Sách quanh tôi", "BookRound".image())
         bookRound.settingType = . bookMap
-        bookRound.color = "33A068".hexColor()
+        bookRound.color = "145f71".hexColor()
         
         let face = SettingItem.init("Facebook - Hội Yêu Sách", "facebook".image())
         face.settingType = . bookFace
@@ -87,14 +91,20 @@ class FunctionViewController: MasterViewController, UITableViewDelegate, UITable
         
         
         
+        let school = SettingItem.init("Sách giáo khoa", "class_book".image())
+        school.settingType = . school
+        school.color = "17bb68".hexColor()
+
+        let univer = SettingItem.init("Đại học - Cao đẳng", "school".image())
+        univer.settingType = . school
+        univer.color = "9d194e".hexColor()
+
         items.append(face)
         items.append(bookRound)
         items.append(store)
-        simpleNavi.set("MiBook.vn")
-        
-
+        items.append(school)
+        items.append(univer)
         tbView.reloadData()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -136,6 +146,12 @@ class FunctionViewController: MasterViewController, UITableViewDelegate, UITable
         {
             push(OrderHistoryViewController())
         }
+        
+        if(stype == .school)
+        {
+            push(BookRefContentViewController())
+        }
+
 
     }
     

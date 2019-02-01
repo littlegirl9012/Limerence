@@ -9,13 +9,11 @@
 import UIKit
 let  addressInstance = AddressInstance.sharedInstance()
 class AddressInstance: NSObject {
-    static var instance: AddressInstance!
     var provinceList  : [DHMProvince] = []
     var dictristList : [DHMDistrict] = []
     
-    
-    
-    
+    static var instance: AddressInstance!
+
     class func sharedInstance() -> AddressInstance
     {
         if(self.instance == nil)
@@ -44,13 +42,12 @@ class AddressInstance: NSObject {
             return provinceList[index].name
         }
         return ""
-        
     }
     
+
     func getChild(_ province : DHMProvince) -> [DHMDistrict]?
     {
         return dictristList.filter{ $0.province_id == province.id }
     }
-
 
 }

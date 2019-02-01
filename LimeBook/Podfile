@@ -19,5 +19,7 @@ pod 'SDWebImage'
 pod 'swiftScan'
 pod 'SwiftyStarRatingView'
 pod 'XMPPFramework/Swift'
+pod 'DeviceUtil'
+
 
 end
