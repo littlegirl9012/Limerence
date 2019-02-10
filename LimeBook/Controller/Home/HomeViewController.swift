@@ -103,7 +103,7 @@ class HomeViewController: MasterViewController, HomeNaviViewDelegate
     override func viewDidAppear(_ animated: Bool) {
         if(apppInstance.isMatchVersion())
         {
-            
+            bottomContraits.constant = 0
         }
         else
         {

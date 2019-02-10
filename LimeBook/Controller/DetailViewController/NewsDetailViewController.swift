@@ -13,6 +13,10 @@ import UIKit
 
 
 class NewsDetailViewController: MasterViewController,NewsCommentCellDelegate, UITableViewDelegate, UITableViewDataSource, ComposeViewDelegate, BookInfoDetailCellDelegate, BookActionViewDelegate, BookTakeUserViewDelegate, BookFeelCellDelegate, ReportViewDelegate{
+    func composeWillType() {
+        
+    }
+    
     
     @IBOutlet weak var btWarning: UIButton!
     @IBOutlet weak var compose: ComposerView!

@@ -4244,6 +4244,7 @@ enum XMPPStreamConfig
 	
 	srvResolver = nil;
 	srvResults = nil;
+	
 	// Are we using old-style SSL? (Not the upgrade to TLS technique specified in the XMPP RFC)
 	if ([self isSecure])
 	{

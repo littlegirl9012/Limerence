@@ -10,6 +10,7 @@ import UIKit
 
 class SimpleNavi: GreenView {
 
+    @IBOutlet weak var heightStatus: NSLayoutConstraint!
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var lbTitle: UILabel!
@@ -20,6 +21,12 @@ class SimpleNavi: GreenView {
         mainView.backgroundColor = "44424A".hexColor()
         statusView.backgroundColor = "44424A".hexColor()
         lbTitle.textColor = UIColor.white
+        
+        if(device.isRStatusBar())
+        {
+            heightStatus.constant = 40 ;
+        }
+
     }
     
     

@@ -1077,6 +1077,29 @@ router.post('/ref/insert',function(req,res)
 
 
 
+router.post('/university',function(req,res)
+{
+    var university_id = req.param('university_id');
+    var last_date = req.param('last_date');
+
+    var query = "";
+
+
+
+
+    connection.query("CALL  book_university(?) ;",[university_id],function(err,rows)
+    {
+        if(!err)
+        {
+            res.status(200).send(Mi.responseProcess(err, rows[0]));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+});
+
 
 
 

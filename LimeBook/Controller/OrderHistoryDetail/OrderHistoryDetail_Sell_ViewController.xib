@@ -26,7 +26,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="64" id="Cje-id-1Rc"/>
+                        <constraint firstAttribute="height" priority="750" constant="64" id="Cje-id-1Rc"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="bKN-e1-Jz2"/>
                 </view>
@@ -50,7 +50,7 @@
                 <constraint firstItem="UVK-70-UWY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vnd-YG-Fbd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="432.80000000000001" y="171.36431784107947"/>
+            <point key="canvasLocation" x="127" y="133"/>
         </view>
     </objects>
 </document>

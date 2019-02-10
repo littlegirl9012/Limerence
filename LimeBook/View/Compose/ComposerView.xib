@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposerView" customModule="LimeBook" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposerView" customModule="MiBook" customModuleProvider="target">
             <connections>
                 <outlet property="btEmoj" destination="Uhk-Nj-r4v" id="tAt-cL-yLe"/>
                 <outlet property="imgEmoj" destination="qnW-UQ-ObV" id="YTW-ei-W4t"/>
@@ -120,6 +120,13 @@
                         <constraint firstItem="VQo-iP-jZP" firstAttribute="top" secondItem="h57-V6-uoG" secondAttribute="top" constant="6" id="Rop-GV-OE1"/>
                     </constraints>
                 </view>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKB-qM-Wui">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="xcw-Mw-iAb"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -129,10 +136,13 @@
                 <constraint firstItem="cwL-H0-osn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KNY-wP-XWI"/>
                 <constraint firstAttribute="bottom" secondItem="Bmd-PD-Fbe" secondAttribute="bottom" id="N19-Dv-ltr"/>
                 <constraint firstItem="Bmd-PD-Fbe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NIJ-9N-Huk"/>
+                <constraint firstItem="xKB-qM-Wui" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RJZ-RX-GKf"/>
                 <constraint firstItem="h57-V6-uoG" firstAttribute="leading" secondItem="Bmd-PD-Fbe" secondAttribute="trailing" id="Y6I-VB-pxh"/>
                 <constraint firstAttribute="bottom" secondItem="cwL-H0-osn" secondAttribute="bottom" id="aN9-lj-pJ4"/>
                 <constraint firstItem="Bmd-PD-Fbe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bOM-vN-srj"/>
                 <constraint firstItem="cwL-H0-osn" firstAttribute="leading" secondItem="h57-V6-uoG" secondAttribute="trailing" id="r07-dQ-txr"/>
+                <constraint firstAttribute="trailing" secondItem="xKB-qM-Wui" secondAttribute="trailing" id="r7N-pG-fpq"/>
+                <constraint firstItem="xKB-qM-Wui" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sqQ-Kw-bKq"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-628" y="-188"/>

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimpleNavi" customModule="LimeBook" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimpleNavi" customModule="MiBook" customModuleProvider="target">
             <connections>
+                <outlet property="heightStatus" destination="NVg-yQ-XhI" id="ua1-Gl-JEu"/>
                 <outlet property="lbTitle" destination="f6Z-i6-Jk2" id="9pj-e6-lGk"/>
                 <outlet property="mainView" destination="fi4-5o-5do" id="WKr-h0-lVK"/>
                 <outlet property="statusView" destination="zIr-Sz-Ne7" id="wcH-EW-PTl"/>
@@ -42,6 +44,7 @@
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="f6Z-i6-Jk2" secondAttribute="bottom" id="D3A-fk-w6h"/>
                         <constraint firstItem="f6Z-i6-Jk2" firstAttribute="top" secondItem="fi4-5o-5do" secondAttribute="top" id="JkR-C8-6Ys"/>
+                        <constraint firstAttribute="height" priority="999" constant="44" id="RIu-5g-e74"/>
                         <constraint firstAttribute="trailing" secondItem="f6Z-i6-Jk2" secondAttribute="trailing" id="iTg-ho-CeQ"/>
                         <constraint firstItem="f6Z-i6-Jk2" firstAttribute="leading" secondItem="fi4-5o-5do" secondAttribute="leading" constant="8" id="nxs-xI-a4Q"/>
                     </constraints>
@@ -58,7 +61,7 @@
                 <constraint firstItem="zIr-Sz-Ne7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vM8-UC-QQw"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-157" y="192"/>
+            <point key="canvasLocation" x="20" y="81"/>
         </view>
     </objects>
 </document>

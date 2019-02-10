@@ -54,6 +54,7 @@
                             <rect key="frame" x="331" y="20" width="44" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="44" id="5Ko-dn-Qcb"/>
+                                <constraint firstAttribute="height" constant="44" id="jUP-v5-BFv"/>
                             </constraints>
                             <state key="normal" image="AddWhite"/>
                             <connections>
@@ -63,6 +64,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3W-95-a0J">
                             <rect key="frame" x="279" y="20" width="44" height="44"/>
                             <constraints>
+                                <constraint firstAttribute="height" constant="44" id="iRE-BK-nTP"/>
                                 <constraint firstAttribute="width" constant="44" id="uN5-xo-7ds"/>
                             </constraints>
                             <state key="normal" image="home_search"/>
@@ -81,14 +83,12 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="W6J-iO-LeB" firstAttribute="height" secondItem="wTM-vi-tXd" secondAttribute="height" id="42W-HL-ABu"/>
-                        <constraint firstAttribute="height" constant="64" id="6rh-Ix-iF4"/>
+                        <constraint firstAttribute="height" priority="750" constant="64" id="6rh-Ix-iF4"/>
                         <constraint firstAttribute="bottom" secondItem="K3W-95-a0J" secondAttribute="bottom" id="GzX-A3-YPW"/>
                         <constraint firstAttribute="bottom" secondItem="wTM-vi-tXd" secondAttribute="bottom" id="He4-jq-uYi"/>
-                        <constraint firstItem="wTM-vi-tXd" firstAttribute="top" secondItem="zMb-iq-29o" secondAttribute="top" constant="20" id="XdH-EM-hbg"/>
                         <constraint firstAttribute="trailing" secondItem="wTM-vi-tXd" secondAttribute="trailing" id="aIt-ou-9aU"/>
                         <constraint firstItem="K3W-95-a0J" firstAttribute="leading" secondItem="W6J-iO-LeB" secondAttribute="trailing" constant="8" id="epe-IF-Zds"/>
                         <constraint firstItem="W6J-iO-LeB" firstAttribute="top" secondItem="wTM-vi-tXd" secondAttribute="top" id="gej-JW-SFF"/>
-                        <constraint firstItem="K3W-95-a0J" firstAttribute="top" secondItem="zMb-iq-29o" secondAttribute="top" constant="20" id="gpj-XB-Nfh"/>
                         <constraint firstItem="W6J-iO-LeB" firstAttribute="width" secondItem="wTM-vi-tXd" secondAttribute="width" id="oMA-5m-6Dt"/>
                         <constraint firstItem="wTM-vi-tXd" firstAttribute="leading" secondItem="K3W-95-a0J" secondAttribute="trailing" constant="8" id="oyh-nd-dOc"/>
                     </constraints>
@@ -125,7 +125,7 @@
                 <constraint firstAttribute="bottom" secondItem="vWz-2j-HNh" secondAttribute="bottom" id="x9Y-TP-c2E"/>
                 <constraint firstAttribute="trailing" secondItem="vWz-2j-HNh" secondAttribute="trailing" id="z31-zs-XwQ"/>
             </constraints>
-            <point key="canvasLocation" x="-575.20000000000005" y="-255.02248875562222"/>
+            <point key="canvasLocation" x="-2" y="-45"/>
         </view>
     </objects>
     <resources>

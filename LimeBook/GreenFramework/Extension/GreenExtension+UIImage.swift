@@ -13,7 +13,8 @@ extension UIImageView
 {
     func setSD(_ url : String)
     {
-        sd_setImage(with: URL(string: url), placeholderImage: "userbackground.jpg".image(), options: .refreshCached)
+        let tempURl = url.replacingOccurrences(of: "200x200", with: "800x800")
+        sd_setImage(with: URL(string: tempURl), placeholderImage: "userbackground.jpg".image(), options: .refreshCached)
     }
 
 }

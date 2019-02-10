@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookRefContentViewController" customModule="MiBook" customModuleProvider="target">
             <connections>
+                <outlet property="bottomSwitch" destination="Yk6-By-TXf" id="uNt-qg-qTb"/>
                 <outlet property="btAdd" destination="MSo-nR-yPu" id="Utf-p1-9VY"/>
                 <outlet property="contentView" destination="KOE-fh-FKH" id="f9p-cs-anl"/>
                 <outlet property="navigationView" destination="cjn-m9-BR5" id="pfY-Vy-jXc"/>
@@ -40,7 +42,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="MSo-nR-yPu" secondAttribute="bottom" id="9PN-QN-WM8"/>
-                        <constraint firstAttribute="height" constant="64" id="lKg-MA-kd5"/>
+                        <constraint firstAttribute="height" priority="750" constant="64" id="lKg-MA-kd5"/>
                         <constraint firstAttribute="trailing" secondItem="MSo-nR-yPu" secondAttribute="trailing" id="ncd-Sm-egp"/>
                     </constraints>
                 </view>
@@ -72,7 +74,8 @@
                 <constraint firstAttribute="trailing" secondItem="cjn-m9-BR5" secondAttribute="trailing" id="wgD-jo-b5M"/>
                 <constraint firstItem="cjn-m9-BR5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yNe-9J-wmU"/>
             </constraints>
-            <point key="canvasLocation" x="-377" y="121"/>
+            <viewLayoutGuide key="safeArea" id="nh7-pD-l0e"/>
+            <point key="canvasLocation" x="-191" y="129"/>
         </view>
     </objects>
     <resources>

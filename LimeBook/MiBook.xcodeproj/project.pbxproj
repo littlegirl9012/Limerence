@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1AD6E3EBF6929F143D1E33E8 /* Pods_LimeBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60518A3DF727616F1EDACD4 /* Pods_LimeBook.framework */; };
 		5100E8D121E259C4003FCF78 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5100E8CF21E259C4003FCF78 /* CartViewController.swift */; };
 		5100E8D221E259C4003FCF78 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5100E8D021E259C4003FCF78 /* CartViewController.xib */; };
 		5100E8D521E25B1E003FCF78 /* CartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5100E8D421E25B1E003FCF78 /* CartHeaderView.swift */; };
@@ -110,6 +109,10 @@
 		51176B752173A895003ECCAF /* NewsDetailCellBook.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51176B712173A894003ECCAF /* NewsDetailCellBook.xib */; };
 		51176B762173A895003ECCAF /* NewsDetailCellBook_5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51176B722173A894003ECCAF /* NewsDetailCellBook_5.xib */; };
 		51176B772173A895003ECCAF /* NewsDetailCellBook_4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51176B732173A895003ECCAF /* NewsDetailCellBook_4.xib */; };
+		5117C0EF2206FB0F008F4DF0 /* BookRefUniverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5117C0ED2206FB0F008F4DF0 /* BookRefUniverViewController.swift */; };
+		5117C0F02206FB0F008F4DF0 /* BookRefUniverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5117C0EE2206FB0F008F4DF0 /* BookRefUniverViewController.xib */; };
+		5117C0F4220754A3008F4DF0 /* BookRefUniverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5117C0F2220754A3008F4DF0 /* BookRefUniverCell.swift */; };
+		5117C0F5220754A3008F4DF0 /* BookRefUniverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5117C0F3220754A3008F4DF0 /* BookRefUniverCell.xib */; };
 		5118A23B21B2734700036DE9 /* MiBookAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5118A23921B2734700036DE9 /* MiBookAddViewController.swift */; };
 		5118A23C21B2734700036DE9 /* MiBookAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5118A23A21B2734700036DE9 /* MiBookAddViewController.xib */; };
 		5118A24021B319F100036DE9 /* CommunicatoinViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5118A23E21B319F100036DE9 /* CommunicatoinViewcontroller.swift */; };
@@ -638,6 +641,7 @@
 		51F3B50121D5E1E800B38990 /* AppInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F3B50021D5E1E800B38990 /* AppInstance.swift */; };
 		51FFAF0921C2D25500BB0459 /* ReportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FFAF0821C2D25500BB0459 /* ReportView.xib */; };
 		51FFAF0B21C2D27100BB0459 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FFAF0A21C2D27100BB0459 /* ReportView.swift */; };
+		667C6CD61208DBD2A0D7CBE4 /* Pods_MiBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E078B749DAAC35A0270C357E /* Pods_MiBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -762,6 +766,10 @@
 		51176B712173A894003ECCAF /* NewsDetailCellBook.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailCellBook.xib; sourceTree = "<group>"; };
 		51176B722173A894003ECCAF /* NewsDetailCellBook_5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailCellBook_5.xib; sourceTree = "<group>"; };
 		51176B732173A895003ECCAF /* NewsDetailCellBook_4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailCellBook_4.xib; sourceTree = "<group>"; };
+		5117C0ED2206FB0F008F4DF0 /* BookRefUniverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRefUniverViewController.swift; sourceTree = "<group>"; };
+		5117C0EE2206FB0F008F4DF0 /* BookRefUniverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRefUniverViewController.xib; sourceTree = "<group>"; };
+		5117C0F2220754A3008F4DF0 /* BookRefUniverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRefUniverCell.swift; sourceTree = "<group>"; };
+		5117C0F3220754A3008F4DF0 /* BookRefUniverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRefUniverCell.xib; sourceTree = "<group>"; };
 		5118A23921B2734700036DE9 /* MiBookAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiBookAddViewController.swift; sourceTree = "<group>"; };
 		5118A23A21B2734700036DE9 /* MiBookAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiBookAddViewController.xib; sourceTree = "<group>"; };
 		5118A23E21B319F100036DE9 /* CommunicatoinViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicatoinViewcontroller.swift; sourceTree = "<group>"; };
@@ -1306,9 +1314,9 @@
 		51F3B50021D5E1E800B38990 /* AppInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInstance.swift; sourceTree = "<group>"; };
 		51FFAF0821C2D25500BB0459 /* ReportView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportView.xib; sourceTree = "<group>"; };
 		51FFAF0A21C2D27100BB0459 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
-		A60518A3DF727616F1EDACD4 /* Pods_LimeBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LimeBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C672ED1AC365932F14FC80B3 /* Pods-LimeBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LimeBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-LimeBook/Pods-LimeBook.release.xcconfig"; sourceTree = "<group>"; };
-		EE2B1ED36B43943B3DAB0E87 /* Pods-LimeBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LimeBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LimeBook/Pods-LimeBook.debug.xcconfig"; sourceTree = "<group>"; };
+		C00A27A110F22182D44BCC24 /* Pods-MiBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiBook/Pods-MiBook.release.xcconfig"; sourceTree = "<group>"; };
+		E078B749DAAC35A0270C357E /* Pods_MiBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7767B5B0A48EA1FFE88D41 /* Pods-MiBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiBook/Pods-MiBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1318,7 +1326,7 @@
 			files = (
 				51C571DF21AEF2D3008F6347 /* libxml2.2.tbd in Frameworks */,
 				517E8CCE214BCE0900C2DF3B /* UserNotifications.framework in Frameworks */,
-				1AD6E3EBF6929F143D1E33E8 /* Pods_LimeBook.framework in Frameworks */,
+				667C6CD61208DBD2A0D7CBE4 /* Pods_MiBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1342,8 +1350,8 @@
 		4937BDA8EE48407142796229 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EE2B1ED36B43943B3DAB0E87 /* Pods-LimeBook.debug.xcconfig */,
-				C672ED1AC365932F14FC80B3 /* Pods-LimeBook.release.xcconfig */,
+				EA7767B5B0A48EA1FFE88D41 /* Pods-MiBook.debug.xcconfig */,
+				C00A27A110F22182D44BCC24 /* Pods-MiBook.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1642,6 +1650,25 @@
 				5113849A2132C725003EFFFE /* OthersPostView.xib */,
 			);
 			path = OthersPost;
+			sourceTree = "<group>";
+		};
+		5117C0EC2206FAF7008F4DF0 /* BookRefUniverViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5117C0F122075428008F4DF0 /* Cell */,
+				5117C0ED2206FB0F008F4DF0 /* BookRefUniverViewController.swift */,
+				5117C0EE2206FB0F008F4DF0 /* BookRefUniverViewController.xib */,
+			);
+			path = BookRefUniverViewController;
+			sourceTree = "<group>";
+		};
+		5117C0F122075428008F4DF0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5117C0F2220754A3008F4DF0 /* BookRefUniverCell.swift */,
+				5117C0F3220754A3008F4DF0 /* BookRefUniverCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		5118A23821B2732900036DE9 /* MibookAddViewController */ = {
@@ -2091,6 +2118,7 @@
 		517D5D34212489CC00EC32AD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5117C0EC2206FAF7008F4DF0 /* BookRefUniverViewController */,
 				51C222D221FBA20C00115CAF /* BookRefInfoView */,
 				5122632D21F47638001224F7 /* BookRefCreate */,
 				5122632821F46812001224F7 /* BookRefSelectedViewController */,
@@ -2607,7 +2635,6 @@
 		5195B231213C2CC900819ACC /* Notify */ = {
 			isa = PBXGroup;
 			children = (
-				51A735AC213FFD0D00070872 /* Cell */,
 				5195B232213CD67900819ACC /* NotificationViewController.swift */,
 				5195B233213CD67900819ACC /* NotificationViewController.xib */,
 				51A735AD213FFD2300070872 /* NotificationCell.swift */,
@@ -2794,13 +2821,6 @@
 				51A6E0862152D0DD0046C344 /* BookMapViewController.xib */,
 			);
 			path = BookMap;
-			sourceTree = "<group>";
-		};
-		51A735AC213FFD0D00070872 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		51A9F35521F322A200561B24 /* ProvinceSelected */ = {
@@ -3327,7 +3347,7 @@
 			children = (
 				51C571DE21AEF2D2008F6347 /* libxml2.2.tbd */,
 				517E8CCD214BCE0900C2DF3B /* UserNotifications.framework */,
-				A60518A3DF727616F1EDACD4 /* Pods_LimeBook.framework */,
+				E078B749DAAC35A0270C357E /* Pods_MiBook.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -3581,6 +3601,7 @@
 				5111D5F021B9044100FF408A /* ContactView.xib in Resources */,
 				511342CF21317ECD008A33B5 /* MIDialog.xib in Resources */,
 				5191E642212AF3CE00A40638 /* UserImageView.xib in Resources */,
+				5117C0F5220754A3008F4DF0 /* BookRefUniverCell.xib in Resources */,
 				5103B80E21F8DC7D00A75B26 /* BookRefSelectedTypeCell.xib in Resources */,
 				5113849121329004003EFFFE /* BuyPostView.xib in Resources */,
 				51142ADE21BC4CF300843ED0 /* Comfortaa-Light.ttf in Resources */,
@@ -3671,6 +3692,7 @@
 				5194C3F02137006100530964 /* ImageGroup3.xib in Resources */,
 				51E3B8E12146B5910019F6F4 /* GreenInfoFieldSymbol.xib in Resources */,
 				51C222CF21FB5E5800115CAF /* BookRefHeaderRadioVIew.xib in Resources */,
+				5117C0F02206FB0F008F4DF0 /* BookRefUniverViewController.xib in Resources */,
 				51ED16F821282BD9000757B5 /* UserCell.xib in Resources */,
 				519FDC81212ECC89003DE031 /* userbackground.jpg in Resources */,
 				517D5D062123CB7200EC32AD /* ic_check.png in Resources */,
@@ -3790,13 +3812,14 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LimeBook/Pods-LimeBook-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-MiBook/Pods-MiBook-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ALCameraViewController/ALCameraViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/DeviceUtil/DeviceUtil.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Gallery/Gallery.framework",
@@ -3820,6 +3843,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceUtil.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gallery.framework",
@@ -3837,7 +3861,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LimeBook/Pods-LimeBook-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiBook/Pods-MiBook-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		708782355076950D1B058BF9 /* [CP] Check Pods Manifest.lock */ = {
@@ -3851,7 +3875,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LimeBook-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MiBook-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3864,7 +3888,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LimeBook/Pods-LimeBook-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-MiBook/Pods-MiBook-resources.sh",
 				"${PODS_ROOT}/AccountKit/AccountKitStrings.bundle",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
@@ -3877,7 +3901,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LimeBook/Pods-LimeBook-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiBook/Pods-MiBook-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -3906,6 +3930,7 @@
 				5176454421B660E100CAA2A9 /* BookTradingViewController.swift in Sources */,
 				51A3DB2E2196B97D0012D8C0 /* BookTakeUserView.swift in Sources */,
 				517E8CD5214D1AA200C2DF3B /* ImageDisplayView.swift in Sources */,
+				5117C0F4220754A3008F4DF0 /* BookRefUniverCell.swift in Sources */,
 				5109ACA721354413009AA38D /* MasterPostView.swift in Sources */,
 				5118A28021B5957A00036DE9 /* InfoActionCell.swift in Sources */,
 				5191E62F212A9EDD00A40638 /* EmoticonInnerView.swift in Sources */,
@@ -4085,6 +4110,7 @@
 				51B0C5FC21A0834200376CB0 /* BookUserView.swift in Sources */,
 				517D5D5021248A7400EC32AD /* MessageCell.swift in Sources */,
 				5194C3B82136C5BE00530964 /* FeedViewController.swift in Sources */,
+				5117C0EF2206FB0F008F4DF0 /* BookRefUniverViewController.swift in Sources */,
 				51C222CD21FB5E4C00115CAF /* BookRefHeaderRadioVIew.swift in Sources */,
 				5176454921B6611D00CAA2A9 /* BookTradingCell.swift in Sources */,
 				51073BCF21E4492F0020C169 /* MKNode.swift in Sources */,
@@ -4302,7 +4328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -4356,7 +4382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -4367,7 +4393,7 @@
 		};
 		51B21C5D2123C5AA0017191B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE2B1ED36B43943B3DAB0E87 /* Pods-LimeBook.debug.xcconfig */;
+			baseConfigurationReference = EA7767B5B0A48EA1FFE88D41 /* Pods-MiBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
@@ -4394,7 +4420,7 @@
 		};
 		51B21C5E2123C5AA0017191B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C672ED1AC365932F14FC80B3 /* Pods-LimeBook.release.xcconfig */;
+			baseConfigurationReference = C00A27A110F22182D44BCC24 /* Pods-MiBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";

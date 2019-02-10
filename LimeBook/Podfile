@@ -1,8 +1,11 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'LimeBook' do
+target 'MiBook' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+
+
 pod 'Alamofire', '~> 4.4'
 pod 'AlamofireImage'
 pod 'PureLayout'
@@ -21,5 +24,6 @@ pod 'SwiftyStarRatingView'
 pod 'XMPPFramework/Swift'
 pod 'DeviceUtil'
 
+  # Pods for MiBook
 
 end

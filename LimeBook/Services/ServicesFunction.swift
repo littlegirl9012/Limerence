@@ -34,7 +34,8 @@ enum APIFunction : String
     
     
     
-    
+    case bookUniversity     = "book/university"
+
     case bookReport     = "book/report"
     case bookUpdateType     = "book/update/type"
     case bookCommentList = "book/comment/list"

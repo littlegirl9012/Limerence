@@ -11,9 +11,10 @@ import UIKit
 class BookRefViewController: MasterViewController , ProvinceControllerDelegate, UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var topView: UIView!
     
-    @IBOutlet weak var btAdd: UIButton!
     @IBOutlet weak var btClass: UIButton!
     @IBOutlet weak var btTop: UIButton!
+    @IBOutlet weak var btAdd: UIButton!
+
     var provinceSelected  : DHMProvince = DHMProvince()
     var districtSelected  : DHMDistrict = DHMDistrict()
     var referType : BookReference!

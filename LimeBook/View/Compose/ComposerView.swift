@@ -10,6 +10,7 @@ import UIKit
 
 protocol ComposeViewDelegate : class {
     func composeDidSend(_ message : LimeMessage)
+    func composeWillType()
 }
 
 
@@ -47,6 +48,10 @@ class ComposerView: GreenView, EmoticonInnerDelegate, UITextViewDelegate
         
     
 
+    }
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        delegate?.composeWillType()
+        return true
     }
     
     func setPlaholderValue(_ pla : String)
@@ -211,8 +216,6 @@ class KeyboardAppearance {
         switch appearance {
         case .dark:
             return UIColor(white: 0.00, alpha: 1) // Black
-            //            return UIColor(white: 0.30, alpha: 1) // iOS Gray
-        //            return UIColor(white: 0.42, alpha: 1) // Tweetbot Gray
         case .default, .light:
             return UIColor(hue: 0.67, saturation: 0, brightness: 0.97, alpha: 1)
         }

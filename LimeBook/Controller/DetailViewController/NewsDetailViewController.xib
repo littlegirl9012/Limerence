@@ -41,6 +41,7 @@
                             <rect key="frame" x="335" y="20" width="40" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="Ijz-Ue-dHc"/>
+                                <constraint firstAttribute="height" constant="44" id="jox-ju-ach"/>
                             </constraints>
                             <state key="normal" image="book_action"/>
                             <connections>
@@ -53,9 +54,8 @@
                         <constraint firstItem="szj-fe-fNd" firstAttribute="leading" secondItem="xUU-XI-HhM" secondAttribute="trailing" id="BFb-IY-hPm"/>
                         <constraint firstAttribute="bottom" secondItem="szj-fe-fNd" secondAttribute="bottom" id="Cu9-Tp-e4O"/>
                         <constraint firstItem="xUU-XI-HhM" firstAttribute="top" secondItem="szj-fe-fNd" secondAttribute="top" id="cnV-Wh-7ly"/>
-                        <constraint firstAttribute="height" constant="64" id="hT0-iP-6D7"/>
+                        <constraint firstAttribute="height" priority="750" constant="64" id="hT0-iP-6D7"/>
                         <constraint firstAttribute="bottom" secondItem="xUU-XI-HhM" secondAttribute="bottom" id="iRM-8I-Icd"/>
-                        <constraint firstItem="szj-fe-fNd" firstAttribute="top" secondItem="78p-Wr-6Rg" secondAttribute="top" constant="20" id="xLJ-tO-QFH"/>
                         <constraint firstAttribute="trailing" secondItem="szj-fe-fNd" secondAttribute="trailing" id="yag-TN-UuX"/>
                     </constraints>
                 </view>
@@ -121,7 +121,7 @@
                 <constraint firstItem="jZ5-b0-ATD" firstAttribute="top" secondItem="78p-Wr-6Rg" secondAttribute="bottom" id="lSf-rV-oBL"/>
                 <constraint firstAttribute="trailing" secondItem="jZ5-b0-ATD" secondAttribute="trailing" id="xxK-k2-1wY"/>
             </constraints>
-            <point key="canvasLocation" x="-464" y="-71"/>
+            <point key="canvasLocation" x="111" y="-269"/>
         </view>
     </objects>
     <resources>

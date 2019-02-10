@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookAddViewController" customModule="LimeBook" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookAddViewController" customModule="MiBook" customModuleProvider="target">
             <connections>
                 <outlet property="addView" destination="FBg-3F-BAE" id="oZN-Ea-mqY"/>
                 <outlet property="btInsert" destination="kjN-g0-8vD" id="mV3-fb-Umd"/>
@@ -23,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="815"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdj-mt-B1g" customClass="NavigationView" customModule="LimeBook" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdj-mt-B1g" customClass="NavigationView" customModule="MiBook" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83w-Kc-gTc">
@@ -40,7 +40,7 @@
                     </subviews>
                     <color key="backgroundColor" red="0.071262716130000001" green="0.45187341450000001" blue="0.91223826139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="64" id="UxZ-pE-2D5"/>
+                        <constraint firstAttribute="height" priority="750" constant="64" id="UxZ-pE-2D5"/>
                         <constraint firstAttribute="trailing" secondItem="83w-Kc-gTc" secondAttribute="trailing" id="gSj-Ak-qP5"/>
                         <constraint firstAttribute="bottom" secondItem="83w-Kc-gTc" secondAttribute="bottom" id="ujH-ir-kqA"/>
                     </constraints>
@@ -51,11 +51,11 @@
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8e-EF-zAN" customClass="TPKeyboardAvoidingScrollView">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="751"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBg-3F-BAE" customClass="BookAddView" customModule="LimeBook" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBg-3F-BAE" customClass="BookAddView" customModule="MiBook" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="691"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjN-g0-8vD" customClass="ButtonSuccess" customModule="LimeBook" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjN-g0-8vD" customClass="ButtonSuccess" customModule="MiBook" customModuleProvider="target">
                                     <rect key="frame" x="243" y="715" width="120" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="120" id="hCK-0Y-JgL"/>

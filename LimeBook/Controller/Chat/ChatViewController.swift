@@ -23,25 +23,23 @@ class ChatViewController: MasterViewController, UITableViewDelegate,UITableViewD
     @IBOutlet weak var btBook: UIButton!
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
+        notifyInstance.addM(self, .messageReceive, selector: #selector(messageReceive))
         contactView.set(target)
         
-        super.viewDidLoad()
         conversation = confernceDataStore.forceGetConversationByUser(target)
         conversation.removeAliasMessage()
         let request = MessageLatest_Request.init(userInstance.user.id, target.id, conversation.messageLatestId())
         messageInstance.latestMessage(request)
         messageInstance.conversationMarkRead(GeneralMessageRequest.init(target))
         
-        notifyInstance.addM(self, .messageReceive, selector: #selector(messageReceive))
         notifyInstance.addM(self, .messageLatest, selector: #selector(reloadTable))
         conversation.readAllMessage()
         notifyInstance.postM(.conversationUpdateItem, conversation)
         initStyle()
-        reloadTable()
-
         headerView.view.backgroundColor = template.backgroundColor
         navigationView.bringSubview(toFront: self.btBook)
+        
     }
     @IBAction func bookTouchIn(_ sender: Any)
     {
@@ -68,8 +66,11 @@ class ChatViewController: MasterViewController, UITableViewDelegate,UITableViewD
     
     @objc func reloadTable()
     {
-        self.tbView.reloadData()
-        self.scrollToBotton()
+        weak var weakself = self;
+        DispatchQueue.main.async {
+            weakself?.tbView.reloadData()
+            weakself?.scrollToBotton()
+        }
     }
     
     func initStyle()
@@ -85,9 +86,6 @@ class ChatViewController: MasterViewController, UITableViewDelegate,UITableViewD
         let hd = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 1))
         tbView.tableHeaderView = hd
         headerView.clipsToBounds = true
-        self.reloadTable()
-        
-        
         weak var weakself = self
         self.navigationView.set(style: .back, title: target.aliasname) {
             weakself?.navigationController?.popViewController(animated: false)
@@ -110,9 +108,9 @@ class ChatViewController: MasterViewController, UITableViewDelegate,UITableViewD
     func scrollToBotton()
     {
         DispatchQueue.main.async {
-            if(self.conversation.messageCount() > 12)
+            if(self.conversation.messageCount() > 0)
             {
-                self.tbView.scrollToRow(at: IndexPath.init(row: self.conversation.messageCount() - 1, section: 0), at: .bottom, animated: false)
+                self.tbView.scrollToRow(at: IndexPath.init(row: self.conversation.messageCount() - 1, section: 0), at: .bottom, animated: true)
             }
         }
     }
@@ -152,6 +150,12 @@ class ChatViewController: MasterViewController, UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return headerView
+    }
+    
+    func composeWillType() {
+        
+        print("Scroll to bottom")
+        scrollToBotton()
     }
     
 }

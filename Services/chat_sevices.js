@@ -26,6 +26,8 @@ io.sockets.on('connection',function(socket)
 	var user_id =  socket.handshake.query['user_id'];
 	var SocketID = socket.id ;
 
+	socket.emit('UserLoginSuccess',{UserID : user_id});
+
 
 	connection.query("CALL  device_update_socket(?,?);",[user_id,SocketID],function(err,rows)
 	{
@@ -425,9 +427,6 @@ io.sockets.on('connection',function(socket)
 		{
 			var userInfo = rows[0][0];
 			var userSocket = rows[1][0].socket_id;
-
-
-
 
 			var targetInfo = rows[2][0]; 
 			var targetSocket = rows[3][0].socket_id;

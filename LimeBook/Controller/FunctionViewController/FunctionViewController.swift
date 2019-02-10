@@ -29,8 +29,9 @@ enum SettingType : Int
     case store = 6
     case order = 7
     case school = 8
-
-
+    case univer = 9
+    
+    
     
 }
 
@@ -96,7 +97,7 @@ class FunctionViewController: MasterViewController, UITableViewDelegate, UITable
         school.color = "17bb68".hexColor()
 
         let univer = SettingItem.init("Đại học - Cao đẳng", "school".image())
-        univer.settingType = . school
+        univer.settingType = . univer
         univer.color = "9d194e".hexColor()
 
         items.append(face)
@@ -152,7 +153,13 @@ class FunctionViewController: MasterViewController, UITableViewDelegate, UITable
             push(BookRefContentViewController())
         }
 
+        if(stype == .univer)
+        {
+            push(BookRefUniverViewController())
+        }
 
+        
+        
     }
     
     

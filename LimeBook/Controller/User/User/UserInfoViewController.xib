@@ -43,7 +43,7 @@
                     </subviews>
                     <color key="backgroundColor" red="0.071262716130000001" green="0.45187341450000001" blue="0.91223826139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="64" id="2Kl-Sx-eG5"/>
+                        <constraint firstAttribute="height" priority="750" constant="64" id="2Kl-Sx-eG5"/>
                         <constraint firstAttribute="trailing" secondItem="fCH-P4-EnT" secondAttribute="trailing" id="LuS-lu-iNd"/>
                         <constraint firstAttribute="bottom" secondItem="fCH-P4-EnT" secondAttribute="bottom" id="VSD-K4-kcs"/>
                     </constraints>
@@ -109,7 +109,7 @@
                 <constraint firstItem="Fyb-P8-5mM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hxr-YC-iSY"/>
                 <constraint firstItem="LMe-uD-26h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kMt-W1-Hny"/>
             </constraints>
-            <point key="canvasLocation" x="-494" y="12"/>
+            <point key="canvasLocation" x="-102" y="2"/>
         </view>
     </objects>
     <resources>

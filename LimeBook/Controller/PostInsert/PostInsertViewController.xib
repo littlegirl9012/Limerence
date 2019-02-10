@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostInsertViewController" customModule="LimeBook" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostInsertViewController" customModule="MiBook" customModuleProvider="target">
             <connections>
                 <outlet property="btPost" destination="SZU-Lq-rRZ" id="k8H-Jo-kaq"/>
                 <outlet property="containerView" destination="Qye-QU-rWa" id="HHa-Ay-KGh"/>
@@ -25,11 +25,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="394"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdF-IX-oXP" customClass="NavigationView" customModule="LimeBook" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdF-IX-oXP" customClass="NavigationView" customModule="MiBook" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="64" id="yYp-w7-a8T"/>
+                        <constraint firstAttribute="height" priority="750" constant="64" id="yYp-w7-a8T"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYc-qn-OCO">
@@ -38,17 +38,17 @@
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="bGf-GC-yl1" customClass="TPKeyboardAvoidingScrollView">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qye-QU-rWa" customClass="GCleanView" customModule="LimeBook" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qye-QU-rWa" customClass="GCleanView" customModule="MiBook" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8eM-g0-yGl">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUO-6F-5n4" userLabel="React" customClass="RadioView" customModule="LimeBook" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUO-6F-5n4" userLabel="React" customClass="RadioView" customModule="MiBook" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="br3-si-2FE" customClass="RadioView" customModule="LimeBook" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="br3-si-2FE" customClass="RadioView" customModule="MiBook" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="46" width="375" height="46"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
@@ -64,7 +64,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBN-Vg-kBf">
                                             <rect key="frame" x="0.0" y="250" width="375" height="80"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZU-Lq-rRZ" customClass="ButtonSuccess" customModule="LimeBook" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZU-Lq-rRZ" customClass="ButtonSuccess" customModule="MiBook" customModuleProvider="target">
                                                     <rect key="frame" x="12" y="28" width="351" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="CMb-W1-6ST"/>

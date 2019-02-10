@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookRefUniverViewController" customModule="MiBook" customModuleProvider="target">
+            <connections>
+                <outlet property="btTop" destination="SID-qT-23I" id="5SM-gc-g1V"/>
+                <outlet property="navigationView" destination="r5K-kS-vHR" id="RoH-Mx-EuY"/>
+                <outlet property="tbView" destination="cjx-Pi-Mva" id="PbC-9m-jGP"/>
+                <outlet property="topView" destination="5uj-8v-4XX" id="Bgz-pm-eVO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cjx-Pi-Mva">
+                    <rect key="frame" x="0.0" y="104" width="375" height="563"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="INr-D2-AEQ"/>
+                        <outlet property="delegate" destination="-1" id="fKi-Xi-y7t"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5K-kS-vHR" customClass="NavigationView" customModule="MiBook" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="750" constant="64" id="E8A-bh-fSh"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uj-8v-4XX">
+                    <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SID-qT-23I">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                            <state key="normal" title="Chọn Trường"/>
+                            <connections>
+                                <action selector="touchIn:" destination="-1" eventType="touchUpInside" id="T8n-lQ-bka"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5Dt-Ks-Bpf"/>
+                        <constraint firstItem="SID-qT-23I" firstAttribute="leading" secondItem="5uj-8v-4XX" secondAttribute="leading" id="K1o-by-3X4"/>
+                        <constraint firstItem="SID-qT-23I" firstAttribute="top" secondItem="5uj-8v-4XX" secondAttribute="top" id="LXy-6d-TQa"/>
+                        <constraint firstAttribute="trailing" secondItem="SID-qT-23I" secondAttribute="trailing" id="dsb-gG-2cH"/>
+                        <constraint firstAttribute="bottom" secondItem="SID-qT-23I" secondAttribute="bottom" id="rD2-A6-OVQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cjx-Pi-Mva" secondAttribute="trailing" id="6zv-eB-Mcn"/>
+                <constraint firstItem="5uj-8v-4XX" firstAttribute="top" secondItem="r5K-kS-vHR" secondAttribute="bottom" id="OUX-Ed-rKp"/>
+                <constraint firstAttribute="trailing" secondItem="r5K-kS-vHR" secondAttribute="trailing" id="TAH-mJ-d2A"/>
+                <constraint firstAttribute="trailing" secondItem="5uj-8v-4XX" secondAttribute="trailing" id="UQN-dE-neV"/>
+                <constraint firstItem="cjx-Pi-Mva" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YDc-Qs-83m"/>
+                <constraint firstItem="5uj-8v-4XX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c3x-vw-fZm"/>
+                <constraint firstItem="r5K-kS-vHR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cX5-7X-4KX"/>
+                <constraint firstAttribute="bottom" secondItem="cjx-Pi-Mva" secondAttribute="bottom" id="mo3-WX-Oct"/>
+                <constraint firstItem="r5K-kS-vHR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rhb-mT-ZnL"/>
+                <constraint firstItem="cjx-Pi-Mva" firstAttribute="top" secondItem="5uj-8v-4XX" secondAttribute="bottom" id="zLs-bx-EXD"/>
+            </constraints>
+            <point key="canvasLocation" x="164" y="145.27736131934034"/>
+        </view>
+    </objects>
+</document>

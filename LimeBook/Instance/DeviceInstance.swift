@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DeviceUtil
 import SystemConfiguration
 let isIpad  : Bool = UIDevice.current.userInterfaceIdiom == .pad
 let isIphone  : Bool = !isIpad
@@ -31,6 +32,7 @@ class DeviceInstance: NSObject {
     var Token = ""
     var Latitude = 0.0
     var Longitude = 0.0
+    let deviceU = DeviceUtil.init()
 
     static var instance: DeviceInstance!
     class func sharedInstance() -> DeviceInstance
@@ -45,8 +47,6 @@ class DeviceInstance: NSObject {
     
     func appVersion()
     {
-        let dictionary = Bundle.main.infoDictionary!
-        
         self.Name =   UIDevice.current.name
         self.OS =     UIDevice.current.systemVersion
     }
@@ -82,6 +82,19 @@ class DeviceInstance: NSObject {
     func vendorID() ->String
     {
         return UIDevice.current.identifierForVendor!.uuidString
+    }
+    
+    func isRStatusBar() ->Bool
+    {
+        var resutl = false ;
+        let hardW = deviceU.hardware()
+        
+        switch hardW {
+        case .IPHONE_X,.IPHONE_X_CN,.IPHONE_XR,.IPHONE_XS,.IPHONE_XS_MAX,.IPHONE_XS_MAX_CN: resutl = true ; break;
+        default: resutl = false ;
+        }
+        return resutl
+        
     }
 
 }

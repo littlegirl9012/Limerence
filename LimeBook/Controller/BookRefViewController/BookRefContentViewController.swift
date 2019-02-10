@@ -34,10 +34,16 @@ class BookRefContentViewController: MasterViewController {
         tabbar.tabBar.isHidden = true
         tabbar.isSwipeEnabled = true
         navigationView.bringSubview(toFront: btAdd)
+        
+        if(device.isRStatusBar())
+        {
+            bottomSwitch.constant = 28
+        }
 
     }
     @IBOutlet weak var btAdd: UIButton!
     
+    @IBOutlet weak var bottomSwitch: NSLayoutConstraint!
     @IBAction func addTouch(_ sender: Any)
     {
         push(BookRefCreateViewController())

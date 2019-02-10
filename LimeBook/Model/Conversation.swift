@@ -9,19 +9,19 @@
 import UIKit
 
 class Conversation: Mi {
-    
+    // đây là list hiển thị ở tab các cuộc trò chuyện
     @objc dynamic var id = -1
     @objc dynamic var user_id = -1
     @objc dynamic var target_user_id = -1
-    @objc dynamic var last_message = ""
+    @objc dynamic var last_message = ""// message cuối
     @objc dynamic var last_date = ""
     @objc dynamic var conversation_type = -1
-    @objc dynamic var name = ""
-    @objc dynamic var image = ""
+    @objc dynamic var name = "" // tên người ko phải là mình
+    @objc dynamic var image = "" // avatar người ko phải mình
     @objc dynamic var messages : [LimeMessage] = []
 
     var media_file : MediaFile!
-    @objc dynamic var message_unread = 0
+    @objc dynamic var message_unread = 0 // số lượng message mà mình chưa đọc
     @objc dynamic var lastMessageAttribute : NSAttributedString!
     
     override init(dictionary: NSDictionary) {

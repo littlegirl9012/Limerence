@@ -48,7 +48,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="64" id="JL2-ei-hWN"/>
+                        <constraint firstAttribute="height" priority="750" constant="64" id="JL2-ei-hWN"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DP8-b1-aez">
@@ -77,7 +77,7 @@
                 <constraint firstItem="vS7-zO-ZMR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sPK-XQ-ltG"/>
                 <constraint firstAttribute="trailing" secondItem="mIJ-Fa-UiN" secondAttribute="trailing" constant="12" id="uz2-Zo-kMT"/>
             </constraints>
-            <point key="canvasLocation" x="-505" y="65"/>
+            <point key="canvasLocation" x="-126" y="142"/>
         </view>
     </objects>
     <resources>

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MiBookAddViewController" customModule="LimeBook" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MiBookAddViewController" customModule="MiBook" customModuleProvider="target">
             <connections>
                 <outlet property="authorField" destination="hYV-c6-9MM" id="weu-h2-pM0"/>
                 <outlet property="categoryField" destination="iUD-rF-V5c" id="Fwq-Sz-Q1o"/>
@@ -27,11 +27,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aev-Qi-0ae" customClass="NavigationView" customModule="LimeBook" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aev-Qi-0ae" customClass="NavigationView" customModule="MiBook" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="64" id="6dC-kS-zt6"/>
+                        <constraint firstAttribute="height" priority="750" constant="64" id="6dC-kS-zt6"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GD9-Z1-NUH">
@@ -52,7 +52,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qz4-QR-Lsb" customClass="ImageSelectView" customModule="LimeBook" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qz4-QR-Lsb" customClass="ImageSelectView" customModule="MiBook" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="100" width="375" height="60"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -79,28 +79,28 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="jia-b9-GUZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dS-8N-opg" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dS-8N-opg" customClass="PostUnitView" customModule="MiBook" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="60" id="xRC-Bh-Jev"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYV-c6-9MM" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYV-c6-9MM" customClass="PostUnitView" customModule="MiBook" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="60" width="375" height="50"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="60" id="3H8-LN-O2E"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUD-rF-V5c" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUD-rF-V5c" customClass="PostUnitView" customModule="MiBook" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="110" width="375" height="60"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="60" id="XHI-pf-wGK"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2b-Ns-Cmp" userLabel="pagenumber" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2b-Ns-Cmp" userLabel="pagenumber" customClass="PostUnitView" customModule="MiBook" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="170" width="375" height="60"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -110,14 +110,14 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tWb-cT-6Fz">
                                                             <rect key="frame" x="0.0" y="230" width="375" height="60"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljQ-bc-R1J" userLabel="isbn" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljQ-bc-R1J" userLabel="isbn" customClass="PostUnitView" customModule="MiBook" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="2It-mj-tYN"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dss-vy-Pxv" customClass="PostUnitView" customModule="LimeBook" customModuleProvider="target">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dss-vy-Pxv" customClass="PostUnitView" customModule="MiBook" customModuleProvider="target">
                                                                     <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
@@ -140,7 +140,7 @@
                                                 <constraint firstItem="jia-b9-GUZ" firstAttribute="top" secondItem="RQw-Px-OPQ" secondAttribute="top" id="dNK-HF-2BG"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R9-PL-1dW" customClass="ButtonSuccess" customModule="LimeBook" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R9-PL-1dW" customClass="ButtonSuccess" customModule="MiBook" customModuleProvider="target">
                                             <rect key="frame" x="12" y="490" width="351" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="vR7-GU-v0k"/>
@@ -196,7 +196,7 @@
                 <constraint firstItem="GD9-Z1-NUH" firstAttribute="leading" secondItem="hnm-Qm-0Qh" secondAttribute="leading" id="wpp-C4-pPN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-551" y="-183"/>
+            <point key="canvasLocation" x="22" y="-226"/>
         </view>
     </objects>
 </document>

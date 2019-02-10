@@ -34,6 +34,7 @@ class NavigationView: GreenView , UITextFieldDelegate{
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var btRight: UIButton!
 
+    @IBOutlet weak var heightStatus: NSLayoutConstraint!
     @IBOutlet weak var tfSearcg: UITextField!
     @IBOutlet weak var wSearch: NSLayoutConstraint!
     @IBOutlet weak var lbTitle: UILabel!
@@ -57,6 +58,11 @@ class NavigationView: GreenView , UITextFieldDelegate{
         lbTitle.textColor = .white;
         tfSearcg.textColor = UIColor.white
         tfSearcg.textAlignment = .left
+        
+        if(device.isRStatusBar())
+        {
+            heightStatus.constant = 40 ;
+        }
 
     }
     @IBAction func backTouch(_ sender: Any) {

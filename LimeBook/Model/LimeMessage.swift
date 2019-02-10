@@ -38,21 +38,21 @@ enum MessagePrivateType : Int
 class LimeMessage: Mi {
     
     
-    @objc dynamic var readed = false
-    @objc dynamic var delivered = false
-    @objc dynamic var content = ""
+    @objc dynamic var readed = false // trạng thái đã/chưa đọc
+    @objc dynamic var delivered = false // trạng thái đã/chưa nhận
+    @objc dynamic var content = "" // nội dung
     @objc dynamic var conversation_id = 0
-    @objc dynamic var media_type = 0
+    @objc dynamic var media_type = 0 // loại media : video, image , tạm chưa dùng
     @objc dynamic var private_type = 0
-    @objc dynamic var message_type = 1
+    @objc dynamic var message_type = 1 //loại : tạm thời chỉ chat text
     @objc dynamic var date = ""
     @objc dynamic var date_io = Date()
     @objc dynamic var timeDisplay = ""
     @objc dynamic var id = -1
-    @objc dynamic var user_id = 1
-    @objc dynamic var target_user_id = 2
-    @objc dynamic var aliasname = ""
-    @objc dynamic var avatar = ""
+    @objc dynamic var user_id = -1 // người gửi
+    @objc dynamic var target_user_id = -1 // người nhận
+    @objc dynamic var aliasname = "" // tên ngừoi gửi
+    @objc dynamic var avatar = "" // avatar người gửi
     @objc dynamic var attri : NSMutableAttributedString!
 
     @objc dynamic var next : LimeMessage!

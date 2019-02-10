@@ -158,11 +158,11 @@ class Book: Mi {
     @objc dynamic var  categoryMode : [BookCategory] = []
     @objc dynamic var  lend : [NSDictionary] = []
     @objc dynamic var  lend_model : [User] = []
-    @objc dynamic var   id = -1;
-    @objc dynamic var   date = "";
-    @objc dynamic var   dateDisplay = "";
-    @objc dynamic var   wp_link = "";
-    @objc dynamic var   wp_id = -1;
+    @objc dynamic var  id = -1;
+    @objc dynamic var  date = "";
+    @objc dynamic var  dateDisplay = "";
+    @objc dynamic var  wp_link = "";
+    @objc dynamic var  wp_id = -1;
 
     @objc dynamic var atributeTitle : NSMutableAttributedString!
     @objc dynamic var attibuteConent : NSMutableAttributedString!
@@ -195,13 +195,11 @@ class Book: Mi {
     }
     
     
-
-    
     override init(dictionary: NSDictionary) {
         super.init(dictionary: dictionary)
     }
     
-    required public override init() {
+    required public init() {
         super.init()
     }
     
@@ -540,22 +538,13 @@ class BookLibrary_Request: Mi
 {
     @objc dynamic var last_id = -1;
     @objc dynamic var category_id = -1;
-
     @objc dynamic var load_type = 0; //0 first -> insert , 1/ loadmore
 }
-
-
-
-
 
 class BookGeneral_Request: Mi
 {
     @objc dynamic var book_id = -1;
 }
-
-
-
-
 
 class BookUserSelect_Request: Mi
 {
@@ -578,6 +567,12 @@ class BookCommentInsert_Request: BookGeneral_Request
     @objc dynamic var content = "";
 
 }
+
+class BookUniversity_Request: Mi
+{
+    @objc dynamic var university_id = -1;
+}
+
 
 class BookFeed_Request: Mi
 {
@@ -871,6 +866,15 @@ extension Services
     }
     
     
-    
+    func bookUniversity(_ request :  BookUniversity_Request, success :@escaping (([Book])->Void), failure: ((String)->Void))
+    {
+        DispatchQueue.global(qos: .background).async {
+            services.request(api: .bookUniversity, param: request.dictionary(), success: { (response) in
+                success(Book.list(data: response.data as! [Dictionary<String, Any>]))
+            }) { (error) in
+                
+            }
+        }
+    }
 
 }

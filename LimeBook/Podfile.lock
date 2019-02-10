@@ -1,6 +1,6 @@
 PODS:
   - AccountKit (4.35.0)
-  - Alamofire (4.8.0)
+  - Alamofire (4.8.1)
   - AlamofireImage (3.5.0):
     - Alamofire (~> 4.8)
   - ALCameraViewController (3.0.3)
@@ -11,17 +11,15 @@ PODS:
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
   - CocoaAsyncSocket (7.6.3)
-  - CocoaLumberjack (3.4.2):
-    - CocoaLumberjack/Default (= 3.4.2)
-    - CocoaLumberjack/Extensions (= 3.4.2)
-  - CocoaLumberjack/Default (3.4.2)
-  - CocoaLumberjack/Extensions (3.4.2):
-    - CocoaLumberjack/Default
-  - CocoaLumberjack/Swift (3.4.2):
-    - CocoaLumberjack/Default
-  - FBSDKCoreKit (4.38.1):
+  - CocoaLumberjack (3.5.0):
+    - CocoaLumberjack/Core (= 3.5.0)
+  - CocoaLumberjack/Core (3.5.0)
+  - CocoaLumberjack/Swift (3.5.0):
+    - CocoaLumberjack/Core
+  - DeviceUtil (5.0.0)
+  - FBSDKCoreKit (4.40.0):
     - Bolts (~> 1.9)
-  - FBSDKLoginKit (4.38.1):
+  - FBSDKLoginKit (4.40.0):
     - FBSDKCoreKit
   - Gallery (2.2.0)
   - GoogleMaps (2.7.0):
@@ -34,9 +32,9 @@ PODS:
   - KissXML (5.2.3)
   - libidn (1.35)
   - PureLayout (3.1.4)
-  - SDWebImage (4.4.2):
-    - SDWebImage/Core (= 4.4.2)
-  - SDWebImage/Core (4.4.2)
+  - SDWebImage (4.4.4):
+    - SDWebImage/Core (= 4.4.4)
+  - SDWebImage/Core (4.4.4)
   - Socket.IO-Client-Swift (13.1.3):
     - Starscream (~> 3.0.2)
   - Starscream (3.0.6)
@@ -58,6 +56,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireImage
   - ALCameraViewController
+  - DeviceUtil
   - FBSDKLoginKit
   - Gallery
   - GoogleMaps
@@ -80,6 +79,7 @@ SPEC REPOS:
     - Bolts
     - CocoaAsyncSocket
     - CocoaLumberjack
+    - DeviceUtil
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Gallery
@@ -99,21 +99,22 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AccountKit: 870ccaf5d33facda9408783e28fbe68c5211e069
-  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   ALCameraViewController: 6398a9282057f709b87a1ecc52a83b48028ade64
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
-  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
-  FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
-  FBSDKLoginKit: 4621c690d9dd8628031a4791497062183ea34b0d
+  CocoaLumberjack: cffaa70a9336515228178e3669b71bd49d343850
+  DeviceUtil: effb5fd6d301a1bd42e0ac367b3391696651431e
+  FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
+  FBSDKLoginKit: 7a1e411d46acc8834588eca437daf34de42e1d52
   Gallery: 3f4c780c4b22906d6b0a5e55d12167cdc4b4fc5b
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   KissXML: 09f88ff8161fd058d67b70740b8b516687b52823
   libidn: e4576a956b797c584c77aaedfc6e3dd639b61bdc
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
-  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SDWebImage: c00ec18ab25d10e5ffac109b0f78d1b4341c9691
   Socket.IO-Client-Swift: d30d6fd08a38ad2a182b090936a043bf512ab2de
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   SwiftHash: 6d312abe61c8359bdef8d0093642f3a70b1c17ba
@@ -122,6 +123,6 @@ SPEC CHECKSUMS:
   SwipeableTabBarController: 3a393aa51f1c49c4517b05047c2688a6175c634c
   XMPPFramework: 5d31ff9f73dce031b24bc49bcf88093627a3a86e
 
-PODFILE CHECKSUM: 21dbd637e03d795ea0ce5e2104d91f7304ca149c
+PODFILE CHECKSUM: eb4d7fa9cebd19a152adb3150eecdc89a812acf5
 
 COCOAPODS: 1.5.3

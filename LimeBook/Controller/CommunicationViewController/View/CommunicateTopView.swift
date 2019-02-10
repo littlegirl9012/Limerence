@@ -15,7 +15,8 @@ protocol CommunicateTopViewDelegate : class {
 
 class CommunicateTopView: GreenView {
 
-
+    @IBOutlet weak var heightStatus: NSLayoutConstraint!
+    
     weak var delegate : CommunicateTopViewDelegate?
 
     @IBOutlet weak var btConver: UIButton!
@@ -28,6 +29,12 @@ class CommunicateTopView: GreenView {
         view.backgroundColor =   "44424A".hexColor()
         
         converStyle()
+        
+        if(device.isRStatusBar())
+        {
+            heightStatus.constant = 40 ;
+        }
+
     }
     
     func contactStyle()
