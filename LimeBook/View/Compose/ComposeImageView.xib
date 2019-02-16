@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeImageView" customModule="MiBook" customModuleProvider="target">
+            <connections>
+                <outlet property="btCancel" destination="21H-9G-bTu" id="hGb-9t-EmJ"/>
+                <outlet property="btSend" destination="1W8-Np-I6q" id="Ddp-uX-chY"/>
+                <outlet property="imgView" destination="L4R-gF-Uji" id="9yb-J8-yUN"/>
+                <outlet property="view" destination="iN0-l3-epB" id="rNo-rZ-O6T"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L4R-gF-Uji">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72v-NV-BBI">
+                    <rect key="frame" x="223" y="619" width="144" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1W8-Np-I6q" customClass="ButtonSuccess" customModule="MiBook" customModuleProvider="target">
+                            <rect key="frame" x="76" y="0.0" width="68" height="40"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="68" id="16O-VH-WGG"/>
+                                <constraint firstAttribute="height" constant="40" id="7bb-Bj-poQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                            <state key="normal" title="Gửi">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="accept:" destination="-1" eventType="touchUpInside" id="INj-4n-cOV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21H-9G-bTu" customClass="ButtonDanger" customModule="MiBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="68" height="40"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="kYc-F0-opj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                            <state key="normal" title="Huỷ">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelTouch:" destination="-1" eventType="touchUpInside" id="xdD-ad-fTa"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="4yg-QD-9vY"/>
+                        <constraint firstAttribute="bottom" secondItem="21H-9G-bTu" secondAttribute="bottom" id="6zx-vX-Nnl"/>
+                        <constraint firstItem="1W8-Np-I6q" firstAttribute="top" secondItem="72v-NV-BBI" secondAttribute="top" id="fvZ-Fq-Pca"/>
+                        <constraint firstAttribute="trailing" secondItem="1W8-Np-I6q" secondAttribute="trailing" id="gs6-Bf-fxv"/>
+                        <constraint firstItem="1W8-Np-I6q" firstAttribute="leading" secondItem="21H-9G-bTu" secondAttribute="trailing" constant="8" id="oSw-ii-7Ww"/>
+                        <constraint firstAttribute="bottom" secondItem="1W8-Np-I6q" secondAttribute="bottom" id="oi5-NZ-3aw"/>
+                        <constraint firstItem="21H-9G-bTu" firstAttribute="leading" secondItem="72v-NV-BBI" secondAttribute="leading" id="olu-6a-3k3"/>
+                        <constraint firstItem="21H-9G-bTu" firstAttribute="width" secondItem="1W8-Np-I6q" secondAttribute="width" id="uuV-zD-Ytz"/>
+                        <constraint firstItem="21H-9G-bTu" firstAttribute="top" secondItem="72v-NV-BBI" secondAttribute="top" id="wim-T3-d0K"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="L4R-gF-Uji" secondAttribute="trailing" id="67F-wL-AL8"/>
+                <constraint firstAttribute="bottom" secondItem="L4R-gF-Uji" secondAttribute="bottom" id="D5u-Vy-kPc"/>
+                <constraint firstAttribute="bottom" secondItem="72v-NV-BBI" secondAttribute="bottom" constant="8" id="Dw2-Kd-Mr8"/>
+                <constraint firstAttribute="trailing" secondItem="72v-NV-BBI" secondAttribute="trailing" constant="8" id="WbQ-cY-K2b"/>
+                <constraint firstItem="L4R-gF-Uji" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qL9-EY-CZz"/>
+                <constraint firstItem="L4R-gF-Uji" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uDX-l1-n3S"/>
+            </constraints>
+            <point key="canvasLocation" x="301.60000000000002" y="53.523238380809602"/>
+        </view>
+    </objects>
+</document>

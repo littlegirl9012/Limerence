@@ -16,10 +16,8 @@ class MessageCell: UITableViewCell {
     @IBOutlet weak var avatar: UIView!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var lbTime: UILabel!
-    
     @IBOutlet weak var userImageView: UserImageView!
-
-    
+    var message : LimeMessage?
     class func getCell(_ message : LimeMessage)-> String
     {
         if(message.messageType() == .plaintext)
@@ -33,13 +31,22 @@ class MessageCell: UITableViewCell {
                 return "MessageTargetCell"
             }
         }
+        if(message.messageType() == .media)
+        {
+            if(message.user_id == userInstance.user.id)
+            {
+                return  "MessageImageMyCell"
+            }
+            else
+            {
+                return "MessageImageTargetCell"
+            }
+        }
+
         return ""
         
     }
     
-    
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -47,16 +54,23 @@ class MessageCell: UITableViewCell {
         
         textContentView.drawRadius(4, color: UIColor.white, thickness: 0.0)
         textContentView.backgroundColor =  UIColor.white
-        lbContent.backgroundColor = UIColor.white
-        
         selectionStyle = .none
-        lbContent.layer.masksToBounds = true;
         contentView.isOpaque = true
         backgroundView?.isOpaque = true
-        lbContent.textColor = template.generalTextColor
         lbTime.alpha = 0.48
         contentView.backgroundColor =  template.backgroundColor
         
+        if(lbContent != nil)
+        {
+            lbContent.textColor = template.generalTextColor
+            lbContent.layer.masksToBounds = true;
+            lbContent.backgroundColor = UIColor.white
+        }
+        if(imgView != nil)
+        {
+            imgView.drawRadius(0)
+            textContentView.drawRadius(0)
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -65,7 +79,23 @@ class MessageCell: UITableViewCell {
     
     func set(_ message : LimeMessage)
     {
+        userImageView.set(message.aliasname, url: message.avatar)
         lbTime.text = message.timeDisplay
-        lbContent.attributedText = message.attri
+
+        if(message.messageType() == .plaintext)
+        {
+            lbContent.attributedText = message.attri
+        }
+        if(message.messageType() == .media)
+        {
+            imgView.setSD(message.content)
+        }
+        self.message = message
+    }
+    @IBAction func touchInImage(_ sender: Any) {
+        let imageGroup = ImageGroupControler()
+        let mediaFile = MediaFile.init(self.message!.content, MediaType.image)
+        imageGroup.image = [mediaFile]
+        viewController()?.push(imageGroup)
     }
 }

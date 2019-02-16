@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Gallery
 protocol ComposeViewDelegate : class {
     func composeDidSend(_ message : LimeMessage)
     func composeWillType()
@@ -21,7 +21,7 @@ enum ComposingType : Int
 }
 
 
-class ComposerView: GreenView, EmoticonInnerDelegate, UITextViewDelegate
+class ComposerView: GreenView, EmoticonInnerDelegate, GalleryControllerDelegate,ComposeImageViewDelegate, UITextViewDelegate
 {
     
     @IBOutlet var textView: UITextView!
@@ -46,6 +46,9 @@ class ComposerView: GreenView, EmoticonInnerDelegate, UITextViewDelegate
         plainTextStyle()
         emjView.delegate = self;
         
+        
+        textView.backgroundColor = "f3f4f5".hexColor()
+        textView.drawRadius(4)
     
 
     }
@@ -75,8 +78,6 @@ class ComposerView: GreenView, EmoticonInnerDelegate, UITextViewDelegate
             textView.textColor = UIColor.black
         }
     }
-
-    
 
     @IBOutlet weak var imgEmoj: UIImageView!
     @IBOutlet weak var btEmoj: UIButton!
@@ -127,13 +128,18 @@ class ComposerView: GreenView, EmoticonInnerDelegate, UITextViewDelegate
     {
         NotificationCenter.default.removeObserver(self)
     }
+    @IBAction func imgTouch(_ sender: Any) {
+        
+        
+        callLibrary()
+    }
     
     func set(_ value : ComposingType)
     {
         switch value {
         case .text:
             textView.inputView = nil;
-            imgEmoj.image =  UIImage.init(named: "happiness")
+            imgEmoj.image =  UIImage.init(named: "compose_emoticon")
         break ;
         case .emoticon:
             imgEmoj.image =  UIImage.init(named: "keyboard")
@@ -178,7 +184,7 @@ class ComposerView: GreenView, EmoticonInnerDelegate, UITextViewDelegate
     
     func plainTextStyle()
     {
-        self.imgEmoj.image = "happiness".image()
+        self.imgEmoj.image = "compose_emoticon".image()
         self.composingType = .text
     }
     
@@ -193,6 +199,91 @@ class ComposerView: GreenView, EmoticonInnerDelegate, UITextViewDelegate
         activePlaceholder()
     }
     
+    func callLibrary()
+    {
+        let gallery = GalleryController()
+        Config.tabsToShow = [Config.GalleryTab.cameraTab,Config.GalleryTab.imageTab]
+        Config.Camera.imageLimit = 1;
+        Config.Grid.CloseButton.tintColor = template.primaryColor
+        Config.Grid.ArrowButton.tintColor = template.primaryColor
+        gallery.delegate = self
+        viewController()?.present(gallery, animated: false, completion: nil)
+    }
+
+    func galleryController(_ controller: GalleryController, didSelectImages images: [Image]) {
+        
+        controller.dismiss()
+        weak var weakself = self;
+        images[0].resolveMedium { (png) in
+            weakself?.previewViewTouch(png)            
+        }
+    }
+    
+    func previewViewTouch(_ image : UIImage?)
+    {
+        let previewView = ComposeImageView.init(frame: CGRect.init(x: 0, y: 0, width: 1, height: 216))
+        textView.inputView = previewView
+        previewView.backgroundColor = template.backgroundColor
+        previewView.image = image
+        previewView.delegate = self;
+        textView.reloadInputViews()
+        textView.becomeFirstResponder()
+
+    }
+    @IBOutlet weak var widthConstraintBtImage: NSLayoutConstraint!
+    
+    func disableSendImage()
+    {
+        widthConstraintBtImage.constant = 0;
+    }
+    
+    func ComposeImageViewSend(_ image: UIImage?) {
+        
+        weak var weakself = self;
+        services.uploadMedia(MediaBrand.conference, images: [image!], success: { (response) in
+            
+            let mediaFilesResponse = MediaFile.list(data: response.data as! [Dictionary<String, Any>])
+            if(mediaFilesResponse.count > 0)
+            {
+                let path = mediaFilesResponse[0].path
+                let message = LimeMessage.init(path)
+                message.target_user_id = self.target_user_id
+                message.readed = true ;
+                message.message_type = MesageType.media.rawValue
+                weakself?.delegate?.composeDidSend(message)
+                weakself?.textView.text = ""
+                weakself?.textView.inputView = nil ;
+
+                weakself?.textView.resignFirstResponder()
+            }
+            
+        }, failure: { (error) in
+            
+        }) { (progress) in
+            
+        }
+    }
+    
+    func ComposeImageViewCancel() {
+        textView.inputView = nil
+        textView.resignFirstResponder()
+
+        
+    }
+    func galleryController(_ controller: GalleryController, didSelectVideo video: Video) {
+        controller.dismiss()
+        
+    }
+    
+    func galleryController(_ controller: GalleryController, requestLightbox images: [Image]) {
+        controller.dismiss()
+        
+    }
+    
+    func galleryControllerDidCancel(_ controller: GalleryController) {
+        controller.dismiss()
+    }
+
 }
 
 
@@ -234,3 +325,60 @@ class KeyboardAppearance {
 }
 
 
+
+
+import UIKit
+import Photos
+
+
+// MARK: - UIImage
+
+extension Image {
+    
+    /// Resolve UIImage synchronously
+    ///
+    /// - Parameter size: The target size
+    /// - Returns: The resolved UIImage, otherwise nil
+    public func resolveMedium(completion: @escaping (UIImage?) -> Void) {
+        let options = PHImageRequestOptions()
+        options.isNetworkAccessAllowed = true
+        options.deliveryMode = .opportunistic
+        
+        let targetSize = CGSize(
+            width: asset.pixelWidth,
+            height: asset.pixelHeight
+        )
+        
+        PHImageManager.default().requestImage(
+            for: asset,
+            targetSize: targetSize,
+            contentMode: .default,
+            options: options) { (image, _) in
+                completion(image)
+        }
+    }
+    
+    public static func resolveMedium(images: [Image], completion: @escaping ([UIImage?]) -> Void) {
+        let dispatchGroup = DispatchGroup()
+        var convertedImages = [Int: UIImage]()
+        
+        for (index, image) in images.enumerated() {
+            dispatchGroup.enter()
+            
+            image.resolveMedium(completion: { resolvedImage in
+                if let resolvedImage = resolvedImage {
+                    convertedImages[index] = resolvedImage
+                }
+                
+                dispatchGroup.leave()
+            })
+        }
+        
+        dispatchGroup.notify(queue: .main, execute: {
+            let sortedImages = convertedImages
+                .sorted(by: { $0.key < $1.key })
+                .map({ $0.value })
+            completion(sortedImages)
+        })
+    }
+}

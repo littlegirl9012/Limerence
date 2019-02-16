@@ -35,6 +35,7 @@ enum APIFunction : String
     
     
     case bookUniversity     = "book/university"
+    case bookStoreSearch     = "book/store/search"
 
     case bookReport     = "book/report"
     case bookUpdateType     = "book/update/type"
@@ -63,7 +64,11 @@ enum APIFunction : String
     case feelingList = "feeling/list"
     case universityList = "university/list"
     case adminBookTikiInsert = "admin/book/tiki/insert"
-    
+    case adminBookFahasaInsert = "admin/book/fahasa/insert"
+    case adminBookTikiList = "admin/tiki/list"
+    case tikiUpdatePrice = "admin/tiki/update/sellprice"
+
+
     
     case orderInsert = "order/insert"
     case orderList = "order/list"

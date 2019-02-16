@@ -53,6 +53,8 @@ class BookTypeView: GreenView , RadioViewDelegate{
             break
         case .web:
             break
+        case .tiki:
+            break
 
         case .library: break
             

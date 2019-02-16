@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageGroupControler" customModule="LimeBook" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageGroupControler" customModule="MiBook" customModuleProvider="target">
             <connections>
                 <outlet property="btBack" destination="dYO-wm-5Eh" id="zY9-mX-rFu"/>
                 <outlet property="btDownload" destination="8c5-qr-szX" id="Ybe-HR-e66"/>
@@ -63,14 +63,25 @@
                                 <constraint firstAttribute="width" constant="40" id="bGP-lI-MnK"/>
                             </constraints>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOd-Ll-Xs0" customClass="LineView" customModule="MiBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="n9I-mn-aeB"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="PCq-NM-it5"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="jOd-Ll-Xs0" firstAttribute="leading" secondItem="Dn9-Xt-PK6" secondAttribute="leading" id="11l-TO-Ipi"/>
                         <constraint firstAttribute="trailing" secondItem="8c5-qr-szX" secondAttribute="trailing" constant="12" id="5Fc-BN-zy5"/>
                         <constraint firstItem="dYO-wm-5Eh" firstAttribute="leading" secondItem="Dn9-Xt-PK6" secondAttribute="leading" id="BuI-AV-8xy"/>
                         <constraint firstAttribute="bottom" secondItem="N6v-V7-Qjb" secondAttribute="bottom" id="FTy-Pd-LUf"/>
+                        <constraint firstAttribute="trailing" secondItem="jOd-Ll-Xs0" secondAttribute="trailing" id="RiF-ni-5L5"/>
                         <constraint firstAttribute="bottom" secondItem="dYO-wm-5Eh" secondAttribute="bottom" id="UtM-Ys-t8w"/>
                         <constraint firstItem="dYO-wm-5Eh" firstAttribute="top" secondItem="Dn9-Xt-PK6" secondAttribute="top" id="VEJ-v6-0jw"/>
+                        <constraint firstItem="jOd-Ll-Xs0" firstAttribute="top" secondItem="Dn9-Xt-PK6" secondAttribute="top" id="VQ8-je-cTB"/>
                         <constraint firstItem="N6v-V7-Qjb" firstAttribute="top" secondItem="Dn9-Xt-PK6" secondAttribute="top" id="deu-1b-RPq"/>
                         <constraint firstItem="8c5-qr-szX" firstAttribute="leading" secondItem="N6v-V7-Qjb" secondAttribute="trailing" constant="12" id="en9-bd-WH6"/>
                         <constraint firstAttribute="height" constant="44" id="nIR-03-ta9"/>

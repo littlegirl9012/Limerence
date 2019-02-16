@@ -37,7 +37,7 @@ class BookDetailViewController: MasterViewController,BookTypeViewDelegate{
         imgSelectView.fillImage(book.images)
         menuView.setBook(self.book.book_type_n)
         bookTypeDidSelect(self.book.book_type_n)
-        
+        lbCat.textR = self.book.cat_name
         if(book.book_type_n == .sell)
         {
             tradingView.tvContent.text = self.book.content
@@ -154,7 +154,11 @@ class BookDetailViewController: MasterViewController,BookTypeViewDelegate{
         }
         
         services.bookUpdateType(request, success: {
-            weakself?.view.info(title: "Thông Báo", desc: "Cập nhật sách thành công")
+            weakself?.view.dialog(title: "Thông báo", desc: "Cập nhật thành công", type: .info, acceptBlock: {
+                weakself?.pop()
+            }, cancelBlock: {
+                
+            })
         }) { (error) in
             
         }

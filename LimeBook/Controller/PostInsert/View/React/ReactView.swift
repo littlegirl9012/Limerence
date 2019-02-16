@@ -33,6 +33,7 @@ class ReactView: MasterPostView , PostSelectViewDelegate, BookSelectViewControll
         if(type == .select)
         {
             let book = BookSelectViewController()
+            book.selectType = . feel
             book.delegate = self;
             viewController()?.push(book)
         }

@@ -46,6 +46,12 @@
 		5109ACA321352B0E009AA38D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5109ACA221352B0E009AA38D /* Book.swift */; };
 		5109ACA521354312009AA38D /* MediaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5109ACA421354312009AA38D /* MediaFile.swift */; };
 		5109ACA721354413009AA38D /* MasterPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5109ACA621354413009AA38D /* MasterPostView.swift */; };
+		510AFBF72215C8EB00E1A2D9 /* BookCompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510AFBF52215C8EB00E1A2D9 /* BookCompareViewController.swift */; };
+		510AFBF82215C8EB00E1A2D9 /* BookCompareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510AFBF62215C8EB00E1A2D9 /* BookCompareViewController.xib */; };
+		510AFBFD2215C9E900E1A2D9 /* BookCompareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510AFBFB2215C9E900E1A2D9 /* BookCompareCell.swift */; };
+		510AFBFE2215C9E900E1A2D9 /* BookCompareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510AFBFC2215C9E900E1A2D9 /* BookCompareCell.xib */; };
+		510AFC012215DFFE00E1A2D9 /* BookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510AFC002215DFFE00E1A2D9 /* BookImageView.swift */; };
+		510AFC032215E00500E1A2D9 /* BookImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510AFC022215E00500E1A2D9 /* BookImageView.xib */; };
 		510B00C2215AAFBB00EFC8E4 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B00C0215AAFBB00EFC8E4 /* QuestionView.swift */; };
 		510B00C3215AAFBB00EFC8E4 /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510B00C1215AAFBB00EFC8E4 /* QuestionView.xib */; };
 		510B00C6215AAFD500EFC8E4 /* ReactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510B00C4215AAFD500EFC8E4 /* ReactView.xib */; };
@@ -151,6 +157,10 @@
 		5122633621F478BC001224F7 /* BookRefItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5122633421F478BC001224F7 /* BookRefItemCell.xib */; };
 		512F209721441C3C0070D427 /* BookAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F209621441C3C0070D427 /* BookAddView.swift */; };
 		512F209921441C420070D427 /* BookAddView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512F209821441C420070D427 /* BookAddView.xib */; };
+		51375BEE22181274001F9C89 /* BookOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51375BEC22181274001F9C89 /* BookOwnerViewController.swift */; };
+		51375BEF22181274001F9C89 /* BookOwnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51375BED22181274001F9C89 /* BookOwnerViewController.xib */; };
+		51375BF32218823E001F9C89 /* BookOwnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51375BF12218823E001F9C89 /* BookOwnerCell.swift */; };
+		51375BF42218823E001F9C89 /* BookOwnerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51375BF22218823E001F9C89 /* BookOwnerCell.xib */; };
 		51427BFE218227B9003C828D /* UserSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51427BFC218227B9003C828D /* UserSearchCell.swift */; };
 		51427BFF218227B9003C828D /* UserSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51427BFD218227B9003C828D /* UserSearchCell.xib */; };
 		5147AD9021DF2F9300BBF92C /* UniversityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5147AD8E21DF2F9100BBF92C /* UniversityViewController.swift */; };
@@ -612,6 +622,12 @@
 		51E3B8E02146B5910019F6F4 /* GreenInfoFieldSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3B8DE2146B5910019F6F4 /* GreenInfoFieldSymbol.swift */; };
 		51E3B8E12146B5910019F6F4 /* GreenInfoFieldSymbol.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E3B8DF2146B5910019F6F4 /* GreenInfoFieldSymbol.xib */; };
 		51E3B8E42146B7280019F6F4 /* MD5Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3B8E22146B7280019F6F4 /* MD5Digest.swift */; };
+		51E8EBE2221081C0009EE1E1 /* ComposeImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E8EBE1221081C0009EE1E1 /* ComposeImageView.xib */; };
+		51E8EBE4221081D2009EE1E1 /* ComposeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8EBE3221081D2009EE1E1 /* ComposeImageView.swift */; };
+		51E8EBE8221097DB009EE1E1 /* MessageImageMyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E8EBE6221097DB009EE1E1 /* MessageImageMyCell.xib */; };
+		51E8EBEA221098B1009EE1E1 /* MessageImageTargetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E8EBE9221098B1009EE1E1 /* MessageImageTargetCell.xib */; };
+		51E8EBF52211E10B009EE1E1 /* BookSelectSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8EBF42211E10B009EE1E1 /* BookSelectSearchView.swift */; };
+		51E8EBF72211E113009EE1E1 /* BookSelectSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E8EBF62211E113009EE1E1 /* BookSelectSearchView.xib */; };
 		51ED16DD21280AFD000757B5 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED16DB21280AFD000757B5 /* ConversationViewController.swift */; };
 		51ED16DE21280AFD000757B5 /* ConversationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51ED16DC21280AFD000757B5 /* ConversationViewController.xib */; };
 		51ED16E321280B3D000757B5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51ED16E021280B3D000757B5 /* HomeViewController.xib */; };
@@ -701,6 +717,12 @@
 		5109ACA221352B0E009AA38D /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		5109ACA421354312009AA38D /* MediaFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFile.swift; sourceTree = "<group>"; };
 		5109ACA621354413009AA38D /* MasterPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterPostView.swift; sourceTree = "<group>"; };
+		510AFBF52215C8EB00E1A2D9 /* BookCompareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCompareViewController.swift; sourceTree = "<group>"; };
+		510AFBF62215C8EB00E1A2D9 /* BookCompareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCompareViewController.xib; sourceTree = "<group>"; };
+		510AFBFB2215C9E900E1A2D9 /* BookCompareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCompareCell.swift; sourceTree = "<group>"; };
+		510AFBFC2215C9E900E1A2D9 /* BookCompareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCompareCell.xib; sourceTree = "<group>"; };
+		510AFC002215DFFE00E1A2D9 /* BookImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookImageView.swift; sourceTree = "<group>"; };
+		510AFC022215E00500E1A2D9 /* BookImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookImageView.xib; sourceTree = "<group>"; };
 		510B00C0215AAFBB00EFC8E4 /* QuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		510B00C1215AAFBB00EFC8E4 /* QuestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionView.xib; sourceTree = "<group>"; };
 		510B00C4215AAFD500EFC8E4 /* ReactView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReactView.xib; sourceTree = "<group>"; };
@@ -808,6 +830,10 @@
 		5122633421F478BC001224F7 /* BookRefItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRefItemCell.xib; sourceTree = "<group>"; };
 		512F209621441C3C0070D427 /* BookAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAddView.swift; sourceTree = "<group>"; };
 		512F209821441C420070D427 /* BookAddView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookAddView.xib; sourceTree = "<group>"; };
+		51375BEC22181274001F9C89 /* BookOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookOwnerViewController.swift; sourceTree = "<group>"; };
+		51375BED22181274001F9C89 /* BookOwnerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookOwnerViewController.xib; sourceTree = "<group>"; };
+		51375BF12218823E001F9C89 /* BookOwnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookOwnerCell.swift; sourceTree = "<group>"; };
+		51375BF22218823E001F9C89 /* BookOwnerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookOwnerCell.xib; sourceTree = "<group>"; };
 		51427BFC218227B9003C828D /* UserSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchCell.swift; sourceTree = "<group>"; };
 		51427BFD218227B9003C828D /* UserSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSearchCell.xib; sourceTree = "<group>"; };
 		5147AD8E21DF2F9100BBF92C /* UniversityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityViewController.swift; sourceTree = "<group>"; };
@@ -1284,6 +1310,12 @@
 		51E3B8DF2146B5910019F6F4 /* GreenInfoFieldSymbol.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GreenInfoFieldSymbol.xib; sourceTree = "<group>"; };
 		51E3B8E22146B7280019F6F4 /* MD5Digest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5Digest.swift; sourceTree = "<group>"; };
 		51E3B8E32146B7280019F6F4 /* SwiftDigest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftDigest.h; sourceTree = "<group>"; };
+		51E8EBE1221081C0009EE1E1 /* ComposeImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComposeImageView.xib; sourceTree = "<group>"; };
+		51E8EBE3221081D2009EE1E1 /* ComposeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeImageView.swift; sourceTree = "<group>"; };
+		51E8EBE6221097DB009EE1E1 /* MessageImageMyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageImageMyCell.xib; sourceTree = "<group>"; };
+		51E8EBE9221098B1009EE1E1 /* MessageImageTargetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageImageTargetCell.xib; sourceTree = "<group>"; };
+		51E8EBF42211E10B009EE1E1 /* BookSelectSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSelectSearchView.swift; sourceTree = "<group>"; };
+		51E8EBF62211E113009EE1E1 /* BookSelectSearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookSelectSearchView.xib; sourceTree = "<group>"; };
 		51ED16DB21280AFD000757B5 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		51ED16DC21280AFD000757B5 /* ConversationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationViewController.xib; sourceTree = "<group>"; };
 		51ED16E021280B3D000757B5 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -1447,6 +1479,34 @@
 				5108C19C21BCEFBD00D0B04E /* TradingUnitView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		510AFBF92215C8F800E1A2D9 /* Compare */ = {
+			isa = PBXGroup;
+			children = (
+				510AFBFA2215C9CF00E1A2D9 /* Cell */,
+				510AFBF52215C8EB00E1A2D9 /* BookCompareViewController.swift */,
+				510AFBF62215C8EB00E1A2D9 /* BookCompareViewController.xib */,
+			);
+			path = Compare;
+			sourceTree = "<group>";
+		};
+		510AFBFA2215C9CF00E1A2D9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				510AFBFB2215C9E900E1A2D9 /* BookCompareCell.swift */,
+				510AFBFC2215C9E900E1A2D9 /* BookCompareCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		510AFBFF2215DFE900E1A2D9 /* BookImageView */ = {
+			isa = PBXGroup;
+			children = (
+				510AFC002215DFFE00E1A2D9 /* BookImageView.swift */,
+				510AFC022215E00500E1A2D9 /* BookImageView.xib */,
+			);
+			path = BookImageView;
 			sourceTree = "<group>";
 		};
 		510B00BD215AAEE000EFC8E4 /* Present */ = {
@@ -1774,6 +1834,25 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		51375BEB22181259001F9C89 /* Owner */ = {
+			isa = PBXGroup;
+			children = (
+				51375BF022181A00001F9C89 /* Cell */,
+				51375BEC22181274001F9C89 /* BookOwnerViewController.swift */,
+				51375BED22181274001F9C89 /* BookOwnerViewController.xib */,
+			);
+			path = Owner;
+			sourceTree = "<group>";
+		};
+		51375BF022181A00001F9C89 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				51375BF12218823E001F9C89 /* BookOwnerCell.swift */,
+				51375BF22218823E001F9C89 /* BookOwnerCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		51427BFB218226B8003C828D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1895,6 +1974,8 @@
 			children = (
 				516CCD0021B1AAB2007BD5A4 /* BookSelectFooterView.swift */,
 				516CCD0221B1AABD007BD5A4 /* BookSelectFooterView.xib */,
+				51E8EBF42211E10B009EE1E1 /* BookSelectSearchView.swift */,
+				51E8EBF62211E113009EE1E1 /* BookSelectSearchView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1925,7 +2006,6 @@
 				517D5C852123CB7200EC32AD /* Extension */,
 				517D5C942123CB7200EC32AD /* General */,
 				517D5C9C2123CB7200EC32AD /* GreenDefine.swift */,
-				517D5C9D2123CB7200EC32AD /* GreenDialog */,
 				517D5C9E2123CB7200EC32AD /* Icons */,
 				517D5CC82123CB7200EC32AD /* View */,
 			);
@@ -1968,13 +2048,6 @@
 				517D5C9B2123CB7200EC32AD /* GreenView.swift */,
 			);
 			path = General;
-			sourceTree = "<group>";
-		};
-		517D5C9D2123CB7200EC32AD /* GreenDialog */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GreenDialog;
 			sourceTree = "<group>";
 		};
 		517D5C9E2123CB7200EC32AD /* Icons */ = {
@@ -2118,6 +2191,8 @@
 		517D5D34212489CC00EC32AD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				51375BEB22181259001F9C89 /* Owner */,
+				510AFBF92215C8F800E1A2D9 /* Compare */,
 				5117C0EC2206FAF7008F4DF0 /* BookRefUniverViewController */,
 				51C222D221FBA20C00115CAF /* BookRefInfoView */,
 				5122632D21F47638001224F7 /* BookRefCreate */,
@@ -2225,6 +2300,8 @@
 				517D5D4521248A7300EC32AD /* MessageMyCell.xib */,
 				517D5D4621248A7300EC32AD /* MessageTargetCell.swift */,
 				517D5D4921248A7300EC32AD /* MessageTargetCell.xib */,
+				51E8EBE6221097DB009EE1E1 /* MessageImageMyCell.xib */,
+				51E8EBE9221098B1009EE1E1 /* MessageImageTargetCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -2232,6 +2309,7 @@
 		517D5D5521248C1B00EC32AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				510AFBFF2215DFE900E1A2D9 /* BookImageView */,
 				51A9F37121F3AEC800561B24 /* MIDropList */,
 				5111D5EC21B9039C00FF408A /* ContactView */,
 				510333FC21706F5F00552469 /* ImageBook */,
@@ -2407,6 +2485,8 @@
 				517D5D5121248C0D00EC32AD /* ComposerView.xib */,
 				5191E62E212A9EDD00A40638 /* EmoticonInnerView.swift */,
 				5191E630212AA08100A40638 /* EmoticonInnerView.xib */,
+				51E8EBE3221081D2009EE1E1 /* ComposeImageView.swift */,
+				51E8EBE1221081C0009EE1E1 /* ComposeImageView.xib */,
 			);
 			path = Compose;
 			sourceTree = "<group>";
@@ -3487,6 +3567,7 @@
 				51176B5B21731048003ECCAF /* BookInfoDetailCell.xib in Resources */,
 				516CCD0321B1AABD007BD5A4 /* BookSelectFooterView.xib in Resources */,
 				51B56E6D2141616A008D2A71 /* BookDetailCell.xib in Resources */,
+				51E8EBEA221098B1009EE1E1 /* MessageImageTargetCell.xib in Resources */,
 				511384962132A80C003EFFFE /* SellPostView.xib in Resources */,
 				517E58D321EBA1F400084534 /* OrderDetailInfoCell.xib in Resources */,
 				51C86751216105EB007260AD /* CommentView.xib in Resources */,
@@ -3513,6 +3594,7 @@
 				51176B6F21739429003ECCAF /* BookHeaderView.xib in Resources */,
 				519FDC6F212D6E19003DE031 /* UserUnitView.xib in Resources */,
 				517D5CEE2123CB7200EC32AD /* GDown.png in Resources */,
+				510AFBFE2215C9E900E1A2D9 /* BookCompareCell.xib in Resources */,
 				517D5CEB2123CB7200EC32AD /* GClover.png in Resources */,
 				517D5D072123CB7200EC32AD /* ic_unCheck.png in Resources */,
 				51C8675E21615B29007260AD /* PostNoteView.xib in Resources */,
@@ -3546,6 +3628,7 @@
 				51073C0621E5FB1B0020C169 /* CartAddressCell.xib in Resources */,
 				510D160421A92970004CD2DE /* template2.html in Resources */,
 				517D5D042123CB7200EC32AD /* GUser_1.png in Resources */,
+				51E8EBF72211E113009EE1E1 /* BookSelectSearchView.xib in Resources */,
 				517D5D002123CB7200EC32AD /* GSetting.png in Resources */,
 				517D5CF42123CB7200EC32AD /* GLeftArrow.png in Resources */,
 				517D5CF72123CB7200EC32AD /* GMinus.png in Resources */,
@@ -3565,6 +3648,7 @@
 				51176B752173A895003ECCAF /* NewsDetailCellBook.xib in Resources */,
 				5195B214213978FD00819ACC /* ImageGroupCell.xib in Resources */,
 				51C5721021B0313D008F6347 /* TikiViewController.xib in Resources */,
+				510AFBF82215C8EB00E1A2D9 /* BookCompareViewController.xib in Resources */,
 				51ED16EF21281171000757B5 /* NewsViewController.xib in Resources */,
 				51846AFA213718E6002D60EC /* LineView.xib in Resources */,
 				517D5CEF2123CB7200EC32AD /* GEmail.png in Resources */,
@@ -3626,6 +3710,7 @@
 				51F3B4FB21D5505400B38990 /* BookDetailTradingView.xib in Resources */,
 				51B8525E215CE030007CF97D /* ReactUserView.xib in Resources */,
 				5103340221706FA400552469 /* ImageBook.xib in Resources */,
+				510AFC032215E00500E1A2D9 /* BookImageView.xib in Resources */,
 				51A9F34A21F252F400561B24 /* Quicksand-Light.otf in Resources */,
 				515A4EBE2147FF0A000CF66D /* RegisterViewController.xib in Resources */,
 				517E8CD7214D1AAA00C2DF3B /* ImageDisplayView.xib in Resources */,
@@ -3638,6 +3723,7 @@
 				5175129821E85839005369C2 /* template3.html in Resources */,
 				5194C3ED2137006100530964 /* ImageGroup2.xib in Resources */,
 				51F23DEB21C1052400846E50 /* Legancy@2x.png in Resources */,
+				51E8EBE2221081C0009EE1E1 /* ComposeImageView.xib in Resources */,
 				5194C3DE2136E69D00530964 /* cnllcngd1.jpg in Resources */,
 				51142ADC21BC4CF300843ED0 /* Comfortaa-Regular.ttf in Resources */,
 				5188B4EE2150F2E100190188 /* maintance.jpg in Resources */,
@@ -3648,6 +3734,7 @@
 				51C5720B21B0300A008F6347 /* AdminViewController.xib in Resources */,
 				51F23DE721C0F8F500846E50 /* LegancyView.xib in Resources */,
 				519ED5AA21430F4E004897D7 /* BookCatCell.xib in Resources */,
+				51E8EBE8221097DB009EE1E1 /* MessageImageMyCell.xib in Resources */,
 				5184168E21F43C95009EBB79 /* BookRefCell.xib in Resources */,
 				5194C3E12136E69D00530964 /* book1.jpeg in Resources */,
 				517D5D112123CB7300EC32AD /* GreenButtonCenter.xib in Resources */,
@@ -3716,6 +3803,7 @@
 				517D5CFE2123CB7200EC32AD /* GSearch.png in Resources */,
 				51C80DFF216E7E6500F825EA /* FeelingListView.xib in Resources */,
 				519B86F72168319D00A94A8D /* NewsCategoryView.xib in Resources */,
+				51375BF42218823E001F9C89 /* BookOwnerCell.xib in Resources */,
 				51C80CF7216A7F8E00F825EA /* SVN-Sharpen.otf in Resources */,
 				517D5CE82123CB7200EC32AD /* GBack.png in Resources */,
 				5113849B2132C725003EFFFE /* OthersPostView.xib in Resources */,
@@ -3726,6 +3814,7 @@
 				517D5CF22123CB7200EC32AD /* GHome.png in Resources */,
 				517D5CFD2123CB7200EC32AD /* GRight.png in Resources */,
 				5151B16821E985E500B1E095 /* DevViewController.xib in Resources */,
+				51375BEF22181274001F9C89 /* BookOwnerViewController.xib in Resources */,
 				510D15D821A839DD004CD2DE /* NewsDetailWebViewController.xib in Resources */,
 				515A4EC32148273A000CF66D /* UpdateVersionViewController.xib in Resources */,
 				5188B4E4214FE5CC00190188 /* EditSingleLineView.xib in Resources */,
@@ -4016,6 +4105,7 @@
 				517D5D4C21248A7300EC32AD /* MessageTargetCell.swift in Sources */,
 				5184168D21F43C95009EBB79 /* BookRefCell.swift in Sources */,
 				517C431521F0BCEB00F7D7A4 /* OrderHistoryDetail_Sell_ViewController.swift in Sources */,
+				51375BF32218823E001F9C89 /* BookOwnerCell.swift in Sources */,
 				5118A24421B31BD600036DE9 /* CommunicateTopView.swift in Sources */,
 				5188B4DE214FE49E00190188 /* UserEditViewController.swift in Sources */,
 				5188B4E9214FF90200190188 /* CalendarInputView.swift in Sources */,
@@ -4081,6 +4171,7 @@
 				51FFAF0B21C2D27100BB0459 /* ReportView.swift in Sources */,
 				5195B255213DA3A000819ACC /* ContactCell.swift in Sources */,
 				51E3B8AB21464AF50019F6F4 /* ApplicationInfo.swift in Sources */,
+				510AFBFD2215C9E900E1A2D9 /* BookCompareCell.swift in Sources */,
 				517D5CDD2123CB7200EC32AD /* GreenExtention+UITextView.swift in Sources */,
 				517D5CD12123CB7200EC32AD /* GreenExtension+Array.swift in Sources */,
 				5195B227213C0BBF00819ACC /* SettingHeaderView.swift in Sources */,
@@ -4094,6 +4185,7 @@
 				517D5D33212486B600EC32AD /* Mi.swift in Sources */,
 				51C86736215FD328007260AD /* AudioInstance.swift in Sources */,
 				516CCCFD21B19DA4007BD5A4 /* AdminAuthorViewController.swift in Sources */,
+				51E8EBE4221081D2009EE1E1 /* ComposeImageView.swift in Sources */,
 				5122632221F45D4B001224F7 /* BookRefListCell.swift in Sources */,
 				51427BFE218227B9003C828D /* UserSearchCell.swift in Sources */,
 				512F209721441C3C0070D427 /* BookAddView.swift in Sources */,
@@ -4158,6 +4250,7 @@
 				51C80CF3216A402700F825EA /* BookType.swift in Sources */,
 				517D5CDC2123CB7200EC32AD /* GreenExtention+UITextField.swift in Sources */,
 				5118A24021B319F100036DE9 /* CommunicatoinViewcontroller.swift in Sources */,
+				510AFC012215DFFE00E1A2D9 /* BookImageView.swift in Sources */,
 				5147C55A21EA5AD7001B12CA /* OrderHistoryCell.swift in Sources */,
 				519FDC74212DCAF4003DE031 /* Services.swift in Sources */,
 				517D5CD32123CB7200EC32AD /* GreenExtension+String.swift in Sources */,
@@ -4181,6 +4274,7 @@
 				51E362CF215936EF002C875F /* HYSViewController.swift in Sources */,
 				5194C3E62137002D00530964 /* ImageGroup1.swift in Sources */,
 				51A9F37621F3AEC800561B24 /* MIDropListCell.swift in Sources */,
+				51375BEE22181274001F9C89 /* BookOwnerViewController.swift in Sources */,
 				517D5CE12123CB7200EC32AD /* GreenLabel.swift in Sources */,
 				51B94B56218D700100AF9531 /* NewsSearchViewController.swift in Sources */,
 				511342C22131733F008A33B5 /* PostInsertViewController.swift in Sources */,
@@ -4192,6 +4286,7 @@
 				5122633021F47828001224F7 /* BookRefHeaderView.swift in Sources */,
 				5147AD9421DF30EE00BBF92C /* AddressCell.swift in Sources */,
 				51D5858521959D2B00D4DF09 /* BookActionView.swift in Sources */,
+				510AFBF72215C8EB00E1A2D9 /* BookCompareViewController.swift in Sources */,
 				519B86F52168319400A94A8D /* NewsCategoryView.swift in Sources */,
 				517D5D202123CB9F00EC32AD /* FormaterInstance.swift in Sources */,
 				515A4ECC2148428C000CF66D /* InitInfoViewController.swift in Sources */,
@@ -4221,6 +4316,7 @@
 				5100E8DE21E26028003FCF78 /* CartFooterView.swift in Sources */,
 				517D5D142123CB7300EC32AD /* GreenEmptyView.swift in Sources */,
 				517D5CD72123CB7200EC32AD /* GreenExtension+UITableViewCell.swift in Sources */,
+				51E8EBF52211E10B009EE1E1 /* BookSelectSearchView.swift in Sources */,
 				51176B6D21739420003ECCAF /* BookHeaderView.swift in Sources */,
 				519FDC6A212D6DC4003DE031 /* UserInfoCell.swift in Sources */,
 			);

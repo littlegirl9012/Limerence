@@ -22,6 +22,8 @@ class MasterViewController: UIViewController {
 
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        print("Screen : \(nibName!)")
         super.viewWillAppear(animated)
     }
     

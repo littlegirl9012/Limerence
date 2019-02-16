@@ -365,6 +365,23 @@ router.post('/user/select',function(req,res)
 });
 
 
+router.post('/store/search',function(req,res)
+{
+    var title = req.param('title');
+    var keyword = req.param('keyword');
+
+    connection.query("CALL  book_store_search(?,?) ;",[title,keyword],function(err,rows)
+    {
+        if(!err)
+        {
+            res.status(200).send(Mi.responseProcess(err, rows[0]));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+});
 
 
 router.post('/search',function(req,res)

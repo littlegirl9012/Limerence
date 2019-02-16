@@ -30,7 +30,8 @@ enum SettingType : Int
     case order = 7
     case school = 8
     case univer = 9
-    
+    case search = 10
+
     
     
 }
@@ -73,6 +74,11 @@ class FunctionViewController: MasterViewController, UITableViewDelegate, UITable
         simpleNavi.set("MiBook.vn")
 
         
+        let search = SettingItem.init("Tìm kiếm sách", "book_search".image())
+        search.settingType = . search
+        search.color = "00a4a4".hexColor()
+
+        
         let bookRound = SettingItem.init("Sách quanh tôi", "BookRound".image())
         bookRound.settingType = . bookMap
         bookRound.color = "145f71".hexColor()
@@ -100,11 +106,22 @@ class FunctionViewController: MasterViewController, UITableViewDelegate, UITable
         univer.settingType = . univer
         univer.color = "9d194e".hexColor()
 
+        
+
+        items.append(search)
         items.append(face)
         items.append(bookRound)
         items.append(store)
         items.append(school)
         items.append(univer)
+        
+        if(userInstance.user.id == 1)
+        {
+            let admin = SettingItem.init("Quản trị", "home_setting".image())
+            admin.settingType = . admin
+            admin.color = "ffdd00".hexColor()
+            items.append(admin)
+        }
         tbView.reloadData()
     }
     
@@ -158,7 +175,18 @@ class FunctionViewController: MasterViewController, UITableViewDelegate, UITable
             push(BookRefUniverViewController())
         }
 
-        
+        if(stype == .search)
+        {
+            let select = BookSelectViewController()
+            select.selectType = .search
+            push(select)
+        }
+        if(stype == .admin)
+        {
+            let select = AdminViewController()
+            push(select)
+        }
+
         
     }
     

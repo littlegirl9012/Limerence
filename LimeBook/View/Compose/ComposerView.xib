@@ -15,6 +15,7 @@
                 <outlet property="imgEmoj" destination="qnW-UQ-ObV" id="YTW-ei-W4t"/>
                 <outlet property="textView" destination="VQo-iP-jZP" id="gXv-PS-bdA"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Res-Jp-zh5"/>
+                <outlet property="widthConstraintBtImage" destination="pdg-4H-R8K" id="7uc-r3-4gR"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -63,10 +64,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bmd-PD-Fbe">
-                    <rect key="frame" x="0.0" y="0.0" width="40" height="60"/>
+                    <rect key="frame" x="0.0" y="0.0" width="84" height="60"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B24-iS-PCE">
-                            <rect key="frame" x="0.0" y="20" width="40" height="40"/>
+                            <rect key="frame" x="44" y="20" width="40" height="40"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keyboard" translatesAutoresizingMaskIntoConstraints="NO" id="qnW-UQ-ObV">
                                     <rect key="frame" x="8" y="8" width="24" height="24"/>
@@ -90,23 +91,36 @@
                                 <constraint firstAttribute="height" constant="40" id="OEH-39-FHB"/>
                                 <constraint firstItem="Uhk-Nj-r4v" firstAttribute="top" secondItem="B24-iS-PCE" secondAttribute="top" id="T5y-DU-Mhq"/>
                                 <constraint firstItem="qnW-UQ-ObV" firstAttribute="centerX" secondItem="B24-iS-PCE" secondAttribute="centerX" id="naV-6x-jJx"/>
+                                <constraint firstAttribute="width" constant="40" id="unC-En-E7l"/>
                                 <constraint firstItem="Uhk-Nj-r4v" firstAttribute="leading" secondItem="B24-iS-PCE" secondAttribute="leading" id="wER-DN-PE1"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXb-OO-fLr">
+                            <rect key="frame" x="4" y="20" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="pdg-4H-R8K"/>
+                            </constraints>
+                            <state key="normal" image="compose_gallery"/>
+                            <connections>
+                                <action selector="imgTouch:" destination="-1" eventType="touchUpInside" id="av9-BW-SFz"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="B24-iS-PCE" secondAttribute="bottom" id="0w0-of-9TS"/>
-                        <constraint firstItem="B24-iS-PCE" firstAttribute="leading" secondItem="Bmd-PD-Fbe" secondAttribute="leading" id="KXj-wO-BT6"/>
-                        <constraint firstAttribute="width" constant="40" id="cQe-dR-LHd"/>
+                        <constraint firstItem="B24-iS-PCE" firstAttribute="leading" secondItem="WXb-OO-fLr" secondAttribute="trailing" id="4iy-eT-oba"/>
+                        <constraint firstItem="WXb-OO-fLr" firstAttribute="height" secondItem="B24-iS-PCE" secondAttribute="height" id="SS8-hS-e2C"/>
+                        <constraint firstAttribute="bottom" secondItem="WXb-OO-fLr" secondAttribute="bottom" id="VQR-6R-pOq"/>
+                        <constraint firstItem="WXb-OO-fLr" firstAttribute="leading" secondItem="Bmd-PD-Fbe" secondAttribute="leading" constant="4" id="nre-4v-zW1"/>
                         <constraint firstAttribute="trailing" secondItem="B24-iS-PCE" secondAttribute="trailing" id="zbh-xP-6wB"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h57-V6-uoG">
-                    <rect key="frame" x="40" y="0.0" width="295" height="60"/>
+                    <rect key="frame" x="88" y="0.0" width="247" height="60"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VQo-iP-jZP">
-                            <rect key="frame" x="0.0" y="6" width="295" height="50"/>
+                            <rect key="frame" x="0.0" y="6" width="247" height="50"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -120,7 +134,7 @@
                         <constraint firstItem="VQo-iP-jZP" firstAttribute="top" secondItem="h57-V6-uoG" secondAttribute="top" constant="6" id="Rop-GV-OE1"/>
                     </constraints>
                 </view>
-                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKB-qM-Wui">
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKB-qM-Wui" userLabel="Line">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -137,7 +151,7 @@
                 <constraint firstAttribute="bottom" secondItem="Bmd-PD-Fbe" secondAttribute="bottom" id="N19-Dv-ltr"/>
                 <constraint firstItem="Bmd-PD-Fbe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NIJ-9N-Huk"/>
                 <constraint firstItem="xKB-qM-Wui" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RJZ-RX-GKf"/>
-                <constraint firstItem="h57-V6-uoG" firstAttribute="leading" secondItem="Bmd-PD-Fbe" secondAttribute="trailing" id="Y6I-VB-pxh"/>
+                <constraint firstItem="h57-V6-uoG" firstAttribute="leading" secondItem="Bmd-PD-Fbe" secondAttribute="trailing" constant="4" id="Y6I-VB-pxh"/>
                 <constraint firstAttribute="bottom" secondItem="cwL-H0-osn" secondAttribute="bottom" id="aN9-lj-pJ4"/>
                 <constraint firstItem="Bmd-PD-Fbe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bOM-vN-srj"/>
                 <constraint firstItem="cwL-H0-osn" firstAttribute="leading" secondItem="h57-V6-uoG" secondAttribute="trailing" id="r07-dQ-txr"/>
@@ -145,11 +159,12 @@
                 <constraint firstItem="xKB-qM-Wui" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sqQ-Kw-bKq"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-628" y="-188"/>
+            <point key="canvasLocation" x="-666" y="-197"/>
         </view>
     </objects>
     <resources>
         <image name="ComposeViewSend" width="30" height="28"/>
+        <image name="compose_gallery" width="24" height="22"/>
         <image name="keyboard" width="43" height="26"/>
     </resources>
 </document>

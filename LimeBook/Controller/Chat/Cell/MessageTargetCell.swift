@@ -20,12 +20,15 @@ class MessageTargetCell: MessageCell {
 
     }
     
-    override func set(_ message: LimeMessage) {
+    override func set(_ message: LimeMessage)
+    {
         super.set(message)
-        textContentView.drawRadius(4, color: UIColor.white, thickness: 0.0)
         textContentView.backgroundColor =  template.primaryColor
-        lbContent.backgroundColor = UIColor.clear
-        lbContent.textColor = UIColor.white
-        userImageView.set(message.aliasname, url: message.avatar)
+        if(lbContent != nil)
+        {
+            lbContent.backgroundColor = UIColor.clear
+            lbContent.textColor = UIColor.white
+        }
+
     }
 }

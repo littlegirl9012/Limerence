@@ -206,11 +206,17 @@ io.sockets.on('connection',function(socket)
 		var user_id = data.user_id ;
 		var target_user_id =  data.target_user_id ;
 		var content = data.content ;
+		var message_type = 1;
+
+		if(data.message_type)
+		{
+			message_type = data.message_type;
+		}
 
 
 //function limerencePush(pn_type,from_id, to_id, target_id)
 
-		connection.query("CALL  message_insert(?,?,?);",[user_id,target_user_id,content],function(err,rows)
+		connection.query("CALL  message_insert(?,?,?,?);",[user_id,target_user_id,content,message_type],function(err,rows)
 		{
 			pn_services.limerencePush(1,user_id,target_user_id,1,content);
 
@@ -289,6 +295,10 @@ io.sockets.on('connection',function(socket)
 	        	if(messageList.length > 0)
 	        	{
 	        		socket.emit('MessageLatest',messageList.reverse());
+	        	}
+	        	else
+	        	{
+	        		
 	        	}
 
 	        }

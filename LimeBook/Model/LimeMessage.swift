@@ -45,7 +45,7 @@ class LimeMessage: Mi {
     @objc dynamic var media_type = 0 // loại media : video, image , tạm chưa dùng
     @objc dynamic var private_type = 0
     @objc dynamic var message_type = 1 //loại : tạm thời chỉ chat text
-    @objc dynamic var date = ""
+    @objc dynamic var create_date = ""
     @objc dynamic var date_io = Date()
     @objc dynamic var timeDisplay = ""
     @objc dynamic var id = -1
@@ -174,7 +174,7 @@ class LimeMessage: Mi {
             {
                 let item = data[i]
                 let unit = LimeMessage.init(dictionary: item as NSDictionary)
-                unit.date_io = unit.date.date8601()
+                unit.date_io = unit.create_date.date8601()
                 unit.timeDisplay = unit.date_io.timeValue()
                 
                 if(i > 0)

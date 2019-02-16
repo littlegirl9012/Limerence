@@ -178,6 +178,12 @@ open class Mi: NSObject {
         }
     }
 
+  
+    
+    
+    
+    
+    
     public init(dictionary : NSDictionary)
     {
         super.init()
@@ -204,6 +210,9 @@ open class Mi: NSObject {
             }
         }
     }
+    
+    
+    
     public func dictionary(ignore : [String]) ->Dictionary<String,AnyObject >
     {
         var dict = Dictionary<String, Any>()

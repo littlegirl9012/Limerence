@@ -45,6 +45,84 @@ router.post('/book/tiki/insert',function(req,res)
 });
 
 
+router.post('/tiki/list',function(req,res)
+{
+    connection.query("CALL  tiki_list();",[],function(err,rows)
+    {
+        if(!err)
+        {
+            res.status(200).send(Mi.responseProcess(err, rows[0]));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+});
+
+
+router.post('/tiki/update/sellprice',function(req,res)
+{
+    var id = req.param('tiki_id');
+        var sell_price = req.param('sell_price');
+
+    connection.query("CALL  tiki_update_sell_price(?,?);",[id,sell_price],function(err,rows)
+    {
+        if(!err)
+        {
+            res.status(200).send(Mi.responseProcess(err, rows[0]));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+});
+
+
+router.post('/book/fahasa/insert',function(req,res)
+{
+
+    var keyInsert = "(temp";
+    var valueInsert = "(?";
+    var recordInsert = [];
+    recordInsert.push(1);
+
+    for (const key in req.body)
+    {
+        var temValue = req.body[key];
+        if(temValue.length == 0)
+        {
+            continue ;
+        }
+        keyInsert = keyInsert + "," + key;
+        valueInsert = valueInsert + "," + "?" ;
+    recordInsert.push(temValue);
+
+    }
+
+    keyInsert = keyInsert + ")";
+    valueInsert = valueInsert + ")";
+
+    var query = "insert INTO book_store" + " " + keyInsert + " VALUES " + valueInsert ;
+    console.log(query,recordInsert) ;
+
+
+    connection.query(query,recordInsert,function(err,rows)
+    {
+        if(!err)
+        {
+            res.status(200).send(Mi.responseProcess(err, rows[0]));
+        }
+        else
+        {
+            res.status(200).send(Mi.responseProcess(err, err));
+        }
+    });
+
+ 
+});
+
 
 
 

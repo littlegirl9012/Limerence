@@ -86,6 +86,7 @@ enum BookType : Int
     case question = 8
     case library = 9
     case web = 12
+    case tiki = 16
 
 
 }
@@ -95,6 +96,7 @@ class Book: Mi {
 
     @objc dynamic var feeling_user_id = -1;
     @objc dynamic var feeling_id = -1;
+    @objc dynamic var tiki_id = -1;
 
     @objc dynamic var feeling_aliasname = "";
     @objc dynamic var feeling_avatar = "";
@@ -104,11 +106,14 @@ class Book: Mi {
     @objc dynamic var feeling_intro = "";
     @objc dynamic var feeling_note = "";
     @objc dynamic var feeling_rate = 0.0;
+    @objc dynamic var sell_price = 0.0;
+
     @objc dynamic var feeling : [Feelling] = [];
     @objc dynamic var feeling_target : Feelling!;
 
     
-    
+    @objc dynamic var keyword = "";
+
     
     @objc dynamic var user_id = -1;
     @objc dynamic var like_count = 0;
@@ -122,6 +127,7 @@ class Book: Mi {
     @objc dynamic var isbn = "";
     @objc dynamic var code = "";
     @objc dynamic var page_number = "";
+    @objc dynamic var cat_name = "";
 
     @objc dynamic var image  = "";
     @objc dynamic var image_media  : MediaFile! ;
@@ -133,6 +139,8 @@ class Book: Mi {
     @objc dynamic var province_id = -1;
 
     @objc dynamic var author = "";
+    @objc dynamic var link = "";
+
     @objc dynamic var status = 0;
     @objc dynamic var images  : [String] = []
     @objc dynamic var avatar = "";
@@ -278,6 +286,37 @@ class Book: Mi {
         print("book deinit------------------A")
     }
 
+    func isFahasa()->Bool
+    {
+        if link.lowercased().contains("fahasa") {
+            return true
+        }
+        return false
+
+    }
+    
+    func isTiki()->Bool
+    {
+        if link.lowercased().contains("tiki") {
+            return true
+        }
+        return false
+    }
+    
+    func storeColor()->(String,UIColor)
+    {
+        if(isTiki())
+        {
+            return ("Tiki","26a0fc".hexColor())
+        }
+        if(isFahasa())
+        {
+            return ("Fahasa","e31f2e".hexColor())
+        }
+        return ("unknow",.white)
+
+    }
+    
     
     func toggleShowMode()
     {
@@ -632,6 +671,13 @@ class BookUpdateType_Request: Mi
     @objc dynamic var price = 0.0;
     @objc dynamic var content = "";
     @objc dynamic var book_type = 1;
+}
+
+class BookStoreSearch_Request : Mi
+{
+    @objc dynamic var title = "";
+    @objc dynamic var keyword = "";
+    @objc dynamic var author = "";
 
 }
 
@@ -865,6 +911,17 @@ extension Services
         }
     }
     
+    func bookStoreSearch(_ request :  BookStoreSearch_Request, success :@escaping (([Book])->Void), failure: ((String)->Void))
+    {
+        DispatchQueue.global(qos: .background).async {
+            services.request(api: .bookStoreSearch, param: request.dictionary(), success: { (response) in
+                success(Book.list(data: response.data as! [Dictionary<String, Any>]))
+            }) { (error) in
+                
+            }
+        }
+    }
+
     
     func bookUniversity(_ request :  BookUniversity_Request, success :@escaping (([Book])->Void), failure: ((String)->Void))
     {

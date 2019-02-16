@@ -27,7 +27,7 @@ class BookViewController: MasterViewController, UITableViewDelegate, UITableView
     @IBAction func addAction(_ sender: Any)
     {
         let bookSelect = BookSelectViewController()
-        bookSelect.isTake = true ;
+        bookSelect.selectType = .take;
         push(bookSelect)
     }
     
@@ -106,7 +106,7 @@ class BookViewController: MasterViewController, UITableViewDelegate, UITableView
     func bookAddFromMibook() {
         view.hideAlertBox()
         let bookSelect = BookSelectViewController()
-        bookSelect.isTake = true ;
+        bookSelect.selectType = .take ;
         push(bookSelect)
     }
 

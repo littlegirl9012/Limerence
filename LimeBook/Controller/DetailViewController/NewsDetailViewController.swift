@@ -35,7 +35,9 @@ class NewsDetailViewController: MasterViewController,NewsCommentCellDelegate, UI
         tbView.setIdentifier("NewsCommentCell")
 
         
-        if(self.book.book_type_n == .library)
+        compose.disableSendImage()
+        
+        if((self.book.book_type_n == .library) || (self.book.book_type_n == .tiki))
         {
             identifier = "BookInfoDetailCell"
         }

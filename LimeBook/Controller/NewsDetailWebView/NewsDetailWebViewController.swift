@@ -15,6 +15,7 @@ class NewsDetailWebViewController: MasterViewController, UIWebViewDelegate {
         super.viewDidLoad()
 
         
+        
         weak var weakself = self;
         self.navigationView.set(style: .back, title: "Chi Tiết") {
             weakself?.pop()

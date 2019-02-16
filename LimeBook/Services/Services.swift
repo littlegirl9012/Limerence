@@ -115,7 +115,7 @@ class Services: NSObject {
             {
                 let imageType = image.imageType()
                 let fileName =  String.random(4) + "." + imageType
-                multipartFormData.append((image.lowestQualityJPEGNSData)  , withName: "media", fileName: fileName, mimeType: imageType.mineType())
+                multipartFormData.append((image.mediumQualityJPEGNSData)  , withName: "media", fileName: fileName, mimeType: imageType.mineType())
             }
 
         }, to:dataRequest.0,headers:nil)
@@ -161,7 +161,7 @@ class Services: NSObject {
             {
                 let imageType = image.imageType()
                 let fileName =  String.random(4) + "." + imageType
-                multipartFormData.append((image.lowQualityJPEGNSData)  , withName: "media", fileName: fileName, mimeType: imageType.mineType())
+                multipartFormData.append((image.mediumQualityJPEGNSData)  , withName: "media", fileName: fileName, mimeType: imageType.mineType())
             }
             
         }, to:dataRequest.0,headers:nil)
@@ -317,17 +317,14 @@ class Services: NSObject {
     
     func customRequest( url : String, success :@escaping ((String)->Void), failure :@escaping ((String)->Void))
     {
-        
         let encoding = URLEncoding.default
-        
-        Alamofire.request(url, method: .get, parameters:["":""], encoding: encoding, headers: nil)
+        Alamofire.request(url, method: .get, parameters:nil, encoding: encoding, headers: nil)
             .responseString { response in
                 
                 if(response.value != nil)
                 {
                     success(response.value!)
                 }
-
         }
     }
 

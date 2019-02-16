@@ -30,6 +30,8 @@ extension  MessageInstance {
             if(data.count > 0)
             {
                 let message = LimeMessage.init(dictionary: data[0] as! NSDictionary)
+                message.date_io = message.create_date.date8601()
+                message.timeDisplay = message.date_io.timeValue()
                 confernceDataStore.messageReceive(message)
                 notifyInstance.postM(.messageReceive, message)
             }

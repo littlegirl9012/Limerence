@@ -52,7 +52,7 @@ class BookInfoDetailCell: UITableViewCell {
     func set(_ book : Book)
     {
         self.book = book
-        if(book.book_type_n == .library)
+        if((book.book_type_n == .library) || (book.book_type_n == .tiki))
         {
             library()
         }

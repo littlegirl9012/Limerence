@@ -39,6 +39,7 @@ class ChatViewController: MasterViewController, UITableViewDelegate,UITableViewD
         initStyle()
         headerView.view.backgroundColor = template.backgroundColor
         navigationView.bringSubview(toFront: self.btBook)
+        scrollToBotton()
         
     }
     @IBAction func bookTouchIn(_ sender: Any)
@@ -81,6 +82,16 @@ class ChatViewController: MasterViewController, UITableViewDelegate,UITableViewD
         tbView.setIdentifier("MessageMyCell")
         tbView.setIdentifier("MessageTargetCell")
         tbView.setIdentifier("MessageLoadmoreCell")
+        
+        tbView.setIdentifier("MessageImageTargetCell")
+        tbView.setIdentifier("MessageImageMyCell")
+
+        
+        
+        
+        
+        
+        
         composeView.target_user_id = target.id
         headerView.delegate = self;
         let hd = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 1))

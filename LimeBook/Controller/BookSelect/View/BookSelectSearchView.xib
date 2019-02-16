@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookSelectSearchView" customModule="MiBook" customModuleProvider="target">
+            <connections>
+                <outlet property="btAdd" destination="TLz-JC-cAL" id="pZ6-4L-xqD"/>
+                <outlet property="btClose" destination="QAw-a6-wjm" id="AGM-Pw-lM8"/>
+                <outlet property="btDetail" destination="uCR-3D-Qqa" id="gy7-jA-XxL"/>
+                <outlet property="btOwner" destination="u2x-BM-6Rv" id="Eaz-nJ-wwG"/>
+                <outlet property="btPrice" destination="sh3-6F-P2g" id="rh7-Ot-T4y"/>
+                <outlet property="imgView" destination="Pbj-lr-sZI" id="pLd-X9-vsp"/>
+                <outlet property="lbAuthor" destination="l4T-57-2Rb" id="5yk-oC-Xvl"/>
+                <outlet property="lbTitle" destination="Q8E-3C-v9s" id="Wg3-gZ-mF5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Vgd-NU-e5o"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oC-Pe-FTX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Con chó nhỏ mang giỏ hoa hồng" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8E-3C-v9s">
+                            <rect key="frame" x="92" y="12" width="271" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn nhật ánh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4T-57-2Rb">
+                            <rect key="frame" x="92" y="37" width="110" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuB-Gi-VrB" customClass="LineView" customModule="MiBook" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="119.5" width="375" height="0.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="kAG-oZ-Zvg"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="r4U-Tf-NCK"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbj-lr-sZI" customClass="BookImageView" customModule="MiBook" customModuleProvider="target">
+                            <rect key="frame" x="12" y="12" width="68" height="96"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="68" id="6gV-f2-aOw"/>
+                                <constraint firstAttribute="height" constant="96" id="vtP-za-Txm"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Pbj-lr-sZI" firstAttribute="top" secondItem="9oC-Pe-FTX" secondAttribute="top" constant="12" id="20j-up-Fta"/>
+                        <constraint firstItem="l4T-57-2Rb" firstAttribute="leading" secondItem="Q8E-3C-v9s" secondAttribute="leading" id="2Bx-lv-4Mh"/>
+                        <constraint firstAttribute="bottom" secondItem="Pbj-lr-sZI" secondAttribute="bottom" constant="12" id="4cn-JV-GvA"/>
+                        <constraint firstAttribute="height" constant="120" id="6Cw-oE-QHD"/>
+                        <constraint firstItem="Q8E-3C-v9s" firstAttribute="top" secondItem="9oC-Pe-FTX" secondAttribute="top" constant="12" id="8d7-Pz-pPd"/>
+                        <constraint firstItem="Pbj-lr-sZI" firstAttribute="leading" secondItem="ByX-LN-6Hp" secondAttribute="leading" constant="12" id="Bm4-xS-auo"/>
+                        <constraint firstItem="ByX-LN-6Hp" firstAttribute="trailing" secondItem="Q8E-3C-v9s" secondAttribute="trailing" constant="12" id="COj-yN-LI8"/>
+                        <constraint firstItem="l4T-57-2Rb" firstAttribute="top" secondItem="Q8E-3C-v9s" secondAttribute="bottom" constant="8" id="DhO-rK-bs9"/>
+                        <constraint firstItem="KuB-Gi-VrB" firstAttribute="trailing" secondItem="ByX-LN-6Hp" secondAttribute="trailing" id="PUI-fH-qwN"/>
+                        <constraint firstItem="KuB-Gi-VrB" firstAttribute="leading" secondItem="ByX-LN-6Hp" secondAttribute="leading" id="YQe-2k-I9Z"/>
+                        <constraint firstAttribute="bottom" secondItem="KuB-Gi-VrB" secondAttribute="bottom" id="fB2-QX-Wwn"/>
+                        <constraint firstItem="Q8E-3C-v9s" firstAttribute="leading" secondItem="Pbj-lr-sZI" secondAttribute="trailing" constant="12" id="smD-V7-tg0"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="ByX-LN-6Hp"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1Z-hx-xHk">
+                    <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="cws-4S-mDN"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="EBW-FW-0s8">
+                    <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKl-He-om7">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLz-JC-cAL" customClass="ButtonSelectSearch" customModule="MiBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="Thêm vào tủ sách"/>
+                                    <connections>
+                                        <action selector="takeTouch:" destination="-1" eventType="touchUpInside" id="kXu-Lw-f5H"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boU-3j-pwZ" customClass="LineView" customModule="MiBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="0.5" id="V0X-B6-T88"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="H9a-GK-gao"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="TLz-JC-cAL" secondAttribute="bottom" id="3ld-tr-LxT"/>
+                                <constraint firstAttribute="trailing" secondItem="boU-3j-pwZ" secondAttribute="trailing" id="4WI-xH-qVQ"/>
+                                <constraint firstItem="TLz-JC-cAL" firstAttribute="leading" secondItem="GKl-He-om7" secondAttribute="leading" id="GMZ-pP-c6e"/>
+                                <constraint firstItem="boU-3j-pwZ" firstAttribute="top" secondItem="GKl-He-om7" secondAttribute="top" id="ORK-ho-DK7"/>
+                                <constraint firstItem="TLz-JC-cAL" firstAttribute="top" secondItem="GKl-He-om7" secondAttribute="top" id="VbV-1T-A5s"/>
+                                <constraint firstAttribute="trailing" secondItem="TLz-JC-cAL" secondAttribute="trailing" id="apK-c8-HrF"/>
+                                <constraint firstItem="boU-3j-pwZ" firstAttribute="leading" secondItem="GKl-He-om7" secondAttribute="leading" id="dFf-55-0nk"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNW-h0-ZYU">
+                            <rect key="frame" x="0.0" y="109.5" width="375" height="109.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sh3-6F-P2g" customClass="ButtonSelectSearch" customModule="MiBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="So sách giá bán"/>
+                                    <connections>
+                                        <action selector="compareTouch:" destination="-1" eventType="touchUpInside" id="siE-Yo-Lqk"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzz-rt-Weq" customClass="LineView" customModule="MiBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="0.5" id="LP6-E3-8bP"/>
+                                        <constraint firstAttribute="height" constant="0.5" id="zmD-tJ-LV3"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="Jyp-i8-tyq"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="sh3-6F-P2g" firstAttribute="top" secondItem="hNW-h0-ZYU" secondAttribute="top" id="KUL-Gk-gZz"/>
+                                <constraint firstItem="sh3-6F-P2g" firstAttribute="leading" secondItem="hNW-h0-ZYU" secondAttribute="leading" id="T3H-52-cIF"/>
+                                <constraint firstAttribute="bottom" secondItem="sh3-6F-P2g" secondAttribute="bottom" id="Wmo-Wb-skL"/>
+                                <constraint firstItem="nzz-rt-Weq" firstAttribute="top" secondItem="hNW-h0-ZYU" secondAttribute="top" id="aE4-XQ-4Vd"/>
+                                <constraint firstItem="nzz-rt-Weq" firstAttribute="leading" secondItem="hNW-h0-ZYU" secondAttribute="leading" id="bAL-Af-U9Y"/>
+                                <constraint firstAttribute="trailing" secondItem="nzz-rt-Weq" secondAttribute="trailing" id="smE-Vb-mRM"/>
+                                <constraint firstAttribute="trailing" secondItem="sh3-6F-P2g" secondAttribute="trailing" id="yt6-dZ-PWK"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zl-8I-mxY">
+                            <rect key="frame" x="0.0" y="219" width="375" height="109"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2x-BM-6Rv" customClass="ButtonSelectSearch" customModule="MiBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="Người sở hữu sách"/>
+                                    <connections>
+                                        <action selector="ownerTouch:" destination="-1" eventType="touchUpInside" id="l6W-0K-J6a"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bo9-4b-29t" customClass="LineView" customModule="MiBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="0.5" id="HXj-Di-W07"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="0.5" id="pmd-eP-6CT"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="33z-9k-Snn"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="u2x-BM-6Rv" secondAttribute="bottom" id="BH2-Hy-34A"/>
+                                <constraint firstItem="u2x-BM-6Rv" firstAttribute="leading" secondItem="1zl-8I-mxY" secondAttribute="leading" id="HKy-13-olM"/>
+                                <constraint firstAttribute="trailing" secondItem="u2x-BM-6Rv" secondAttribute="trailing" id="Itj-e0-n9s"/>
+                                <constraint firstItem="Bo9-4b-29t" firstAttribute="top" secondItem="1zl-8I-mxY" secondAttribute="top" id="OuY-0w-u6l"/>
+                                <constraint firstAttribute="trailing" secondItem="Bo9-4b-29t" secondAttribute="trailing" id="VmC-tL-DX9"/>
+                                <constraint firstItem="Bo9-4b-29t" firstAttribute="leading" secondItem="1zl-8I-mxY" secondAttribute="leading" id="f5Z-7Z-kFs"/>
+                                <constraint firstItem="u2x-BM-6Rv" firstAttribute="top" secondItem="1zl-8I-mxY" secondAttribute="top" id="xvC-HL-q76"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wk-z3-W7j">
+                            <rect key="frame" x="0.0" y="328" width="375" height="109.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCR-3D-Qqa" customClass="ButtonSelectSearch" customModule="MiBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="Chi tiết sách"/>
+                                    <connections>
+                                        <action selector="detailTouch:" destination="-1" eventType="touchUpInside" id="Wsw-kK-ixn"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sps-3d-04N" customClass="LineView" customModule="MiBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="0.5" id="PUY-8U-7ks"/>
+                                        <constraint firstAttribute="height" constant="0.5" id="t8N-Qs-c2t"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="WEz-oC-iP8"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="uCR-3D-Qqa" firstAttribute="leading" secondItem="7wk-z3-W7j" secondAttribute="leading" id="59a-mj-VYe"/>
+                                <constraint firstItem="Sps-3d-04N" firstAttribute="leading" secondItem="7wk-z3-W7j" secondAttribute="leading" id="7hB-bR-V7a"/>
+                                <constraint firstItem="Sps-3d-04N" firstAttribute="top" secondItem="7wk-z3-W7j" secondAttribute="top" id="IrF-7h-U0i"/>
+                                <constraint firstAttribute="trailing" secondItem="Sps-3d-04N" secondAttribute="trailing" id="QCv-kW-A0f"/>
+                                <constraint firstItem="uCR-3D-Qqa" firstAttribute="top" secondItem="7wk-z3-W7j" secondAttribute="top" id="Se6-xb-l8i"/>
+                                <constraint firstAttribute="trailing" secondItem="uCR-3D-Qqa" secondAttribute="trailing" id="Yio-C5-mtb"/>
+                                <constraint firstAttribute="bottom" secondItem="uCR-3D-Qqa" secondAttribute="bottom" id="pwl-rN-YPL"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sR-8i-9pE">
+                            <rect key="frame" x="0.0" y="437.5" width="375" height="109.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAw-a6-wjm" customClass="ButtonSelectSearch" customModule="MiBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                    <state key="normal" title="Đóng"/>
+                                    <connections>
+                                        <action selector="closeTOuch:" destination="-1" eventType="touchUpInside" id="c9c-JB-xah"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQ3-pY-teq" customClass="LineView" customModule="MiBook" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="0.5" id="LmR-gf-vCk"/>
+                                        <constraint firstAttribute="height" constant="0.5" id="TER-Vf-NyH"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="ws4-9J-cvn"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="QAw-a6-wjm" secondAttribute="trailing" id="EM7-Ha-SyR"/>
+                                <constraint firstItem="QAw-a6-wjm" firstAttribute="leading" secondItem="9sR-8i-9pE" secondAttribute="leading" id="FF0-oT-9Xj"/>
+                                <constraint firstItem="QAw-a6-wjm" firstAttribute="top" secondItem="9sR-8i-9pE" secondAttribute="top" id="M5k-lf-u2V"/>
+                                <constraint firstItem="RQ3-pY-teq" firstAttribute="leading" secondItem="9sR-8i-9pE" secondAttribute="leading" id="Nb3-Tv-VO7"/>
+                                <constraint firstAttribute="trailing" secondItem="RQ3-pY-teq" secondAttribute="trailing" id="PfY-fS-HgS"/>
+                                <constraint firstAttribute="bottom" secondItem="QAw-a6-wjm" secondAttribute="bottom" id="eDZ-DY-R8F"/>
+                                <constraint firstItem="RQ3-pY-teq" firstAttribute="top" secondItem="9sR-8i-9pE" secondAttribute="top" id="gvA-tZ-DDD"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="750" constant="240" id="WRJ-43-dyS"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EBW-FW-0s8" secondAttribute="bottom" id="ExE-BA-zut"/>
+                <constraint firstItem="9oC-Pe-FTX" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="IaW-PE-h8t"/>
+                <constraint firstItem="9oC-Pe-FTX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ONA-56-fI9"/>
+                <constraint firstItem="9oC-Pe-FTX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RCs-m2-bCP"/>
+                <constraint firstItem="EBW-FW-0s8" firstAttribute="top" secondItem="9oC-Pe-FTX" secondAttribute="bottom" id="YE1-8g-BJf"/>
+                <constraint firstItem="EBW-FW-0s8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aif-a7-cII"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EBW-FW-0s8" secondAttribute="trailing" id="sSa-PX-6Vs"/>
+                <constraint firstAttribute="bottom" secondItem="O1Z-hx-xHk" secondAttribute="bottom" id="ssc-s6-BKN"/>
+                <constraint firstAttribute="trailing" secondItem="O1Z-hx-xHk" secondAttribute="trailing" id="tQV-4e-hg3"/>
+                <constraint firstItem="O1Z-hx-xHk" firstAttribute="top" secondItem="9oC-Pe-FTX" secondAttribute="bottom" id="tnu-lz-1pR"/>
+                <constraint firstItem="O1Z-hx-xHk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wGb-IH-3W1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-370" y="90"/>
+        </view>
+    </objects>
+</document>
